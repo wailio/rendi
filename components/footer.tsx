@@ -1,142 +1,127 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
-import { Facebook, Instagram, Mail, Music2 } from "lucide-react"
-import { usePathname } from "next/navigation"
+import { Facebook, Instagram, Mail, Music2, Check, ArrowUpRight } from "lucide-react"
+import { useState } from "react"
+import type React from "react"
+
+const chairImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2013%20ao%C3%BBt%202026%2C%2022_56_04-68bCwk2UOD9WzaDzfZVJCAdMQf6zdk.png"
+const lampImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2013%20ao%C3%BBt%202026%2C%2023_00_01-9Jx8Mg07F8yutI4yA4eo05Jh4QCT1R.png"
+
+function NewArrivalsForm() {
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<"idle" | "error" | "success">("idle")
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email.trim())
+
+    if (!validEmail) {
+      setStatus("error")
+      return
+    }
+
+    setStatus("success")
+    setEmail("")
+  }
+
+  return (
+    <div className="flex h-full flex-col justify-between bg-[#26313b] px-7 py-8 text-[#f1eee7] sm:px-10 sm:py-10">
+      <div>
+        <p className="font-serif text-[clamp(1.45rem,2vw,2rem)] tracking-[-0.03em]">Nouveautés | Arrivages</p>
+        <p className="mt-2 max-w-[18rem] text-sm leading-6 text-[#d1d2cd]">
+          Soyez les premiers à découvrir nos nouvelles pièces et collections.
+        </p>
+      </div>
+
+      <div className="flex justify-center py-8">
+        <img src={lampImage} alt="Lampe de bureau illustrée" className="h-44 w-auto object-contain sm:h-52" />
+      </div>
+
+      <form onSubmit={handleSubmit} noValidate>
+        <label htmlFor="new-arrivals-email" className="sr-only">Votre adresse email</label>
+        <div className="flex overflow-hidden border border-[#b9a387]/60 bg-[#f0ede5]">
+          <input
+            id="new-arrivals-email"
+            type="email"
+            value={email}
+            onChange={(event) => { setEmail(event.target.value); setStatus("idle") }}
+            placeholder="Votre email"
+            aria-invalid={status === "error"}
+            aria-describedby="new-arrivals-feedback"
+            className="min-w-0 flex-1 bg-transparent px-3 py-3 text-sm text-[#26313b] outline-none placeholder:text-[#77766f]"
+          />
+          <button type="submit" className="bg-[#a98661] px-4 text-xs font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#92734f]">
+            Recevoir
+          </button>
+        </div>
+        <p id="new-arrivals-feedback" role="status" className="mt-2 min-h-5 text-xs text-[#d1d2cd]">
+          {status === "error" && "Veuillez saisir une adresse email valide."}
+          {status === "success" && <span className="inline-flex items-center gap-1"><Check className="h-3.5 w-3.5" /> Merci, vous serez informé de nos nouveaux arrivages.</span>}
+        </p>
+      </form>
+    </div>
+  )
+}
+
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return <Link href={href} className="group inline-flex items-center gap-1 text-[15px] leading-7 text-[#272b2d] transition-colors hover:text-[#a98661]">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
+}
 
 export default function Footer() {
-  const pathname = usePathname()
-  const isHomePage = pathname === "/"
-  
   return (
-    <footer className={`relative py-5 md:py-20 overflow-hidden`}>
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%208%20nov.%202025%2C%2016_52_02-58aR3ivw7SRjNIpV7B6kudRoWQqbRl.png)",
-          filter: "blur(10px)",
-        }}
-      ></div>
+    <footer className="overflow-hidden bg-[#ece9e1] text-[#272b2d]">
+      <div className="mx-auto max-w-[1380px] px-5 pb-5 pt-10 sm:px-8 sm:pt-14 lg:px-12">
+        <div className="grid overflow-hidden border border-[#d4d0c6] bg-[#f4f1e9] lg:grid-cols-[1.02fr_1fr_1.7fr]">
+          <section className="relative flex min-h-[430px] flex-col justify-end overflow-hidden border-b border-[#d4d0c6] px-7 pb-8 pt-8 sm:px-12 lg:min-h-[485px] lg:border-b-0 lg:border-r">
+            <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-cover object-center opacity-90 mix-blend-multiply" />
+            <div className="relative z-10 mt-auto max-w-[19rem] text-center">
+              <h2 className="font-serif text-4xl tracking-[-0.04em] sm:text-5xl">Rais Meuble</h2>
+              <p className="mt-2 text-sm font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
+              <p className="mt-1 text-sm">Est. 2018</p>
+            </div>
+          </section>
 
-      <div className="absolute inset-0 bg-[#071225]/48"></div>
+          <NewArrivalsForm />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-12 mb-6 md:mb-12 text-white">
-          {/* Brand Logo */}
-          <div>
-            <Image 
-              src="/logo-rais-meuble.png" 
-              alt="Rais Meuble" 
-              width={140} 
-              height={60}
-              className="h-12 md:h-16 w-auto mb-3 md:mb-4"
-            />
-            <p className="text-xs md:text-sm text-ivory/70 font-light leading-relaxed">
-              Meubles artisanaux de luxe pour transformer vos espaces en havres de paix.
-            </p>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h4 className="text-sm md:text-base font-semibold mb-2 md:mb-4">Boutique</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/all-products" className="hover:text-[#7E8EA6] transition-colors">
-                  Tous les Produits
-                </Link>
-              </li>
-              <li>
-                <Link href="/offers" className="hover:text-[#7E8EA6] transition-colors">
-                  Offres & Promotions
-                </Link>
-              </li>
-              <li>
-                <Link href="/rooms" className="hover:text-[#7E8EA6] transition-colors">
-                  Collections
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-sm md:text-base font-semibold mb-2 md:mb-4">Entreprise</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/about" className="hover:text-[#7E8EA6] transition-colors">
-                  À Propos
-                </Link>
-              </li>
-              <li>
-                <Link href="/inspirations" className="hover:text-[#7E8EA6] transition-colors">
-                  Inspirations
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-[#7E8EA6] transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-sm md:text-base font-semibold mb-2 md:mb-4">Contact</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:info@raismeuble.dz" className="hover:text-[#9AAAC1] transition-colors">
-                  info@raismeuble.dz
-                </a>
-              </li>
-              <li className="hover:text-[#9AAAC1] transition-colors">
-                0554 37 84 95
-              </li>
-              <li className="text-white/80 text-xs">
-                Aïn Naâdja, Algérie
-              </li>
-              <li className="text-white/80 text-xs font-medium mt-2">
-                Horaires: 9:00-19:00
-              </li>
-            </ul>
-          </div>
+          <section className="grid gap-9 px-7 py-9 sm:grid-cols-2 sm:px-10 lg:grid-cols-[1fr_1fr_1.2fr] lg:gap-7 lg:px-9 lg:py-11">
+            <div>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Explorer</h3>
+              <nav className="flex flex-col">
+                <FooterLink href="/all-products">Tous les produits</FooterLink>
+                <FooterLink href="/offers">Offres & promotions</FooterLink>
+                <FooterLink href="/rooms">Collections</FooterLink>
+                <FooterLink href="/inspirations">Inspirations</FooterLink>
+              </nav>
+            </div>
+            <div>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Rais Meuble</h3>
+              <nav className="flex flex-col">
+                <FooterLink href="/about">Notre histoire</FooterLink>
+                <FooterLink href="/contact">Nous trouver</FooterLink>
+                <FooterLink href="/contact">Contact</FooterLink>
+                <FooterLink href="/faq">Aide & conseils</FooterLink>
+              </nav>
+              <h3 className="mb-3 mt-7 text-sm font-semibold uppercase tracking-[0.12em]">Assistance</h3>
+              <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>
+            </div>
+            <div className="border-t border-[#d4d0c6] pt-7 sm:col-span-2 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+              <div className="mb-5 flex gap-4 text-[#a98661]">
+                <Link href="https://facebook.com/p/Rais-meuble-100063890029935" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-1"><Facebook className="h-6 w-6" /></Link>
+                <Link href="https://instagram.com/raismeuble" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-1"><Instagram className="h-6 w-6" /></Link>
+                <Link href="https://tiktok.com/@rais.meuble" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-transform hover:-translate-y-1"><Music2 className="h-6 w-6" /></Link>
+              </div>
+              <div className="overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf]">
+                <iframe title="Rais Meuble sur Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12793.79295723246!2d3.066540187158203!3d36.71179470000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadbdafc4b31b%3A0xf61ba3d3c1683efd!2sRais%20Meuble!5e0!3m2!1sfr!2sdz!4v1786306193589!5m2!1sfr!2sdz" className="h-44 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+              </div>
+              <p className="mt-4 text-center text-sm leading-6">Rais Meuble<br />Aïn Naâdja, Alger</p>
+            </div>
+          </section>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-brass/30 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-sm text-ivory/60">© 2026 Rais Meuble. Tous droits réservés.</p>
-
-          {/* Social Links */}
-          <div className="flex gap-5">
-            <Link 
-              href="https://facebook.com/p/Rais-meuble-100063890029935" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#7E8EA6] transition-colors text-ivory/80 p-2 hover:bg-[#7E8EA6]/10 rounded-lg"
-            >
-              <Facebook className="w-5 h-5" />
-            </Link>
-            <Link 
-              href="https://instagram.com/raismeuble" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#7E8EA6] transition-colors text-ivory/80 p-2 hover:bg-[#7E8EA6]/10 rounded-lg"
-            >
-              <Instagram className="w-5 h-5" />
-            </Link>
-            <Link 
-              href="https://tiktok.com/@rais.meuble" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#7E8EA6] transition-colors text-ivory/80 p-2 hover:bg-[#7E8EA6]/10 rounded-lg"
-            >
-              <Music2 className="w-5 h-5" />
-            </Link>
-          </div>
+        <div className="flex flex-col gap-3 border-t border-[#cfcac0] pt-5 text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 Rais Meuble. Tous droits réservés.</p>
+          <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
       </div>
     </footer>
