@@ -26,7 +26,7 @@ function NewArrivalsForm() {
   }
 
   return (
-    <div className="flex h-full flex-col justify-between bg-[#26313b] px-7 py-8 text-[#f1eee7] sm:px-10 sm:py-10">
+    <div className="flex h-full flex-col justify-between bg-[#26313b] px-5 py-6 text-[#f1eee7] sm:px-7 sm:py-7">
       <div>
         <p className="font-serif text-[clamp(1.45rem,2vw,2rem)] tracking-[-0.03em]">Nouveautés | Arrivages</p>
         <p className="mt-2 max-w-[18rem] text-sm leading-6 text-[#d1d2cd]">
@@ -34,8 +34,8 @@ function NewArrivalsForm() {
         </p>
       </div>
 
-      <div className="flex justify-center py-8">
-        <img src={lampImage} alt="Lampe de bureau illustrée" className="h-44 w-auto object-contain sm:h-52" />
+      <div className="flex justify-center py-3">
+        <img src={lampImage} alt="Lampe de bureau illustrée" className="h-32 w-auto object-contain sm:h-36" />
       </div>
 
       <form onSubmit={handleSubmit} noValidate>
@@ -71,20 +71,22 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 export default function Footer() {
   return (
     <footer className="overflow-hidden bg-[#ece9e1] text-[#272b2d]">
-      <div className="mx-auto max-w-[1380px] px-5 pb-5 pt-10 sm:px-8 sm:pt-14 lg:px-12">
-        <div className="grid overflow-hidden border border-[#d4d0c6] bg-[#f4f1e9] lg:grid-cols-[1.02fr_1fr_1.7fr]">
-          <section className="relative flex min-h-[430px] flex-col justify-end overflow-hidden border-b border-[#d4d0c6] px-7 pb-8 pt-8 sm:px-12 lg:min-h-[485px] lg:border-b-0 lg:border-r">
-            <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-cover object-center opacity-90 mix-blend-multiply" />
-            <div className="relative z-10 mt-auto max-w-[19rem] text-center">
-              <h2 className="font-serif text-4xl tracking-[-0.04em] sm:text-5xl">Rais Meuble</h2>
-              <p className="mt-2 text-sm font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
-              <p className="mt-1 text-sm">Est. 2018</p>
+      <div className="mx-auto max-w-[1380px] px-5 pb-4 pt-8 sm:px-8 sm:pt-10 lg:px-12">
+        <div className="grid overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
+          <section className="relative flex min-h-[300px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
+            <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
+            <div className="relative z-10 mt-auto text-center">
+              <h2 className="font-serif text-[2rem] tracking-[-0.05em] sm:text-[2.35rem]">Rais Meuble</h2>
+              <p className="mt-1 text-[11px] font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
+              <p className="mt-0.5 text-[11px]">Est. 2018</p>
             </div>
           </section>
 
-          <NewArrivalsForm />
+          <div className="min-h-[300px] border-y border-r border-[#d4d0c6]">
+            <NewArrivalsForm />
+          </div>
 
-          <section className="grid gap-9 px-7 py-9 sm:grid-cols-2 sm:px-10 lg:grid-cols-[1fr_1fr_1.2fr] lg:gap-7 lg:px-9 lg:py-11">
+          <section className="grid gap-6 border-b border-r border-[#d4d0c6] px-6 py-7 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-5 lg:px-7 lg:py-8">
             <div>
               <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Explorer</h3>
               <nav className="flex flex-col">
@@ -119,7 +121,7 @@ export default function Footer() {
           </section>
         </div>
 
-        <div className="flex flex-col gap-3 border-t border-[#cfcac0] pt-5 text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-0 flex flex-col gap-3 border-t border-[#bdb8ad] pt-4 text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Rais Meuble. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
