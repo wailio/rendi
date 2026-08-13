@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vola - Premium Furniture</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-icon-v2.png">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">V</div>
+                <span class="logo-text">Vola</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu desktop">
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#process" class="nav-link">Our Process</a>
+                <a href="#about" class="nav-link">Why Choose Us</a>
+            </div>
+
+            <!-- Right Side Actions -->
+            <div class="nav-actions">
+                <button class="cart-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </button>
+                <button class="contact-btn">Contact Us</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#process" class="nav-link">Our Process</a>
+                <a href="#about" class="nav-link">Why Choose Us</a>
+                <button class="contact-btn">Contact Us</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background" style="background-image: url('hero-bedroom.png')">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Unique Furniture for Modern Spaces</h1>
+            <p class="hero-subtitle">Discover exquisitely crafted furniture that transforms your space into a sanctuary of style and comfort.</p>
+            <button class="cta-button">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-grid">
+                <!-- Sofas Card -->
+                <div class="showcase-card">
+                    <img src="luxury-sofa-furniture.jpg" alt="Premium sofas collection" class="showcase-image">
+                    <div class="showcase-overlay">
+                        <p class="showcase-text">Sofas</p>
+                    </div>
+                </div>
+
+                <!-- Sleeping Room Card -->
+                <div class="showcase-card">
+                    <img src="modern-bedroom-furniture-set.jpg" alt="Elegant bedroom collection" class="showcase-image">
+                    <div class="showcase-overlay">
+                        <p class="showcase-text">Sleeping Room</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container narrow">
+            <h2 class="section-title">Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 3H9c-1 0-2 1-2 2v2H4c-1 0-2 1-2 2v10c0 1 1 2 2 2h16c1 0 2-1 2-2V9c0-1-1-2-2-2h-3V5c0-1-1-2-2-2z"></path>
+                        </svg>
+                    </div>
+                    <p class="category-label">Chairs</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 5c-1 0-2 1-2 2v10c0 1 1 2 2 2h12c1 0 2-1 2-2V7c0-1-1-2-2-2H6z"></path>
+                        </svg>
+                    </div>
+                    <p class="category-label">Sofas</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 2H9v4h6V2zM3 6h18v2H3zM3 10h18v10c0 1-1 2-2 2H5c-1 0-2-1-2-2V10z"></path>
+                        </svg>
+                    </div>
+                    <p class="category-label">Lighting</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 5c-1 0-2 1-2 2v10c0 1 1 2 2 2h16c1 0 2-1 2-2V7c0-1-1-2-2-2H4z"></path>
+                        </svg>
+                    </div>
+                    <p class="category-label">Beds</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 3h16v18H4V3z"></path>
+                            <line x1="8" y1="7" x2="8" y2="17"></line>
+                            <line x1="12" y1="7" x2="12" y2="17"></line>
+                            <line x1="16" y1="7" x2="16" y2="17"></line>
+                        </svg>
+                    </div>
+                    <p class="category-label">Storage</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L6 8h12z"></path>
+                            <path d="M8 8h8v12c0 1-1 2-2 2H10c-1 0-2-1-2-2V8z"></path>
+                        </svg>
+                    </div>
+                    <p class="category-label">Décor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="minimalist-sofa.jpg" alt="Minimalist Sofa" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Minimalist Sofa</h3>
+                        <p class="product-price">$1,299</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="executive-office-chair.jpg" alt="Executive Chair" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Executive Chair</h3>
+                        <p class="product-price">$799</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="wooden-coffee-table.jpg" alt="Coffee Table" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Coffee Table</h3>
+                        <p class="product-price">$499</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="modern-platform-bed.jpg" alt="Platform Bed" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Platform Bed</h3>
+                        <p class="product-price">$1,599</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="minimalist-wall-shelves.jpg" alt="Wall Shelving" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Wall Shelving</h3>
+                        <p class="product-price">$349</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="modern-pendant-lights.jpg" alt="Pendant Lights" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Pendant Lights</h3>
+                        <p class="product-price">$249</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="luxury-lounge-chair.jpg" alt="Lounge Chair" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Lounge Chair</h3>
+                        <p class="product-price">$899</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="modern-sideboard-cabinet.jpg" alt="Sideboard" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Sideboard</h3>
+                        <p class="product-price">$1,199</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">V</div>
+                        <span>Vola</span>
+                    </div>
+                    <p class="footer-text">Crafting exceptional furniture experiences for modern living spaces.</p>
+                </div>
+
+                <!-- Shop Links -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Links -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@vola.com">hello@vola.com</a></li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 Vola Furniture. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.68[...]"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+                            <path d="M12 8a4 4 0 110 8 4 4 0 010-8z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
