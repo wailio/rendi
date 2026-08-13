@@ -29,7 +29,7 @@ function NewArrivalsForm() {
     <div className="flex h-full flex-col justify-between bg-[#26313b] px-5 py-6 text-[#f1eee7] sm:px-7 sm:py-7">
       <div>
         <p className="font-serif text-[clamp(1.45rem,2vw,2rem)] tracking-[-0.03em]">Nouveautés | Arrivages</p>
-        <p className="mt-2 max-w-[18rem] text-sm leading-6 text-[#d1d2cd]">
+        <p className="mt-2 max-w-[18rem] text-[13px] leading-5 text-[#d1d2cd]">
           Soyez les premiers à découvrir nos nouvelles pièces et collections.
         </p>
       </div>
@@ -65,14 +65,14 @@ function NewArrivalsForm() {
 }
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return <Link href={href} className="group inline-flex items-center gap-1 text-[15px] leading-7 text-[#272b2d] transition-colors hover:text-[#a98661]">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
+  return <Link href={href} className="group relative inline-flex w-fit items-center gap-1 text-[15px] leading-7 text-[#272b2d] transition-colors hover:text-[#a98661] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#a98661] after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
 }
 
 export default function Footer() {
   return (
     <footer className="overflow-hidden bg-[#ece9e1] text-[#272b2d]">
       <div className="mx-auto max-w-[1380px] px-5 pb-4 pt-8 sm:px-8 sm:pt-10 lg:px-12">
-        <div className="grid overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
+        <div className="grid items-stretch overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
           <section className="relative flex min-h-[300px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
             <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
             <div className="relative z-10 mt-auto text-center">
@@ -114,7 +114,7 @@ export default function Footer() {
                 <Link href="https://tiktok.com/@rais.meuble" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-transform hover:-translate-y-1"><Music2 className="h-6 w-6" /></Link>
               </div>
               <div className="overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf]">
-                <iframe title="Rais Meuble sur Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12793.79295723246!2d3.066540187158203!3d36.71179470000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadbdafc4b31b%3A0xf61ba3d3c1683efd!2sRais%20Meuble!5e0!3m2!1sfr!2sdz!4v1786306193589!5m2!1sfr!2sdz" className="h-44 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+                <iframe title="Rais Meuble sur Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5406841856447!2d3.0806420758341875!3d36.70957387227306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786659470996!5m2!1sfr!2sdz" className="h-44 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
               </div>
               <p className="mt-4 text-center text-sm leading-6">Rais Meuble<br />Aïn Naâdja, Alger</p>
             </div>
