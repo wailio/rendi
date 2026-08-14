@@ -5,7 +5,8 @@ import { Facebook, Instagram, Mail, Music2, Check, ArrowUpRight } from "lucide-r
 import { useState } from "react"
 import type React from "react"
 
-const footerReferenceImage = "/footer-mobenia-reference.png"
+const footerBackgroundImage = "/footer-chair-sketch.png"
+const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz"
 
 function NewArrivalsForm() {
   const [email, setEmail] = useState("")
@@ -70,13 +71,12 @@ export default function Footer() {
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
       <div className="w-full pb-3 pt-0 sm:pb-4">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:grid-cols-4">
-          <section className="flex min-w-0 flex-col bg-[#f4f1e9] p-6 sm:p-8">
-            <div className="flex min-h-[150px] items-center justify-center overflow-hidden">
-              <img src={footerReferenceImage} alt="Illustration Mobenia Furniture avec fauteuil et lampe" className="max-h-44 max-w-full object-contain" />
-            </div>
-            <div className="mt-6">
+          <section className="relative flex min-h-[280px] min-w-0 flex-col justify-end overflow-hidden bg-[#f4f1e9] p-6 sm:p-8">
+            <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-[#f4f1e9]/30" />
+            <div className="relative z-10 max-w-[14rem] rounded-sm bg-[#f4f1e9]/80 p-3 backdrop-blur-[1px]">
               <p className="font-serif text-xl tracking-[-0.03em]">Mobenia Furniture</p>
-              <p className="mt-2 max-w-[14rem] text-xs leading-5 text-[#5c5d5a]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
+              <p className="mt-2 text-xs leading-5 text-[#5c5d5a]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
             </div>
           </section>
 
@@ -92,6 +92,9 @@ export default function Footer() {
               <FooterLink href="/rooms">Collections</FooterLink>
               <FooterLink href="/inspirations">Inspirations</FooterLink>
             </nav>
+            <div className="mt-5 overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf]">
+              <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-28 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+            </div>
           </section>
 
           <section className="min-w-0 bg-[#f4f1e9] px-6 py-7 sm:px-8 sm:py-8">
