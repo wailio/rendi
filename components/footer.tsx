@@ -6,6 +6,7 @@ import { useState } from "react"
 import type React from "react"
 
 const footerBackgroundImage = "/footer-chair-sketch.png"
+const atelierLampImage = "/atelier-maison-lamp.png"
 const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz"
 
 function NewArrivalsForm() {
@@ -26,8 +27,9 @@ function NewArrivalsForm() {
   }
 
   return (
-    <div className="flex h-full min-h-[292px] flex-col justify-between bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
-      <div>
+    <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
+      <img src={atelierLampImage} alt="Lampe de bureau articulée" className="pointer-events-none absolute bottom-[-1.5rem] right-[-1rem] z-0 w-[34%] max-w-36 object-contain opacity-90 sm:bottom-[-2rem] sm:right-0 sm:w-[30%]" />
+      <div className="relative z-10">
         <p className="font-serif text-[clamp(1.2rem,1.7vw,1.7rem)] leading-tight tracking-[-0.03em]">Nouveautés | Arrivages</p>
         <p className="mt-1 max-w-[15rem] text-[11px] leading-4 text-[#d1d2cd]">
           Soyez les premiers à découvrir nos nouvelles pièces et collections.
@@ -73,10 +75,9 @@ export default function Footer() {
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:grid-cols-4">
           <section className="relative flex min-h-[280px] min-w-0 flex-col justify-end overflow-hidden bg-[#f4f1e9] p-6 sm:p-8">
             <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
-            <div className="absolute inset-0 bg-[#f4f1e9]/30" />
-            <div className="relative z-10 max-w-[14rem] rounded-sm bg-[#f4f1e9]/80 p-3 backdrop-blur-[1px]">
-              <p className="font-serif text-xl tracking-[-0.03em]">Mobenia Furniture</p>
-              <p className="mt-2 text-xs leading-5 text-[#5c5d5a]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
+            <div className="relative z-10 max-w-[15rem] text-[#272b2d] drop-shadow-[0_1px_1px_rgba(244,241,233,0.7)]">
+              <p className="font-serif text-2xl tracking-[-0.04em]">Atelier Maison</p>
+              <p className="mt-2 max-w-[13rem] text-xs leading-5 text-[#454844]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
             </div>
           </section>
 
