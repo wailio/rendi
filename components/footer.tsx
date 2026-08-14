@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Mail, Music2, Check, ArrowUpRight } from "lucide-react"
 import { useState } from "react"
+import { usePathname } from "next/navigation"
 import type React from "react"
 
 const footerBackgroundImage = "/footer-chair-sketch.png"
@@ -28,7 +29,7 @@ function NewArrivalsForm() {
 
   return (
     <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
-      <img src={atelierLampImage} alt="Lampe de bureau articulée" className="pointer-events-none absolute bottom-12 left-1/2 z-0 w-28 -translate-x-1/2 object-contain opacity-90 sm:bottom-14 sm:w-32" />
+      <img src={atelierLampImage} alt="Lampe de bureau articulée" className="pointer-events-none absolute left-1/2 top-[4.75rem] z-0 w-24 -translate-x-1/2 object-contain opacity-90 sm:top-[5rem] sm:w-28" />
       <div className="relative z-10">
         <p className="font-serif text-[clamp(1.2rem,1.7vw,1.7rem)] leading-tight tracking-[-0.03em]">Nouveautés | Arrivages</p>
         <p className="mt-1 max-w-[15rem] text-[11px] leading-4 text-[#d1d2cd]">
@@ -68,7 +69,10 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
   return <Link href={href} className="group relative inline-flex w-fit items-center gap-1 text-xs leading-6 lg:text-[15px] lg:leading-7 text-[#272b2d] transition-colors hover:text-[#a98661] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#a98661] after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
 }
 
-export default function Footer() {
+export default function Footer({ hideMobileMap = false }: { hideMobileMap?: boolean }) {
+  const pathname = usePathname()
+  const shouldHideMobileMap = hideMobileMap && pathname === "/contact"
+
   return (
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
       <div className="w-full pb-3 pt-0 sm:pb-4">
@@ -103,6 +107,7 @@ export default function Footer() {
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
               <FooterLink href="/contact">Nous trouver</FooterLink>
+              <FooterLink href="mailto:mobenia23@gmail.com">mobenia23@gmail.com</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
@@ -116,11 +121,11 @@ export default function Footer() {
           </section>
         </div>
 
-        <div className="order-2 overflow-hidden border-y border-[#c7c3b9] bg-[#ddd9cf] lg:hidden">
+        <div className={`order-2 overflow-hidden border-y border-[#c7c3b9] bg-[#ddd9cf] lg:hidden ${shouldHideMobileMap ? "hidden" : "block"}`}>
           <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
 
-        <div className="mt-0 flex flex-col gap-3 border-t border-[#bdb8ad] pt-4 text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-0 flex flex-col items-center justify-center gap-3 border-t border-[#bdb8ad] pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>© 2026 Mobenia Furniture. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>

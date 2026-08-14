@@ -44,19 +44,19 @@ export default function Hero() {
           <div className="animate-luxury-reveal">
             <p className="mb-4 text-[10px] uppercase tracking-[0.38em] text-[#c9a24b] md:mb-6 md:text-xs md:tracking-[0.5em]">MOBENIA FURNITURE</p>
             <h1 className="mb-3 max-w-4xl text-balance leading-none md:mb-5">
-              <span className="block font-serif text-[clamp(2.2rem,5vw,3.125rem)] font-normal text-[#f5f2ea]">Meubles uniques pour</span>
-              <span className="relative mt-1 inline-block font-[family-name:var(--font-great-vibes)] text-[clamp(4.5rem,9vw,5.5rem)] font-normal leading-[0.9] text-[#c9a24b] md:mt-2">
+              <span className="block font-serif text-[clamp(1.45rem,5vw,3.125rem)] font-normal text-[#f5f2ea] md:text-[clamp(2.2rem,5vw,3.125rem)]">Meubles uniques pour</span>
+              <span className="relative mt-1 inline-block px-1 py-1 font-[family-name:var(--font-great-vibes)] text-[clamp(2.65rem,10vw,5.5rem)] font-normal leading-[0.9] text-[#c9a24b] [text-shadow:1px_0_0_#111,-1px_0_0_#111,0_1px_0_#111,0_-1px_0_#111] md:mt-2 md:px-2 md:py-2">
                 espaces modernes
                 <svg aria-hidden="true" viewBox="0 0 360 34" className="absolute -bottom-5 left-1/2 h-7 w-[115%] -translate-x-1/2 overflow-visible md:-bottom-7 md:h-8">
                   <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#c9a24b" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </span>
             </h1>
-            <p className="mb-6 max-w-2xl text-[10px] uppercase leading-5 tracking-[0.18em] text-white/70 md:mb-9 md:text-sm md:tracking-[0.28em]">
-              Découvrez des meubles magnifiquement conçus qui transforment votre espace
+            <p className="mb-4 max-w-[16rem] text-[8px] uppercase leading-4 tracking-[0.12em] text-white/70 md:mb-9 md:max-w-2xl md:text-sm md:tracking-[0.28em]">
+              Des meubles conçus pour transformer votre espace
             </p>
             <Link href="/contact" className="inline-block animate-luxury-button">
-              <Button className="rounded-full border border-[#c9a24b] bg-transparent px-5 py-2.5 text-xs font-medium text-[#c9a24b] shadow-none hover:bg-[#c9a24b]/10 hover:text-[#f5f2ea] md:px-8 md:py-5 md:text-sm">
+              <Button className="rounded-full border border-[#c9a24b] bg-[#06112a] px-4 py-2 text-[10px] font-medium text-[#f5f2ea] shadow-none transition-colors hover:bg-[#92734f] hover:text-[#fffaf1] focus-visible:bg-[#92734f] focus-visible:text-[#fffaf1] md:px-8 md:py-5 md:text-sm">
                 Nous Contacter
               </Button>
             </Link>
