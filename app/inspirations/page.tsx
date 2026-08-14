@@ -2,6 +2,7 @@ import LuxuryHeader from "@/components/luxury-header"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
+import { Gem, Lightbulb, Scaling, Shuffle } from "lucide-react"
 import { allProducts } from "@/lib/products"
 
 export default function InspirationsPage() {
@@ -96,38 +97,23 @@ export default function InspirationsPage() {
       {/* Inspiration Tips Section */}
       <section className="py-16 md:py-24 px-4 md:px-8 bg-gray-50">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 text-center mb-12">
+          <h2 className="text-lg md:text-3xl font-serif font-bold text-gray-900 text-center mb-6 md:mb-12">
             Design Tips & Ideas
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-lg font-serif font-bold text-gray-900 mb-3">Mix & Match Styles</h3>
-              <p className="text-gray-700 leading-relaxed font-light">
-                Don't be afraid to combine different design aesthetics. Mixing modern with vintage or bohemian with minimalist creates a unique, personalized space.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-lg font-serif font-bold text-gray-900 mb-3">Focus on Proportion</h3>
-              <p className="text-gray-700 leading-relaxed font-light">
-                Balance is key in interior design. Mix large statement pieces with smaller decorative items to create visual harmony in your space.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-lg font-serif font-bold text-gray-900 mb-3">Lighting Matters</h3>
-              <p className="text-gray-700 leading-relaxed font-light">
-                The right lighting can completely transform a space. Layer different light sources to create ambiance and highlight your favorite pieces.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-lg font-serif font-bold text-gray-900 mb-3">Quality Over Quantity</h3>
-              <p className="text-gray-700 leading-relaxed font-light">
-                Invest in fewer, high-quality pieces that will last. Timeless furniture is more valuable than trendy items that quickly become dated.
-              </p>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-8">
+            {[
+              [Shuffle, "Mix & Match", "Combine styles for a personal space."],
+              [Scaling, "Proportion", "Balance statement pieces with accents."],
+              [Lightbulb, "Lighting", "Layer light to set the mood."],
+              [Gem, "Quality", "Choose fewer pieces that last."],
+            ].map(([Icon, title, description]) => (
+              <div key={title} className="bg-white p-3 md:p-8 rounded-lg md:rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="mb-1 flex size-6 items-center justify-center rounded-full border border-[#a89163] text-[#8b7344] md:mb-3 md:size-10"><Icon className="size-3 md:size-5" aria-hidden="true" /></div>
+                <h3 className="text-[11px] md:text-lg font-serif font-bold text-gray-900 mb-1 md:mb-3">{title}</h3>
+                <p className="text-[10px] md:text-base text-gray-700 leading-tight md:leading-relaxed font-light">{description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

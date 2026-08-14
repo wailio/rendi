@@ -10,7 +10,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-48 pb-16 px-6 md:px-12 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f]">
+      <section className="pt-28 pb-8 px-4 md:pt-48 md:pb-16 md:px-12 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f]">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-xl md:text-4xl font-serif font-bold text-white mb-6">
             À Propos Mobenia Furniture
@@ -27,10 +27,10 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Mission</h2>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 font-light">
+              <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
                 Chez Mobenia Furniture, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
               </p>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light">
+              <p className="text-gray-300 text-xs md:text-lg leading-relaxed font-light">
                 Nous travaillons avec les meilleurs artisans et fournisseurs pour garantir que chaque pièce de notre collection répond à nos normes rigoureuses en matière de qualité, de conception et de durabilité.
               </p>
             </div>
@@ -51,26 +51,26 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 px-6 md:px-12 bg-[#2a2a2a]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-12 text-center">Nos Valeurs Fondamentales</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
             {/* Value 1 */}
-            <div className="p-8 bg-[#1f1f1f] rounded-lg border-l-4 border-[#0B5DA0] hover:shadow-lg transition-all duration-300 hover:border-[#1E90FF]">
-              <h3 className="text-xl font-semibold text-white mb-4">Excellence</h3>
+            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#8b7344] hover:shadow-lg transition-all duration-300 hover:border-[#d2b979]">
+              <h3 className="text-xs md:text-xl font-semibold text-white mb-1 md:mb-4">Excellence</h3>
               <p className="text-gray-300 leading-relaxed font-light">
                 Nous poursuivons l&apos;excellence dans chaque détail, de la conceptualisation du design à la livraison finale. La qualité n&apos;est jamais compromise.
               </p>
             </div>
 
             {/* Value 2 */}
-            <div className="p-8 bg-[#1f1f1f] rounded-lg border-l-4 border-[#0B5DA0] hover:shadow-lg transition-all duration-300 hover:border-[#1E90FF]">
-              <h3 className="text-xl font-semibold text-white mb-4">Authenticité</h3>
+            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#8b7344] hover:shadow-lg transition-all duration-300 hover:border-[#d2b979]">
+              <h3 className="text-xs md:text-xl font-semibold text-white mb-1 md:mb-4">Authenticité</h3>
               <p className="text-gray-300 leading-relaxed font-light">
                 Chaque pièce raconte une histoire. Nous croyons en un design authentique qui résiste à l&apos;épreuve du temps, sans tendances ni artifices.
               </p>
             </div>
 
             {/* Value 3 */}
-            <div className="p-8 bg-[#1f1f1f] rounded-lg border-l-4 border-[#0B5DA0] hover:shadow-lg transition-all duration-300 hover:border-[#1E90FF]">
-              <h3 className="text-xl font-semibold text-white mb-4">Service Client</h3>
+            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#8b7344] hover:shadow-lg transition-all duration-300 hover:border-[#d2b979]">
+              <h3 className="text-xs md:text-xl font-semibold text-white mb-1 md:mb-4">Service Client</h3>
               <p className="text-gray-300 leading-relaxed font-light">
                 Votre satisfaction est notre priorité. Nous offrons un soutien complet avant, pendant et après votre achat.
               </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 px-6 md:px-12 bg-[#1f1f1f]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-lg h-96 order-2 md:order-1 border-l-4 border-[#0B5DA0]">
+            <div className="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-lg h-96 order-2 md:order-1 border-l-4 border-[#8b7344]">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-YEUeqvNEaVRSsuLyvMGCwxIJjDlhDS.jpg"
                 alt="Our Story"
@@ -94,13 +94,13 @@ export default function AboutPage() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Histoire</h2>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 font-light">
+              <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
                 Fondée avec une vision de redéfinir le mobilier de luxe, Mobenia Furniture a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
               </p>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 font-light">
+              <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
                 Au fil des années, nous sommes devenus une destination de confiance pour le mobilier de luxe, reconnue pour notre engagement envers un design exceptionnel, un savoir-faire de qualité et un service client exceptionnel.
               </p>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light">
+              <p className="text-gray-300 text-xs md:text-lg leading-relaxed font-light">
                 Aujourd&apos;hui, nous continuons à évoluer, en recherchant constamment des innovations en matière de design tout en honorant les principes intemporels qui définissent la vie de luxe.
               </p>
             </div>
@@ -117,12 +117,12 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/all-products">
-              <Button className="bg-[#020817] hover:bg-[#00030A] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <Button className="bg-[#8b7344] hover:bg-[#6f5b35] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Explorer Collection
               </Button>
             </a>
             <a href="/contact">
-              <Button className="border-2 border-[#020817] text-white hover:bg-[#020817] hover:text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300">
+              <Button className="border-2 border-[#8b7344] text-white hover:bg-[#8b7344] hover:text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300">
                 Nous Contacter
               </Button>
             </a>

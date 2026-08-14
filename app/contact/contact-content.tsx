@@ -97,7 +97,7 @@ export default function ContactContent() {
           </form>
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-2xl border border-[#a89163]/30 md:mt-16"><ContactMap /></div>
+        <div className="mt-8 mb-16 overflow-hidden rounded-2xl border border-[#a89163]/30 md:mt-16 md:mb-0"><ContactMap /></div>
       </section>
     </main>
   )
