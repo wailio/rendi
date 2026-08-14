@@ -48,34 +48,38 @@ export default function ContactContent() {
 
   return (
     <main className="min-h-screen bg-[#1b1b1b] text-[#f6f1e9]">
-      <section className="relative flex min-h-[250px] items-center justify-center overflow-hidden pt-20 md:min-h-[330px] md:pt-28">
-        <img src="/contact-hero.jpg" alt="Salon Mobenia avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-35 blur-[2px]" />
-        <div className="absolute inset-0 bg-[#111111]/65" />
-        <h1 className="relative z-10 font-sans text-4xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
+      <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
+        <img src="/contact-inspiration.jpg" alt="Salon Mobenia avec fauteuil et table basse" className="absolute inset-0 h-full w-full object-cover object-center opacity-40 blur-[1px]" />
+        <div className="absolute inset-0 bg-[#111111]/70" />
+        <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-        <div className="mb-12 text-center">
-          <p className="font-serif text-5xl leading-none text-[#a89163]/35 md:text-7xl">Contact</p>
-          <h2 className="-mt-2 text-2xl font-bold tracking-tight text-white md:text-3xl">Informations de contact</h2>
+      <section className="mx-auto max-w-6xl px-4 py-6 md:px-8 md:py-20">
+        <div className="mb-6 text-center md:mb-12">
+          <p className="font-serif text-2xl leading-none text-[#a89163]/35 md:text-7xl">Contact</p>
+          <h2 className="-mt-1 text-base font-bold tracking-tight text-white md:text-3xl">Informations de contact</h2>
         </div>
 
-        <div className="grid border-y border-[#a89163]/20 md:grid-cols-4">
+        <div className="flex flex-wrap justify-center gap-3 border-y border-[#a89163]/20 py-4 md:grid md:grid-cols-4 md:gap-0 md:border-y">
           {contactDetails.map(({ icon: Icon, label, value }, index) => (
-            <div key={label} className={`px-5 py-8 text-center md:py-6 ${index < contactDetails.length - 1 ? "border-b border-[#a89163]/20 md:border-b-0 md:border-r" : ""}`}>
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-[#a89163] text-[#d2b979]"><Icon className="h-5 w-5" strokeWidth={1.4} /></div>
-              <p className="text-sm font-semibold text-white">{value}</p>
-              <p className="mt-2 text-xs leading-5 text-[#aaa59d]">{label} · Mobenia Furniture</p>
+            <div key={label} className="flex flex-col items-center md:border-r md:border-[#a89163]/20 md:px-5 md:py-8 md:py-6 md:text-center">
+              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#a89163] text-[#d2b979] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
+              <p className="text-xs font-semibold text-white md:text-sm">{value}</p>
+              <p className="mt-0.5 text-[10px] leading-3 text-[#aaa59d] md:mt-2 md:text-xs md:leading-5">{label}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-start md:gap-16">
-          <div className="pt-2">
-            <p className="font-serif text-5xl leading-none text-[#a89163]/35 md:text-6xl">Form</p>
-            <h2 className="-mt-1 text-3xl font-bold text-white">Parlons de votre projet</h2>
-            <p className="mt-5 max-w-sm text-sm leading-6 text-[#aaa59d]">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
-            <div className="mt-8 border-l border-[#a89163] pl-4 text-xs leading-5 text-[#d2b979]">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
+        <div className="mt-8 grid gap-4 md:mt-16 md:gap-10 md:grid-cols-[0.7fr_1.3fr] md:items-start md:gap-16">
+          <div className="hidden pt-2 md:block">
+            <p className="font-serif text-2xl leading-none text-[#a89163]/35 md:text-6xl">Form</p>
+            <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
+            <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
+            <div className="mt-6 border-l border-[#a89163] pl-3 text-xs leading-4 text-[#d2b979] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
+          </div>
+          <div className="md:hidden mb-2 text-center">
+            <p className="font-serif text-xl leading-none text-[#a89163]/35">Form</p>
+            <h2 className="-mt-0.5 text-sm font-bold text-white">Parlons de votre projet</h2>
           </div>
 
           <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4" id="contact-form">
@@ -93,7 +97,7 @@ export default function ContactContent() {
           </form>
         </div>
 
-        <div className="mt-16 overflow-hidden rounded-2xl border border-[#a89163]/30"><ContactMap /></div>
+        <div className="mt-8 overflow-hidden rounded-2xl border border-[#a89163]/30 md:mt-16"><ContactMap /></div>
       </section>
     </main>
   )

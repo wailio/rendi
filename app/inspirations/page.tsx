@@ -45,11 +45,11 @@ export default function InspirationsPage() {
       {/* Hero Section */}
       <div className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-4 leading-tight">
-            Get <span className="text-[#0B5DA0]">Inspired</span> by Design
+          <h1 className="text-base md:text-4xl font-serif font-bold text-gray-900 mb-3 leading-tight md:mb-4">
+            Get <span className="text-[#a89163]">Inspired</span> by Design
           </h1>
-          <p className="text-xs md:text-lg text-gray-700 max-w-2xl mx-auto font-light">
-            Explore design styles and interior trends that will transform your living spaces into expressions of your personal style.
+          <p className="text-xs md:text-lg text-gray-600 max-w-2xl mx-auto font-light">
+            Explore design styles and interior trends that will transform your living spaces.
           </p>
         </div>
       </div>
@@ -57,13 +57,13 @@ export default function InspirationsPage() {
       {/* Inspirations Grid */}
       <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
             {inspirations.map((item, idx) => (
               <div
                 key={item.id}
-                className="inspiration-card group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                className="inspiration-card group rounded-lg md:rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer"
               >
-                <div className="relative h-44 md:h-80 overflow-hidden bg-gray-300">
+                <div className="relative h-28 md:h-80 overflow-hidden bg-gray-300">
                   <img
                     src={item.images[0]}
                     alt={item.name}
@@ -72,17 +72,17 @@ export default function InspirationsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 </div>
 
-                <div className="p-3 md:p-6 bg-white">
-                  <h3 className="text-xl font-serif font-bold text-gray-900 mb-2">
+                <div className="p-2 md:p-6 bg-white">
+                  <h3 className="text-xs md:text-xl font-serif font-bold text-gray-900 mb-1 md:mb-2 line-clamp-2">
                     {item.name}
                   </h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed font-light">
+                  <p className="text-gray-600 mb-2 md:mb-4 text-[10px] md:text-sm leading-relaxed font-light line-clamp-1 md:line-clamp-2">
                     {item.description}
                   </p>
-                  <div className="text-sm font-semibold text-[#0B5DA0] mb-4">{item.price}</div>
+                  <div className="text-xs md:text-sm font-semibold text-[#a89163] mb-2 md:mb-4">{item.price}</div>
 
                   <Link href={`/product/${item.id}`}>
-                    <button className="w-full border border-[#0B5DA0] text-[#0B5DA0] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#0B5DA0] hover:text-white transition-all duration-300">
+                    <button className="w-full border border-[#a89163] text-[#a89163] px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold text-[10px] md:text-sm hover:bg-[#a89163] hover:text-white transition-all duration-300">
                       Explore Style
                     </button>
                   </Link>
@@ -141,15 +141,15 @@ export default function InspirationsPage() {
           <p className="text-lg md:text-xl text-gray-300 mb-8 font-light">
             Find the perfect pieces from our collection or consult with our design experts.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/all-products">
-              <button className="bg-[#0B5DA0] hover:bg-[#061632] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <button className="bg-[#a89163] hover:bg-[#8b7344] text-white px-6 md:px-8 py-2 md:py-3 font-semibold text-sm md:text-base rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Browse Collection
               </button>
             </Link>
             <Link href="/contact">
-              <button className="border-2 border-white text-white px-8 py-3 font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Consultation
+              <button className="border-2 border-[#a89163] text-[#a89163] px-6 md:px-8 py-2 md:py-3 font-semibold text-sm md:text-base rounded-lg hover:bg-[#a89163] hover:text-white transition-all duration-300">
+                Contact Us
               </button>
             </Link>
           </div>
