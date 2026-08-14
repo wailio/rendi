@@ -62,13 +62,13 @@ export default function LuxuryHeader() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 text-xs">
           {/* Left Side - Social Icons */}
           <div className="flex items-center gap-3">
-            <Link href="https://facebook.com/p/Rais-meuble-100063890029935" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://facebook.com/MOBENIA23" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
               <Facebook className="w-4 h-4" />
             </Link>
-            <Link href="https://instagram.com/raismeuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://instagram.com/mobenia_furniture" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
               <Instagram className="w-4 h-4" />
             </Link>
-            <Link href="https://tiktok.com/@rais.meuble" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://tiktok.com/@mobenia.furniture23" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
               <Music2 className="w-4 h-4" />
             </Link>
           </div>
@@ -99,8 +99,8 @@ export default function LuxuryHeader() {
           {/* Logo - Simple and clean */}
           <Link href="/" className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <Image 
-              src="/logo-rais-meuble.png" 
-              alt="Rais Meuble" 
+              src="/logo-mobenia-furniture.png" 
+              alt="Mobenia Furniture" 
               width={140} 
               height={60}
               className="h-12 w-auto"

@@ -5,14 +5,14 @@ import { Star } from 'lucide-react'
 
 const reviews = [
   {
-    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Rais Meuble. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
+    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Mobenia Furniture. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
     author: "Amira Kebab",
     role: "Client Vérifiée",
     rating: 5,
     years: "il y a 2 mois"
   },
   {
-    text: "Transformé mon salon complètement ! Les meubles de Rais Meuble ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
+    text: "Transformé mon salon complètement ! Les meubles de Mobenia Furniture ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
     author: "Karim Bouhadj",
     role: "Client Vérifiée",
     rating: 5,
@@ -26,21 +26,21 @@ const reviews = [
     years: "il y a 3 semaines"
   },
   {
-    text: "Réception à la hauteur ! L'équipe de Rais Meuble a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
+    text: "Réception à la hauteur ! L'équipe de Mobenia Furniture a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
     author: "Hassan Medjahed",
     role: "Client Vérifiée",
     rating: 5,
     years: "il y a 1 mois"
   },
   {
-    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Rais Meuble, c'est mon choix désormais !",
+    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Mobenia Furniture, c'est mon choix désormais !",
     author: "Yasmine Lahlou",
     role: "Client Vérifiée",
     rating: 5,
     years: "il y a 2 semaines"
   },
   {
-    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Rais Meuble à tous mes amis.",
+    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Mobenia Furniture à tous mes amis.",
     author: "Omar Belhadj",
     role: "Client Vérifiée",
     rating: 5,

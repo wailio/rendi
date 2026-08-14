@@ -106,7 +106,7 @@ export default function ContactContent() {
               </div>
               <h3 className="text-[8px] md:text-xl font-semibold text-white text-left">Numero De Téléphone</h3>
             </div>
-            <p className="text-[7px] md:text-base text-gray-300 text-left"><span className="md:hidden">0554 37 84 95</span><span className="hidden md:inline">0554 37 84 95</span></p>
+            <p className="text-[7px] md:text-base text-gray-300 text-left"><span className="md:hidden">+213 656 373 378</span><span className="hidden md:inline">+213 656 373 378</span></p>
           </div>
 
           <div
@@ -166,7 +166,7 @@ export default function ContactContent() {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="+1 (555) 000"
+                    placeholder="+213 656 373 378"
                     value={formData.phone}
                     onChange={handleChange}
                     required
@@ -333,8 +333,6 @@ export default function ContactContent() {
           </Button>
         </div>
       </section>
-
-      <section className="h-24 md:h-32 bg-white"></section>
     </section>
   )
 }

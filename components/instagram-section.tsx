@@ -23,12 +23,12 @@ export default function InstagramSection() {
             NOUS SUIVRE SUR INSTAGRAM{' '}
             <span className="italic">
               <Link 
-                href="https://www.instagram.com/raismeuble/" 
+                href="https://www.instagram.com/mobenia_furniture/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity text-[#9AAAC1]"
               >
-                @raismeuble
+                @mobenia_furniture
               </Link>
             </span>
           </h2>
@@ -36,13 +36,13 @@ export default function InstagramSection() {
 
         {/* Elfsight Instagram Feed */}
         <div className="flex justify-center mb-8">
-          <div className="elfsight-app-251f5212-7a9a-4935-8bf9-44c9eb7f82c5" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-8279c824-14e6-42db-965a-1da4672515d1" data-elfsight-app-lazy></div>
         </div>
 
         {/* Call to Action */}
         <div className="text-center">
           <Link
-            href="https://www.instagram.com/raismeuble/"
+            href="https://www.instagram.com/mobenia_furniture/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border-2 border-[#9AAAC1] text-white px-8 py-3 font-serif uppercase text-sm tracking-widest hover:bg-[#9AAAC1] hover:text-white transition-all duration-300"

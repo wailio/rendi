@@ -29,8 +29,8 @@ export default function HomepageLuxuryHeader() {
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <Image 
-              src="/logo-rendi.png" 
-              alt="Rais Meuble" 
+src="/logo-mobenia-furniture.png" 
+                alt="Mobenia Furniture"
               width={400} 
               height={120}
               className="h-24 w-auto"

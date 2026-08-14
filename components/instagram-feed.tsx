@@ -22,7 +22,7 @@ export default function InstagramFeed() {
             Suivez-nous sur Instagram
           </h2>
           <p className="text-gray-400 text-lg">
-            @raismeuble
+            @mobenia_furniture
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function InstagramFeed() {
             }}
           >
             <div 
-              className="elfsight-app-251f5212-7a9a-4935-8bf9-44c9eb7f82c5"
+              className="elfsight-app-8279c824-14e6-42db-965a-1da4672515d1"
               data-elfsight-app-lazy
             />
           </div>

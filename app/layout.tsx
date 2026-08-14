@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Rais Meuble | Meubles Luxe",
+  title: "Mobenia Furniture | Meubles Luxe",
   description: "Découvrez notre collection exclusive de meubles de luxe pour transformer votre espace",
   generator: "v0.app",
   viewport: {

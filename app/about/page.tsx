@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="pt-48 pb-16 px-6 md:px-12 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f]">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-xl md:text-4xl font-serif font-bold text-white mb-6">
-            À Propos Rais Meuble
+            À Propos Mobenia Furniture
           </h1>
           <p className="text-xs md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
             Nous nous consacrons à apporter le luxe et l&apos;élégance à votre maison grâce à des collections de mobilier minutieusement sélectionnées qui allient design intemporel et confort moderne.
@@ -28,7 +28,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Mission</h2>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 font-light">
-                Chez Rais Meuble, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
+                Chez Mobenia Furniture, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
               </p>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed font-light">
                 Nous travaillons avec les meilleurs artisans et fournisseurs pour garantir que chaque pièce de notre collection répond à nos normes rigoureuses en matière de qualité, de conception et de durabilité.
@@ -95,7 +95,7 @@ export default function AboutPage() {
             <div className="order-1 md:order-2">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Histoire</h2>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 font-light">
-                Fondée avec une vision de redéfinir le mobilier de luxe, Rais Meuble a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
+                Fondée avec une vision de redéfinir le mobilier de luxe, Mobenia Furniture a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
               </p>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-4 font-light">
                 Au fil des années, nous sommes devenus une destination de confiance pour le mobilier de luxe, reconnue pour notre engagement envers un design exceptionnel, un savoir-faire de qualité et un service client exceptionnel.

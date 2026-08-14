@@ -76,7 +76,7 @@ export default function Footer() {
           <section className="relative flex min-h-[300px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
             <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
             <div className="relative z-10 mt-auto text-center">
-              <h2 className="font-serif text-[2rem] tracking-[-0.05em] sm:text-[2.35rem]">Rais Meuble</h2>
+              <h2 className="font-serif text-[2rem] tracking-[-0.05em] sm:text-[2.35rem]">Mobenia Furniture</h2>
               <p className="mt-1 text-[11px] font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
               <p className="mt-0.5 text-[11px]">Est. 2018</p>
             </div>
@@ -97,7 +97,7 @@ export default function Footer() {
               </nav>
             </div>
             <div>
-              <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Rais Meuble</h3>
+              <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Mobenia Furniture</h3>
               <nav className="flex flex-col">
                 <FooterLink href="/about">Notre histoire</FooterLink>
                 <FooterLink href="/contact">Nous trouver</FooterLink>
@@ -109,20 +109,20 @@ export default function Footer() {
             </div>
             <div className="border-t border-[#d4d0c6] pt-7 sm:col-span-2 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
               <div className="mb-5 flex gap-4 text-[#a98661]">
-                <Link href="https://facebook.com/p/Rais-meuble-100063890029935" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-1"><Facebook className="h-6 w-6" /></Link>
-                <Link href="https://instagram.com/raismeuble" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-1"><Instagram className="h-6 w-6" /></Link>
-                <Link href="https://tiktok.com/@rais.meuble" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-transform hover:-translate-y-1"><Music2 className="h-6 w-6" /></Link>
+                <Link href="https://facebook.com/MOBENIA23" target="_blank" rel="noreferrer" aria-label="Facebook" className="transition-transform hover:-translate-y-1"><Facebook className="h-6 w-6" /></Link>
+                <Link href="https://instagram.com/mobenia_furniture" target="_blank" rel="noreferrer" aria-label="Instagram" className="transition-transform hover:-translate-y-1"><Instagram className="h-6 w-6" /></Link>
+                <Link href="https://tiktok.com/@mobenia.furniture23" target="_blank" rel="noreferrer" aria-label="TikTok" className="transition-transform hover:-translate-y-1"><Music2 className="h-6 w-6" /></Link>
               </div>
               <div className="overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf]">
-                <iframe title="Rais Meuble sur Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5406841856447!2d3.0806420758341875!3d36.70957387227306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786659470996!5m2!1sfr!2sdz" className="h-44 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
+                <iframe title="Mobenia Furniture sur Google Maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz" className="h-44 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
               </div>
-              <p className="mt-4 text-center text-sm leading-6">Rais Meuble<br />Aïn Naâdja, Alger</p>
+              <p className="mt-4 text-center text-sm leading-6">Mobenia Furniture<br />Aïn Naâdja, Alger</p>
             </div>
           </section>
         </div>
 
         <div className="mt-0 flex flex-col gap-3 border-t border-[#bdb8ad] pt-4 text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Rais Meuble. Tous droits réservés.</p>
+          <p>© 2026 Mobenia Furniture. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
       </div>

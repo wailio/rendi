@@ -5,7 +5,7 @@ import Footer from "@/components/footer"
 import AllProductsClientContent from "./client-content"
 
 export const metadata = {
-  title: "Tous les Produits | Rais Meuble",
+  title: "Tous les Produits | Mobenia Furniture",
   description: "Découvrez notre collection complète de meubles de luxe",
 }
 

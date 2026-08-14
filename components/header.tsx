@@ -37,8 +37,8 @@ export default function Header() {
       >
         <Link href="/" className="flex items-center">
           <Image 
-            src="/logo-rais-meuble.png" 
-            alt="Rais Meuble" 
+            src="/logo-mobenia-furniture.png" 
+            alt="Mobenia Furniture" 
             width={120} 
             height={50}
             className="h-10 w-auto"
