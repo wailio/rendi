@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 
 export default function WhyChooseUs() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -130,7 +131,8 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Card 4: Qualité Supérieure */}
-          <div
+          <Link
+            href="/inspirations"
             className="md:col-span-2 rounded-3xl overflow-hidden h-80 flex items-end bg-cover bg-center relative animate-fade-in-up hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-600"
             style={{
               backgroundImage:
@@ -146,7 +148,7 @@ export default function WhyChooseUs() {
                 de contrôle qualité.
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Card 5: Mobilier Personnalisé */}
           <div

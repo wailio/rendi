@@ -36,7 +36,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-lg h-96">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-Ik6kS6vRPmOFU4gcSF7z0UhAZDGShz.jpg"
+                src="/about-mission.jpg"
                 alt="Our Mission"
                 width={500}
                 height={400}
@@ -85,7 +85,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-lg h-96 order-2 md:order-1 border-l-4 border-[#8b7344]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-YEUeqvNEaVRSsuLyvMGCwxIJjDlhDS.jpg"
+                src="/about-history.jpg"
                 alt="Our Story"
                 width={500}
                 height={400}
