@@ -42,14 +42,21 @@ export default function Hero() {
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-6 text-center">
           <div className="animate-luxury-reveal">
-            <h1 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold text-white mb-2 md:mb-4 max-w-3xl leading-tight">
-              Meubles Uniques pour Espaces Modernes
+            <p className="mb-4 text-[10px] uppercase tracking-[0.38em] text-[#c9a24b] md:mb-6 md:text-xs md:tracking-[0.5em]">MOBENIA FURNITURE</p>
+            <h1 className="mb-3 max-w-4xl text-balance leading-none md:mb-5">
+              <span className="block font-serif text-[clamp(2.2rem,5vw,3.125rem)] font-normal text-[#f5f2ea]">Meubles uniques pour</span>
+              <span className="relative mt-1 inline-block font-[family-name:var(--font-great-vibes)] text-[clamp(4.5rem,9vw,5.5rem)] font-normal leading-[0.9] text-[#c9a24b] md:mt-2">
+                espaces modernes
+                <svg aria-hidden="true" viewBox="0 0 360 34" className="absolute -bottom-5 left-1/2 h-7 w-[115%] -translate-x-1/2 overflow-visible md:-bottom-7 md:h-8">
+                  <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#c9a24b" strokeWidth="2" strokeLinecap="round" />
+                </svg>
+              </span>
             </h1>
-            <p className="text-xs md:text-lg lg:text-xl text-white/90 mb-3 md:mb-8 max-w-2xl">
+            <p className="mb-6 max-w-2xl text-[10px] uppercase leading-5 tracking-[0.18em] text-white/70 md:mb-9 md:text-sm md:tracking-[0.28em]">
               Découvrez des meubles magnifiquement conçus qui transforment votre espace
             </p>
             <Link href="/contact" className="inline-block animate-luxury-button">
-              <Button className="bg-[#071225] hover:bg-[#020817] text-white rounded-full px-3 md:px-8 py-1 md:py-6 text-xs md:text-base font-medium shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+              <Button className="rounded-full border border-[#c9a24b] bg-transparent px-5 py-2.5 text-xs font-medium text-[#c9a24b] shadow-none hover:bg-[#c9a24b]/10 hover:text-[#f5f2ea] md:px-8 md:py-5 md:text-sm">
                 Nous Contacter
               </Button>
             </Link>
