@@ -107,6 +107,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
               <FooterLink href="/contact">Nous trouver</FooterLink>
+              <FooterLink href="mailto:mobenia23@gmail.com">mobenia23@gmail.com</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
