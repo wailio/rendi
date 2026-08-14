@@ -73,14 +73,12 @@ export default function Footer() {
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
       <div className="w-full pb-3 pt-0 sm:pb-4">
         <div className="grid w-full items-stretch overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
-          <section className="flex min-h-[292px] flex-col overflow-hidden border border-[#d4d0c6] lg:min-h-[310px] lg:border-r-0">
-            <div className="relative flex min-h-0 flex-1 items-center justify-center px-4 pt-3 sm:px-6">
-              <img src={chairImage} alt="Illustration d'un fauteuil classique" className="h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
-            </div>
-            <div className="border-t border-[#d4d0c6] px-4 py-3 text-center sm:px-6">
-              <h2 className="font-serif text-[1.55rem] leading-none tracking-[-0.05em] sm:text-[1.8rem]">Mobenia Furniture</h2>
-              <p className="mt-1 text-[10px] font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
-              <p className="mt-0.5 text-[10px]">Est. 2018</p>
+          <section className="relative flex min-h-[292px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
+            <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
+            <div className="relative z-10 mt-auto text-center">
+              <h2 className="font-serif text-[2rem] tracking-[-0.05em] sm:text-[2.35rem]">Mobenia Furniture</h2>
+              <p className="mt-1 text-[11px] font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
+              <p className="mt-0.5 text-[11px]">Est. 2018</p>
             </div>
           </section>
 
