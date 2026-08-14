@@ -14,7 +14,7 @@ export default function ContactPage() {
       <Suspense fallback={<div className="py-24">Loading...</div>}>
         <ContactContent />
       </Suspense>
-      <Footer />
+      <Footer hideMobileMap />
     </main>
   )
 }

@@ -57,7 +57,7 @@ export default function PromotionalBanners() {
               <p className="text-lg md:text-xl text-amber-100 font-light italic mb-6">
                 Jusqu&apos;à -30%
               </p>
-              <Link href="/all-products?category=chairs">
+              <Link href="/all-products?category=chambres">
                 <button className="bg-white text-amber-900 px-6 md:px-8 py-2 md:py-3 font-serif font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-gray-100 transition-all duration-300">
                   ACHETER MAINTENANT
                 </button>
