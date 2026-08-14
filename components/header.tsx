@@ -36,13 +36,15 @@ export default function Header() {
         className={`max-w-6xl w-full px-3 py-2 flex items-center justify-between rounded-md transition-all duration-300 ${navClasses}`}
       >
         <Link href="/" className="site-logo flex items-center">
-          <Image 
-            src="/logo-mobenia-furniture.png" 
-            alt="Mobenia Furniture" 
-            width={120} 
-            height={50}
-            className="h-10 w-auto"
-          />
+          <span className="group inline-block cursor-pointer">
+            <Image
+              src="/logo-mobenia-furniture.png"
+              alt="Mobenia Furniture"
+              width={120}
+              height={50}
+              className="h-10 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
+            />
+          </span>
         </Link>
 
         <div className="flex items-center gap-2">

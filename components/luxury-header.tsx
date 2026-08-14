@@ -98,13 +98,15 @@ export default function LuxuryHeader() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo - Simple and clean */}
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
-            <Image 
-              src="/logo-mobenia-furniture.png" 
-              alt="Mobenia Furniture" 
-              width={140} 
-              height={60}
-              className="h-12 w-auto"
-            />
+            <span className="group inline-block cursor-pointer">
+              <Image
+                src="/logo-mobenia-furniture.png"
+                alt="Mobenia Furniture"
+                width={140}
+                height={60}
+                className="h-12 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
+              />
+            </span>
           </Link>
 
           {/* Center Menu - Compact */}

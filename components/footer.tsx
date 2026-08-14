@@ -5,8 +5,7 @@ import { Facebook, Instagram, Mail, Music2, Check, ArrowUpRight } from "lucide-r
 import { useState } from "react"
 import type React from "react"
 
-const chairImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2013%20ao%C3%BBt%202026%2C%2022_56_04-68bCwk2UOD9WzaDzfZVJCAdMQf6zdk.png"
-const lampImage = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2013%20ao%C3%BBt%202026%2C%2023_00_01-9Jx8Mg07F8yutI4yA4eo05Jh4QCT1R.png"
+const footerReferenceImage = "/footer-mobenia-reference.png"
 
 function NewArrivalsForm() {
   const [email, setEmail] = useState("")
@@ -34,9 +33,7 @@ function NewArrivalsForm() {
         </p>
       </div>
 
-      <div className="flex min-h-0 flex-1 items-center justify-center py-1">
-        <img src={lampImage} alt="Lampe de bureau illustrée" className="h-28 w-auto max-w-[88%] object-contain sm:h-32" />
-      </div>
+      <div className="min-h-0 flex-1" aria-hidden="true" />
 
       <form onSubmit={handleSubmit} noValidate>
         <label htmlFor="new-arrivals-email" className="sr-only">Votre adresse email</label>
@@ -73,18 +70,12 @@ export default function Footer() {
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
       <div className="w-full pb-3 pt-0 sm:pb-4">
         <div className="grid w-full items-stretch overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
-          <section className="relative flex min-h-[292px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
-            <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
-            <div className="relative z-10 mt-auto text-center">
-              <h2 className="font-serif text-[2rem] tracking-[-0.05em] sm:text-[2.35rem]">Mobenia Furniture</h2>
-              <p className="mt-1 text-[11px] font-medium tracking-wide">L&apos;art de meubler vos histoires.</p>
-              <p className="mt-0.5 text-[11px]">Est. 2018</p>
+          <section className="relative min-h-[292px] overflow-hidden border border-[#d4d0c6] sm:min-h-[310px] lg:col-span-2 lg:border-r-0">
+            <img src={footerReferenceImage} alt="Illustration Mobenia Furniture avec fauteuil et lampe" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-y-0 right-0 w-full sm:w-[48%]">
+              <NewArrivalsForm />
             </div>
           </section>
-
-          <div className="min-h-[292px] border-y border-r border-[#d4d0c6]">
-            <NewArrivalsForm />
-          </div>
 
           <section className="grid gap-6 border-b border-r border-[#d4d0c6] px-6 py-7 sm:grid-cols-2 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-5 lg:px-7 lg:py-8">
             <div>
