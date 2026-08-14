@@ -6,6 +6,7 @@ import { useState } from "react"
 import type React from "react"
 
 const footerBackgroundImage = "/footer-chair-sketch.png"
+const atelierLampImage = "/atelier-maison-lamp.png"
 const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3198.5406841850314!2d3.0806421!3d36.7095739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fadc55ffe5c27%3A0xf351e61467294090!2sMOBENIA%20FURNITURE!5e0!3m2!1sfr!2sdz!4v1786702142590!5m2!1sfr!2sdz"
 
 function NewArrivalsForm() {
@@ -26,8 +27,9 @@ function NewArrivalsForm() {
   }
 
   return (
-    <div className="flex h-full min-h-[292px] flex-col justify-between bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
-      <div>
+    <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
+      <img src={atelierLampImage} alt="Lampe de bureau articulée" className="pointer-events-none absolute bottom-12 left-1/2 z-0 w-28 -translate-x-1/2 object-contain opacity-90 sm:bottom-14 sm:w-32" />
+      <div className="relative z-10">
         <p className="font-serif text-[clamp(1.2rem,1.7vw,1.7rem)] leading-tight tracking-[-0.03em]">Nouveautés | Arrivages</p>
         <p className="mt-1 max-w-[15rem] text-[11px] leading-4 text-[#d1d2cd]">
           Soyez les premiers à découvrir nos nouvelles pièces et collections.
@@ -63,7 +65,7 @@ function NewArrivalsForm() {
 }
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return <Link href={href} className="group relative inline-flex w-fit items-center gap-1 text-[15px] leading-7 text-[#272b2d] transition-colors hover:text-[#a98661] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#a98661] after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
+  return <Link href={href} className="group relative inline-flex w-fit items-center gap-1 text-xs leading-6 lg:text-[15px] lg:leading-7 text-[#272b2d] transition-colors hover:text-[#a98661] after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-[#a98661] after:transition-[width] after:duration-300 after:content-[''] hover:after:w-full">{children}<ArrowUpRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" /></Link>
 }
 
 export default function Footer() {
@@ -71,28 +73,27 @@ export default function Footer() {
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
       <div className="w-full pb-3 pt-0 sm:pb-4">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:grid-cols-4">
-          <section className="relative flex min-h-[280px] min-w-0 flex-col justify-end overflow-hidden bg-[#f4f1e9] p-6 sm:p-8">
+          <section className="relative hidden min-h-[280px] min-w-0 flex-col justify-end overflow-hidden bg-[#f4f1e9] p-6 sm:p-8 lg:flex">
             <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
-            <div className="absolute inset-0 bg-[#f4f1e9]/30" />
-            <div className="relative z-10 max-w-[14rem] rounded-sm bg-[#f4f1e9]/80 p-3 backdrop-blur-[1px]">
-              <p className="font-serif text-xl tracking-[-0.03em]">Mobenia Furniture</p>
-              <p className="mt-2 text-xs leading-5 text-[#5c5d5a]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
+            <div className="relative z-10 mx-auto max-w-[18rem] text-center text-[#272b2d] drop-shadow-[0_1px_1px_rgba(244,241,233,0.7)]">
+              <p className="font-serif text-2xl tracking-[-0.04em]">Atelier Maison</p>
+              <p className="mt-2 max-w-[13rem] text-xs leading-5 text-[#454844]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
             </div>
           </section>
 
-          <section className="min-w-0 bg-[#26313b]">
+          <section className="hidden min-w-0 bg-[#26313b] lg:block">
             <NewArrivalsForm />
           </section>
 
-          <section className="min-w-0 bg-[#f4f1e9] px-6 py-7 sm:px-8 sm:py-8">
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Explorer</h3>
+          <section className="order-1 min-w-0 bg-[#f4f1e9] px-4 py-5 sm:px-8 sm:py-8 lg:order-none">
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.12em]">Explorer</h3>
             <nav className="flex flex-col">
               <FooterLink href="/all-products">Tous les produits</FooterLink>
               <FooterLink href="/offers">Offres & promotions</FooterLink>
               <FooterLink href="/rooms">Collections</FooterLink>
               <FooterLink href="/inspirations">Inspirations</FooterLink>
             </nav>
-            <div className="mt-5 overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf]">
+            <div className="mt-5 hidden overflow-hidden border border-[#c7c3b9] bg-[#ddd9cf] lg:block">
               <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-28 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
             </div>
           </section>
@@ -113,6 +114,10 @@ export default function Footer() {
               <Link href="https://tiktok.com/@mobenia.furniture23" target="_blank" rel="noreferrer" aria-label="TikTok"><Music2 className="h-5 w-5" /></Link>
             </div>
           </section>
+        </div>
+
+        <div className="order-2 overflow-hidden border-y border-[#c7c3b9] bg-[#ddd9cf] lg:hidden">
+          <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
 
         <div className="mt-0 flex flex-col gap-3 border-t border-[#bdb8ad] pt-4 text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between">
