@@ -35,7 +35,7 @@ export default function Header() {
       <nav
         className={`max-w-6xl w-full px-3 py-2 flex items-center justify-between rounded-md transition-all duration-300 ${navClasses}`}
       >
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="site-logo flex items-center">
           <Image 
             src="/logo-mobenia-furniture.png" 
             alt="Mobenia Furniture" 

@@ -97,7 +97,7 @@ export default function LuxuryHeader() {
       <div className={`w-full py-2.5 px-6 ${headerBgClass}`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo - Simple and clean */}
-          <Link href="/" className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
+          <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <Image 
               src="/logo-mobenia-furniture.png" 
               alt="Mobenia Furniture" 

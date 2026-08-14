@@ -27,7 +27,7 @@ export default function HomepageLuxuryHeader() {
       <div className="w-full py-5 px-6 bg-transparent">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
+          <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <Image 
 src="/logo-mobenia-furniture.png" 
                 alt="Mobenia Furniture"
