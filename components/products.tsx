@@ -234,16 +234,16 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
               <p className="text-xs md:text-sm text-gray-600 font-medium mb-1">{product.name.split(' ')[0]}</p>
               
               {/* Product Title */}
-              <h3 className="text-xs md:text-base font-serif font-bold text-gray-900 mb-2 line-clamp-2 flex-1">
+              <h3 className="text-[11px] md:text-base font-serif font-bold text-gray-900 mb-1 md:mb-2 line-clamp-2 flex-1">
                 {product.name}
               </h3>
 
               {/* Product Description */}
-              <p className="text-xs md:text-sm text-gray-500 mb-2 line-clamp-1">{product.description}</p>
+              <p className="text-[10px] md:text-sm text-gray-500 mb-1 md:mb-2 line-clamp-1">{product.description}</p>
 
               {/* Pricing */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-sm md:text-lg font-bold text-[#020817]">{product.price}</span>
+                <span className="text-xs md:text-lg font-bold text-[#8b7344]">{product.price}</span>
                 {product.originalPrice && (
                   <span className="text-xs md:text-sm text-gray-400 line-through">{product.originalPrice}</span>
                 )}

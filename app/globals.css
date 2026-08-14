@@ -198,6 +198,34 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@layer components {
+  .contact-field {
+    width: 100%;
+    min-height: 3rem;
+    border: 1px solid oklch(0.68 0.08 80 / 0.65);
+    border-radius: 9999px;
+    background: transparent;
+    color: var(--foreground);
+    font-size: 0.875rem;
+    outline: none;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .contact-field::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  .contact-field:focus {
+    border-color: oklch(0.78 0.1 80);
+    background: oklch(0.68 0.08 80 / 0.06);
+  }
+
+  textarea.contact-field {
+    min-height: 7rem;
+    border-radius: 0.75rem;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -218,6 +246,45 @@
 }
 
 /* Smooth animations */
+@keyframes luxuryReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes luxuryButton {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-luxury-reveal {
+  animation: luxuryReveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-luxury-button {
+  animation: luxuryButton 750ms 350ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-luxury-reveal,
+  .animate-luxury-button {
+    animation: none;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

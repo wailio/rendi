@@ -4,48 +4,10 @@ import { useState, useRef } from 'react'
 import { Star } from 'lucide-react'
 
 const reviews = [
-  {
-    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Mobenia Furniture. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
-    author: "Amira Kebab",
-    role: "Client Vérifiée",
-    rating: 5,
-    years: "il y a 2 mois"
-  },
-  {
-    text: "Transformé mon salon complètement ! Les meubles de Mobenia Furniture ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
-    author: "Karim Bouhadj",
-    role: "Client Vérifiée",
-    rating: 5,
-    years: "il y a 1 mois"
-  },
-  {
-    text: "Très satisfaite de mes achats. Les meubles sont confortables et de bonne qualité. Les prix sont raisonnables comparé à la qualité offerte. Je reviendrai certainement pour d'autres achats.",
-    author: "Fatima Meziane",
-    role: "Client Vérifiée",
-    rating: 4,
-    years: "il y a 3 semaines"
-  },
-  {
-    text: "Réception à la hauteur ! L'équipe de Mobenia Furniture a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
-    author: "Hassan Medjahed",
-    role: "Client Vérifiée",
-    rating: 5,
-    years: "il y a 1 mois"
-  },
-  {
-    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Mobenia Furniture, c'est mon choix désormais !",
-    author: "Yasmine Lahlou",
-    role: "Client Vérifiée",
-    rating: 5,
-    years: "il y a 2 semaines"
-  },
-  {
-    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Mobenia Furniture à tous mes amis.",
-    author: "Omar Belhadj",
-    role: "Client Vérifiée",
-    rating: 5,
-    years: "il y a 3 jours"
-  },
+  { image: "/review-rahim.png", author: "Rahim Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "Soyez les bienvenus" },
+  { image: "/review-mehdi.png", author: "Mehdi", role: "", rating: 5, years: "il y a 3 mois", text: "" },
+  { image: "/review-zakaria.png", author: "ZAKARIA BENAMARA", role: "1 avis · 1 photo", rating: 2, years: "il y a 8 mois", text: "Bon produit" },
+  { image: "/review-illyes.png", author: "Illyes Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "" },
 ]
 
 export default function CustomerReviews() {
@@ -82,6 +44,7 @@ export default function CustomerReviews() {
                 key={i}
                 className="flex-shrink-0 w-80 flex flex-col items-start text-left p-6 rounded-lg bg-gray-50 border border-gray-200"
               >
+                <img src={review.image} alt={`Avis de ${review.author}`} className="mb-4 h-auto w-full rounded-md border border-gray-200 object-contain" />
                 <div className="flex gap-1 mb-3 justify-start">
                   {[...Array(review.rating)].map((_, j) => (
                     <Star key={j} className="w-5 h-5 fill-amber-400 text-amber-400" />
@@ -121,6 +84,7 @@ export default function CustomerReviews() {
         {/* Mobile - Carousel */}
         <div className="md:hidden">
           <div className="flex flex-col items-start text-left p-4 bg-gray-50 rounded-lg mb-6 border border-gray-200">
+            <img src={reviews[currentIndex].image} alt={`Avis de ${reviews[currentIndex].author}`} className="mb-4 h-auto w-full rounded-md border border-gray-200 object-contain" />
             <div className="flex gap-1 mb-3 justify-start">
               {[...Array(reviews[currentIndex].rating)].map((_, j) => (
                 <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />

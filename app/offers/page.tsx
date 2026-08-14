@@ -116,45 +116,45 @@ export default function OffersPage() {
             Promotions Actuelles
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
             {currentOffers.map((offer, idx) => (
               <div
                 key={idx}
-                className="offer-card bg-[#2a2a2a] border-2 border-[#0B5DA0] rounded-2xl overflow-hidden hover:border-[#1E90FF] transition-all duration-500 shadow-lg hover:shadow-2xl"
+                className="offer-card bg-[#2a2a2a] border border-[#a89163] rounded-xl md:rounded-2xl overflow-hidden hover:border-[#d2b979] transition-all duration-500 shadow-md hover:shadow-xl"
               >
                 {/* Discount Badge */}
-                <div className="discount-badge bg-[#0B5DA0] text-white px-6 py-4 text-center">
-                  <div className="text-3xl md:text-4xl font-bold font-serif">
+                <div className="discount-badge bg-[#8b7344] text-white px-2 py-2 md:px-6 md:py-4 text-center">
+                  <div className="text-lg md:text-4xl font-bold font-serif">
                     {offer.discount}
                   </div>
-                  <div className="text-sm font-semibold mt-1">RABAIS</div>
+                  <div className="text-[9px] md:text-sm font-semibold mt-0.5 md:mt-1">RABAIS</div>
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-serif font-bold text-white mb-2">
+                <div className="p-2 md:p-6">
+                  <h3 className="text-xs md:text-xl font-serif font-bold text-white mb-1 md:mb-2 line-clamp-2">
                     {offer.title}
                   </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed font-light">
+                  <p className="text-gray-300 mb-2 md:mb-4 text-[10px] md:text-sm leading-tight md:leading-relaxed font-light line-clamp-2">
                     {offer.description}
                   </p>
 
-                  <div className="bg-[#1f1f1f] rounded-lg p-4 mb-4">
-                    <div className="text-xs text-gray-400 mb-1">Valide Jusqu&apos;à</div>
-                    <div className="font-semibold text-gray-300">
+                  <div className="bg-[#1f1f1f] rounded-lg p-2 md:p-4 mb-2 md:mb-4">
+                    <div className="text-[9px] md:text-xs text-gray-400 mb-0.5 md:mb-1">Valide Jusqu&apos;à</div>
+                    <div className="text-[10px] md:text-sm font-semibold text-gray-300 truncate">
                       {offer.validUntil}
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-medium text-[#0B5DA0]">
+                  <div className="flex items-center justify-between mb-2 md:mb-4">
+                    <span className="text-[10px] md:text-sm font-medium text-[#d2b979]">
                       {offer.products} Produits
                     </span>
                   </div>
 
                   <Link href="/all-products">
-                    <button className="w-full bg-[#0B5DA0] hover:bg-[#061632] text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
-                      Acheter Maintenant
+                    <button className="w-full bg-[#a89163] hover:bg-[#8b7344] text-white px-2 md:px-4 py-1.5 md:py-3 rounded-lg font-semibold text-[10px] md:text-sm transition-all duration-300 hover:shadow-lg">
+                      Acheter
                     </button>
                   </Link>
                 </div>
@@ -171,29 +171,23 @@ export default function OffersPage() {
             Pourquoi Choisir Nos Promotions
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-[#1f1f1f] p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border-l-4 border-[#0B5DA0]">
-              <Award className="w-16 h-16 text-[#1E90FF] mx-auto mb-4" />
-              <h3 className="text-lg font-serif font-bold text-white mb-3">Économies Réelles</h3>
-              <p className="text-gray-300 font-light">
-                Des réductions réelles sur les meubles de qualité, pas des prix gonflés
-              </p>
+          <div className="grid grid-cols-3 gap-2 md:gap-8">
+            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#a89163]">
+              <Award className="h-6 w-6 md:h-16 md:w-16 text-[#d2b979] mx-auto mb-2 md:mb-4" />
+              <h3 className="text-[10px] md:text-lg font-serif font-bold text-white mb-1 md:mb-3">Économies</h3>
+              <p className="text-[9px] md:text-base text-gray-300 font-light leading-tight">Réductions réelles</p>
             </div>
 
-            <div className="bg-[#1f1f1f] p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border-l-4 border-[#0B5DA0]">
-              <CheckCircle className="w-16 h-16 text-[#1E90FF] mx-auto mb-4" />
-              <h3 className="text-lg font-serif font-bold text-white mb-3">Qualité Garantie</h3>
-              <p className="text-gray-300 font-light">
-                Les collections de meubles premium maintiennent toujours nos normes élevées
-              </p>
+            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#a89163]">
+              <CheckCircle className="h-6 w-6 md:h-16 md:w-16 text-[#d2b979] mx-auto mb-2 md:mb-4" />
+              <h3 className="text-[10px] md:text-lg font-serif font-bold text-white mb-1 md:mb-3">Qualité</h3>
+              <p className="text-[9px] md:text-base text-gray-300 font-light leading-tight">Garantie premium</p>
             </div>
 
-            <div className="bg-[#1f1f1f] p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300 text-center border-l-4 border-[#0B5DA0]">
-              <Truck className="w-16 h-16 text-[#1E90FF] mx-auto mb-4" />
-              <h3 className="text-lg font-serif font-bold text-white mb-3">Livraison Rapide</h3>
-              <p className="text-gray-300 font-light">
-                Expédition rapide avec livraison gratuite sur certaines commandes
-              </p>
+            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#a89163]">
+              <Truck className="h-6 w-6 md:h-16 md:w-16 text-[#d2b979] mx-auto mb-2 md:mb-4" />
+              <h3 className="text-[10px] md:text-lg font-serif font-bold text-white mb-1 md:mb-3">Livraison</h3>
+              <p className="text-[9px] md:text-base text-gray-300 font-light leading-tight">Expédition rapide</p>
             </div>
           </div>
         </div>
@@ -214,7 +208,7 @@ export default function OffersPage() {
               placeholder="Entrez votre email"
               className="flex-1 px-6 py-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-[#0B5DA0]"
             />
-            <button className="bg-[#0B5DA0] hover:bg-[#061632] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <button               className="bg-[#a89163] hover:bg-[#8b7344] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
               S&apos;abonner
             </button>
           </div>

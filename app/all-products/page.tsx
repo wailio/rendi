@@ -25,7 +25,7 @@ export default function AllProductsPage() {
               <p className="text-center text-gray-600 text-xs md:text-sm mb-4">
                 Découvrez notre sélection exclusive de meubles de luxe
               </p>
-              <div className="h-1 w-12 bg-[#0B5DA0] mx-auto"></div>
+              <div className="h-1 w-12 bg-[#8b7344] mx-auto"></div>
             </div>
 
             <Suspense
