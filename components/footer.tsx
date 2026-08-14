@@ -26,16 +26,16 @@ function NewArrivalsForm() {
   }
 
   return (
-    <div className="flex h-full flex-col justify-between bg-[#26313b] px-5 py-6 text-[#f1eee7] sm:px-7 sm:py-7">
+    <div className="flex h-full min-h-[292px] flex-col justify-between bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
       <div>
-        <p className="font-serif text-[clamp(1.45rem,2vw,2rem)] tracking-[-0.03em]">Nouveautés | Arrivages</p>
-        <p className="mt-2 max-w-[18rem] text-[13px] leading-5 text-[#d1d2cd]">
+        <p className="font-serif text-[clamp(1.2rem,1.7vw,1.7rem)] leading-tight tracking-[-0.03em]">Nouveautés | Arrivages</p>
+        <p className="mt-1 max-w-[15rem] text-[11px] leading-4 text-[#d1d2cd]">
           Soyez les premiers à découvrir nos nouvelles pièces et collections.
         </p>
       </div>
 
-      <div className="flex justify-center py-3">
-        <img src={lampImage} alt="Lampe de bureau illustrée" className="h-32 w-auto object-contain sm:h-36" />
+      <div className="flex min-h-0 flex-1 items-center justify-center py-1">
+        <img src={lampImage} alt="Lampe de bureau illustrée" className="h-28 w-auto max-w-[88%] object-contain sm:h-32" />
       </div>
 
       <form onSubmit={handleSubmit} noValidate>
@@ -49,9 +49,9 @@ function NewArrivalsForm() {
             placeholder="Votre email"
             aria-invalid={status === "error"}
             aria-describedby="new-arrivals-feedback"
-            className="min-w-0 flex-1 bg-transparent px-3 py-3 text-sm text-[#26313b] outline-none placeholder:text-[#77766f]"
+            className="min-w-0 flex-1 bg-transparent px-2.5 py-2 text-xs text-[#26313b] outline-none placeholder:text-[#77766f]"
           />
-          <button type="submit" className="bg-[#a98661] px-4 text-xs font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#92734f]">
+          <button type="submit" className="bg-[#a98661] px-3 text-[10px] font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#92734f]">
             Recevoir
           </button>
         </div>
@@ -70,10 +70,10 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 
 export default function Footer() {
   return (
-    <footer className="overflow-hidden bg-[#ece9e1] text-[#272b2d]">
-      <div className="mx-auto max-w-[1380px] px-5 pb-4 pt-8 sm:px-8 sm:pt-10 lg:px-12">
-        <div className="grid items-stretch overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
-          <section className="relative flex min-h-[300px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
+    <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
+      <div className="w-full pb-3 pt-0 sm:pb-4">
+        <div className="grid w-full items-stretch overflow-hidden bg-[#f4f1e9] lg:grid-cols-[0.88fr_1.02fr_1.65fr]">
+          <section className="relative flex min-h-[292px] flex-col justify-end overflow-hidden border border-[#d4d0c6] px-5 pb-5 pt-5 sm:px-7 lg:min-h-[310px] lg:border-r-0">
             <img src={chairImage} alt="Illustration d'un fauteuil classique" className="absolute inset-0 h-full w-full object-contain object-center opacity-90 mix-blend-multiply" />
             <div className="relative z-10 mt-auto text-center">
               <h2 className="font-serif text-[2rem] tracking-[-0.05em] sm:text-[2.35rem]">Mobenia Furniture</h2>
@@ -82,7 +82,7 @@ export default function Footer() {
             </div>
           </section>
 
-          <div className="min-h-[300px] border-y border-r border-[#d4d0c6]">
+          <div className="min-h-[292px] border-y border-r border-[#d4d0c6]">
             <NewArrivalsForm />
           </div>
 
