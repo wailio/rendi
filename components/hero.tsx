@@ -41,17 +41,19 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-6 text-center">
-          <h1 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold text-white mb-2 md:mb-4 max-w-3xl leading-tight">
-            Meubles Uniques pour Espaces Modernes
-          </h1>
-          <p className="text-xs md:text-lg lg:text-xl text-white/90 mb-3 md:mb-8 max-w-2xl">
-            Découvrez des meubles magnifiquement conçus qui transforment votre espace
-          </p>
-          <Link href="/contact">
-            <Button className="bg-[#071225] hover:bg-[#020817] text-white rounded-full px-3 md:px-8 py-1 md:py-6 text-xs md:text-base font-medium">
-              Nous Contacter
-            </Button>
-          </Link>
+          <div className="animate-luxury-reveal">
+            <h1 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold text-white mb-2 md:mb-4 max-w-3xl leading-tight">
+              Meubles Uniques pour Espaces Modernes
+            </h1>
+            <p className="text-xs md:text-lg lg:text-xl text-white/90 mb-3 md:mb-8 max-w-2xl">
+              Découvrez des meubles magnifiquement conçus qui transforment votre espace
+            </p>
+            <Link href="/contact" className="inline-block animate-luxury-button">
+              <Button className="bg-[#071225] hover:bg-[#020817] text-white rounded-full px-3 md:px-8 py-1 md:py-6 text-xs md:text-base font-medium shadow-[0_10px_30px_rgba(0,0,0,0.25)]">
+                Nous Contacter
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Image carousel indicators */}
@@ -72,7 +74,7 @@ export default function Hero() {
       </div>
 
       {/* Delivery Banner */}
-      <div className="bg-[#06112A] text-white py-4 md:py-6 px-4 md:px-6">
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#06112A] via-[#132848] to-[#8b7344] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="flex items-center justify-center gap-3">
             <Check className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
