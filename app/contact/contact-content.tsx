@@ -25,7 +25,7 @@ export default function ContactContent() {
     if (subject || message) setFormData((prev) => ({ ...prev, subject: subject || "", message: message || "" }))
   }, [searchParams])
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [event.target.name]: event.target.value }))
   }
 
@@ -78,20 +78,18 @@ export default function ContactContent() {
             <div className="mt-8 border-l border-[#a89163] pl-4 text-xs leading-5 text-[#d2b979]">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-3" id="contact-form">
+          <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4" id="contact-form">
             <label className="sr-only" htmlFor="name">Nom</label>
-            <input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Nom" className="contact-field" />
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div><label className="sr-only" htmlFor="email">Email</label><input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Email" className="contact-field" /></div>
-              <div><label className="sr-only" htmlFor="phone">Téléphone</label><input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Téléphone" className="contact-field" /></div>
-            </div>
-            <label className="sr-only" htmlFor="subject">Sujet</label>
-            <select id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="contact-field"><option value="">Sujet</option><option value="product-inquiry">Produit</option><option value="bulk-order">Commande</option><option value="custom-design">Design</option><option value="general">Général</option></select>
+            <input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Nom" className="contact-field w-full rounded-full px-4 py-3.5" />
+            <label className="sr-only" htmlFor="email">Email</label>
+            <input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Email" className="contact-field w-full rounded-full px-4 py-3.5" />
+            <label className="sr-only" htmlFor="phone">Téléphone</label>
+            <input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Téléphone" className="contact-field w-full rounded-full px-4 py-3.5" />
             <label className="sr-only" htmlFor="message">Message</label>
-            <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} placeholder="Message" className="contact-field resize-none" />
-            <div className="flex justify-center pt-2"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#d2b43c] px-10 text-xs font-medium text-[#282014] hover:bg-[#e3c94c]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
-            {status === "success" && <p className="text-center text-xs text-[#d2b979]" role="status">Merci, votre message a bien été envoyé.</p>}
-            {status === "error" && <p className="text-center text-xs text-red-300" role="alert">Une erreur est survenue. Veuillez réessayer.</p>}
+            <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={4} placeholder="Message" className="contact-field w-full resize-none rounded-xl px-4 py-3.5" />
+            <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#e8b843] px-8 py-3 text-xs font-medium text-[#282014] hover:bg-[#f0ca55]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
+            {status === "success" && <p className="text-xs text-[#d2b979]" role="status">Merci, votre message a bien été envoyé.</p>}
+            {status === "error" && <p className="text-xs text-red-300" role="alert">Une erreur est survenue. Veuillez réessayer.</p>}
           </form>
         </div>
 
