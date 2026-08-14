@@ -4,37 +4,12 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { allProducts } from "@/lib/products"
 
-const sofas = [
-  {
-    id: 1,
-    name: "Minimalist Sofa",
-    description: "Sleek and sophisticated sofa perfect for contemporary living spaces",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "12,990 DZD",
-  },
-  {
-    id: 2,
-    name: "Modern Sectional",
-    description: "Spacious L-shaped sectional for comfort and style",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "18,990 DZD",
-  },
-  {
-    id: 3,
-    name: "Contemporary Loveseat",
-    description: "Perfect two-seater for cozy spaces and apartments",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "8,990 DZD",
-  },
-  {
-    id: 4,
-    name: "Luxury Sofa Bed",
-    description: "Convertible sofa bed with premium comfort features",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "15,990 DZD",
-  },
-]
+const sofas = allProducts.filter((product) => product.category === "sofas").map((product) => ({
+  ...product,
+  image: product.images[0],
+}))
 
 export default function SofasPage() {
   return (
@@ -60,7 +35,7 @@ export default function SofasPage() {
           {/* Sofas Grid - Full width stacked on mobile */}
           <div className="grid grid-cols-1 gap-6 md:gap-12">
             {sofas.map((sofa) => (
-              <Link key={sofa.id} href={`/sofas/${sofa.id}`}>
+              <Link key={sofa.id} href={`/product/${sofa.id}`}>
                 <div className="group cursor-pointer bg-white overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="relative overflow-hidden bg-white h-48 md:h-96 flex items-center justify-center">
                     <img

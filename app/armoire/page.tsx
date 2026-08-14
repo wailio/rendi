@@ -4,30 +4,12 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { allProducts } from "@/lib/products"
 
-const armoires = [
-  {
-    id: 9,
-    name: "Armoire Coulissante Blanche",
-    description: "Armoire moderne avec portes coulissantes et miroir intégré pour un look contemporain",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9--WtuPBrTSG9iosuccrJ4MdQerxt5HAb.png",
-    price: "19,990 DZD",
-  },
-  {
-    id: 10,
-    name: "Armoire Bois Noir Moderne",
-    description: "Armoire design avec miroirs coulissants et rangements spacieux pour la chambre",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10--Oiu63bo4oiKdeIAiICTn24XMtap3xX.png",
-    price: "22,990 DZD",
-  },
-  {
-    id: 11,
-    name: "Armoire Miroir 3 Portes",
-    description: "Armoire élégante à portes coulissantes avec miroir de haute qualité et finition premium",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11--Eyp1DAPC0P6vfP6JEPlLyb8YsbFQPh.png",
-    price: "18,990 DZD",
-  },
-]
+const armoires = allProducts.filter((product) => product.category === "armoire").map((product) => ({
+  ...product,
+  image: product.images[0],
+}))
 
 export default function ArmoinePage() {
   return (

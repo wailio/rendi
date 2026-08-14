@@ -4,37 +4,12 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { allProducts } from "@/lib/products"
 
-const sleepingRooms = [
-  {
-    id: 4,
-    name: "Platform Bed",
-    description: "Contemporary platform bed with clean lines and durability",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "15,990 DZD",
-  },
-  {
-    id: 5,
-    name: "Luxury Storage Bed",
-    description: "Queen-size bed with built-in drawer storage and premium mattress",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "18,990 DZD",
-  },
-  {
-    id: 6,
-    name: "Minimalist Bed Frame",
-    description: "Sleek low-profile bed frame with solid wood construction",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "12,990 DZD",
-  },
-  {
-    id: 7,
-    name: "Premium Bedroom Set",
-    description: "Complete bedroom ensemble with bed, nightstands, and dresser",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qyCze2K0aY2i3UdS86oKEY6VDILjJw.png",
-    price: "34,990 DZD",
-  },
-]
+const sleepingRooms = allProducts.filter((product) => product.category === "chambres").map((product) => ({
+  ...product,
+  image: product.images[0],
+}))
 
 export default function SleepingRoomsPage() {
   return (
@@ -60,7 +35,7 @@ export default function SleepingRoomsPage() {
           {/* Sleeping Rooms Grid - Full width stacked on mobile */}
           <div className="grid grid-cols-1 gap-6 md:gap-12">
             {sleepingRooms.map((room) => (
-              <Link key={room.id} href={`/sleeping-rooms/${room.id}`}>
+              <Link key={room.id} href={`/product/${room.id}`}>
                 <div className="group cursor-pointer bg-white overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <div className="relative overflow-hidden bg-white h-48 md:h-96 flex items-center justify-center">
                     <img
