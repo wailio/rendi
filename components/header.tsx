@@ -35,7 +35,7 @@ export default function Header() {
       <nav
         className={`max-w-6xl w-full px-3 py-2 flex items-center justify-between rounded-md transition-all duration-300 ${navClasses}`}
       >
-        <Link href="/" className="site-logo flex items-center">
+        <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
               src="/logo-mobenia-furniture.png"
@@ -45,6 +45,7 @@ export default function Header() {
               className="h-10 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
             />
           </span>
+          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Mobenia Furniture</span>
         </Link>
 
         <div className="flex items-center gap-2">
