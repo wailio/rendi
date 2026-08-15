@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useSearchParams } from "next/navigation"
 import { Sofa, Bed, Armchair } from "lucide-react"
 import { allProducts as catalogProducts } from "@/lib/products"
+import { Reveal } from "@/components/Reveal"
 
 const allProducts = catalogProducts
 
@@ -167,6 +168,7 @@ export default function AllProductsClientContent() {
   return (
     <div className="w-full">
       {/* Category Filters */}
+      <Reveal delay={200}>
       <div className="mb-10 md:mb-14">
         <div className="flex flex-wrap gap-2 md:gap-3 p-4 md:p-6 bg-white rounded-xl border border-gray-200 shadow-sm justify-center">
           {categories.map((category) => (
@@ -189,6 +191,7 @@ export default function AllProductsClientContent() {
           ))}
         </div>
       </div>
+      </Reveal>
 
       {/* Products Grid */}
       {filteredProducts.length > 0 ? (
@@ -197,8 +200,9 @@ export default function AllProductsClientContent() {
             {selectedCategory === "all" ? "Tous les Produits" : categories.find(c => c.id === selectedCategory)?.name}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {filteredProducts.map((product) => (
-            <Link key={product.id} href={`/product/${product.id}`}>
+          {filteredProducts.map((product, i) => (
+            <Reveal key={product.id} variant="pop" delay={Math.min(i * 60, 300)}>
+            <Link href={`/product/${product.id}`}>
               <div className="group h-full bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden hover:border-[#0B5DA0] cursor-pointer flex flex-col">
                 {/* Image */}
                 <div className="relative w-full h-24 md:h-40 lg:h-48 bg-gray-100 overflow-hidden rounded-t-xl">
@@ -228,6 +232,7 @@ export default function AllProductsClientContent() {
                 </div>
               </div>
             </Link>
+            </Reveal>
           ))}
         </div>
         </div>

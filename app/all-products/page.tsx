@@ -3,6 +3,7 @@ import LuxuryHeader from "@/components/luxury-header"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AllProductsClientContent from "./client-content"
+import { Reveal } from "@/components/Reveal"
 
 export const metadata = {
   title: "Tous les Produits | Mobenia Furniture",
@@ -19,12 +20,16 @@ export default function AllProductsPage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             {/* Hero Section */}
             <div className="mb-10 md:mb-14">
-              <h1 className="text-xl md:text-3xl font-serif font-bold text-gray-900 mb-2 text-center">
-                Notre Collection Complète
-              </h1>
-              <p className="text-center text-gray-600 text-xs md:text-sm mb-4">
-                Découvrez notre sélection exclusive de meubles de luxe
-              </p>
+              <Reveal delay={0}>
+                <h1 className="text-xl md:text-3xl font-serif font-bold text-gray-900 mb-2 text-center">
+                  Notre Collection Complète
+                </h1>
+              </Reveal>
+              <Reveal delay={120}>
+                <p className="text-center text-gray-600 text-xs md:text-sm mb-4">
+                  Découvrez notre sélection exclusive de meubles de luxe
+                </p>
+              </Reveal>
               <div className="h-1 w-12 bg-[#8b7344] mx-auto"></div>
             </div>
 
