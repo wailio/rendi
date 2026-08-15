@@ -75,7 +75,6 @@ export default function ContactContent() {
             <p className="font-serif text-2xl leading-none text-[#a89163]/35 md:text-6xl">Form</p>
             <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
             <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
-            <img src="/mobenia-logo-badge.png" alt="Logo Mobenia Furniture" className="mt-6 hidden size-28 object-contain md:block" />
             <div className="mt-6 border-l border-[#a89163] pl-3 text-xs leading-4 text-[#d2b979] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
           </div>
           <div className="md:hidden mb-2 text-center">

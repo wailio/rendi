@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
-import { useState, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { allProducts as catalogProducts, type Product } from "@/lib/products"
 
 interface LegacyProduct {
@@ -260,6 +260,23 @@ export default function Products() {
   const [favorites, setFavorites] = useState<number[]>([])
   const nosProduitRef = useRef<HTMLDivElement>(null)
   const modelesPretsRef = useRef<HTMLDivElement>(null)
+  const hasAutoScrolled = useRef(false)
+
+  useEffect(() => {
+    const element = nosProduitRef.current
+    if (!element) return
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || hasAutoScrolled.current || prefersReducedMotion) return
+      hasAutoScrolled.current = true
+      window.setTimeout(() => element.scrollBy({ left: 420, behavior: "smooth" }), 250)
+      observer.disconnect()
+    }, { threshold: 0.35 })
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
 
   const toggleFavorite = (id: number) => {
     setFavorites((prev) =>
