@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { Star } from 'lucide-react'
+import { Reveal } from '@/components/Reveal'
 
 const reviews = [
   { image: "/review-rahim.png", author: "Rahim Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "Soyez les bienvenus" },
@@ -45,10 +46,13 @@ export default function CustomerReviews() {
   return (
     <section id="offres" className="py-12 md:py-24 px-4 md:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-serif font-bold text-center text-gray-900 mb-12 md:mb-20">
-          AVIS CLIENTS
-        </h2>
+        <Reveal>
+          <h2 className="text-2xl md:text-4xl font-serif font-bold text-center text-gray-900 mb-12 md:mb-20">
+            AVIS CLIENTS
+          </h2>
+        </Reveal>
 
+        <Reveal delay={100}>
         {/* Desktop - Horizontal Scroll with Mouse Hover Controls */}
         <div className="hidden md:block relative group">
           <div
@@ -144,6 +148,7 @@ export default function CustomerReviews() {
             </button>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   )

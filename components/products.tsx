@@ -4,6 +4,7 @@ import Link from "next/link"
 import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { allProducts as catalogProducts, type Product } from "@/lib/products"
+import { Reveal } from "@/components/Reveal"
 
 interface LegacyProduct {
   id: number
@@ -299,7 +300,9 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-3 md:px-6">
         {/* NOS PRODUITS Section */}
         <div className="mb-8 md:mb-12">
-          <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left animate-slideInUp">NOS PRODUITS</h2>
+          <Reveal>
+            <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left">NOS PRODUITS</h2>
+          </Reveal>
 
           {/* Horizontal Scroll Container */}
           <div className="relative group">
@@ -324,13 +327,14 @@ export default function Products() {
               className="pc-scroll-lane flex gap-4 md:gap-6 overflow-x-auto pb-3 scrollbar-hide touch-pan-x"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
-            {nosProduits.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                favorites={favorites}
-                toggleFavorite={toggleFavorite}
-              />
+            {nosProduits.map((product, i) => (
+              <Reveal key={product.id} variant="pop" delay={Math.min(i * 60, 300)}>
+                <ProductCard
+                  product={product}
+                  favorites={favorites}
+                  toggleFavorite={toggleFavorite}
+                />
+              </Reveal>
             ))}
             </div>
           </div>
@@ -338,7 +342,9 @@ export default function Products() {
 
         {/* Modèles Prêts Section */}
         <div className="mb-8 md:mb-12">
-          <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left animate-slideInUp">Modèles prêts</h2>
+          <Reveal>
+            <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left">Modèles prêts</h2>
+          </Reveal>
 
           {/* Horizontal Scroll Container */}
           <div
@@ -346,25 +352,28 @@ export default function Products() {
             className="flex gap-4 md:gap-6 overflow-x-auto pb-2 scrollbar-hide touch-pan-x"
             style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
           >
-            {modelesPrets.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                favorites={favorites}
-                toggleFavorite={toggleFavorite}
-              />
+            {modelesPrets.map((product, i) => (
+              <Reveal key={product.id} variant="pop" delay={i * 80}>
+                <ProductCard
+                  product={product}
+                  favorites={favorites}
+                  toggleFavorite={toggleFavorite}
+                />
+              </Reveal>
             ))}
           </div>
         </div>
 
         {/* Show All Button */}
-        <div className="mt-8 md:mt-12 flex justify-center">
-          <Link href="/all-products">
-            <button className="border-2 border-gray-900 text-gray-900 px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
+        <Reveal delay={200}>
+          <div className="mt-8 md:mt-12 flex justify-center">
+            <Link href="/all-products">
+              <button className="border-2 border-gray-900 text-gray-900 px-8 md:px-12 py-2 md:py-3 font-serif uppercase text-xs md:text-sm tracking-widest hover:bg-gray-900 hover:text-white transition-all duration-300">
               SHOW ALL PRODUCTS
-            </button>
-          </Link>
-        </div>
+              </button>
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

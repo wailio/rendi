@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useEffect } from 'react'
+import { Reveal } from '@/components/Reveal'
 
 export default function InstagramSection() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function InstagramSection() {
 
   return (
     <section className="bg-black text-white py-12 md:py-16 px-4 md:px-6">
+      <Reveal>
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-8 md:mb-10">
@@ -51,6 +53,7 @@ export default function InstagramSection() {
           </Link>
         </div>
       </div>
+      </Reveal>
     </section>
   )
 }
