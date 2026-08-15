@@ -76,11 +76,6 @@ export default function ContactContent() {
             <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
             <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
             <div className="mt-6 border-l border-[#a89163] pl-3 text-xs leading-4 text-[#d2b979] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Design_sans_titre__9_-removebg-preview-BaUqPqE1FFSgmwWuggbywFj8oh8fL9.png"
-              alt="Logo Mobenia"
-              className="mt-8 hidden w-40 object-contain md:block"
-            />
           </div>
           <div className="md:hidden mb-2 text-center">
             <p className="font-serif text-xl leading-none text-[#a89163]/35">Form</p>
