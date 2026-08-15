@@ -9,7 +9,7 @@ export default function InspirationsPage() {
   const inspirations = allProducts
 
   return (
-    <main className="min-h-screen bg-[#f7f1e5] bg-[url('/inspirations-wallpaper.png')] bg-repeat-x bg-top bg-[length:auto_32rem]">
+    <main className="min-h-screen bg-[#f7f1e5] bg-[url('/inspirations-wallpaper.png')] bg-repeat bg-top bg-[length:auto_32rem]">
       <LuxuryHeader />
       <Header />
 
