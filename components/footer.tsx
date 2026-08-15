@@ -81,7 +81,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="relative z-10 mx-auto max-w-[18rem] text-center text-[#272b2d] drop-shadow-[0_1px_1px_rgba(244,241,233,0.7)]">
               <p className="font-[family-name:var(--font-great-vibes)] text-5xl font-normal leading-none text-[#c9a24b] [text-shadow:1px_0_0_#111,-1px_0_0_#111,0_1px_0_#111,0_-1px_0_#111]">Mobenia Furniture</p>
-              <p className="mt-2 max-w-[13rem] text-xs leading-5 text-[#454844]">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
+              <p className="absolute bottom-6 left-6 max-w-[13rem] text-left text-xs leading-5 text-[#454844] sm:bottom-8 sm:left-8">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
             </div>
           </section>
 

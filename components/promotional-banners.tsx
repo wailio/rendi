@@ -9,7 +9,7 @@ export default function PromotionalBanners() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* Banner 1: Perfect Armchair */}
-        <div className="relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+        <div className="promo-card relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
           {/* Background Image */}
           <div className="absolute inset-0 opacity-30">
             <img
@@ -18,9 +18,10 @@ export default function PromotionalBanners() {
               className="w-full h-full object-cover"
             />
           </div>
+          <div className="overlay" />
 
           {/* Content Overlay */}
-          <div className="relative z-10 px-8 md:px-12 flex flex-col justify-center h-full w-full">
+          <div className="content relative z-10 px-8 md:px-12 flex flex-col justify-center h-full w-full">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light text-white mb-2 tracking-wide">
                 FAUTEUIL<br />PARFAIT
@@ -29,7 +30,7 @@ export default function PromotionalBanners() {
                 Nouvelle Collection
               </p>
               <Link href="/all-products?category=sofas">
-                <button className="bg-white text-red-600 px-6 md:px-8 py-2 md:py-3 font-serif font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-gray-100 transition-all duration-300">
+                <button className="btn bg-white text-red-600 px-6 md:px-8 py-2 md:py-3 font-serif font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-gray-100 transition-all duration-300">
                   ACHETER MAINTENANT
                 </button>
               </Link>
@@ -38,7 +39,7 @@ export default function PromotionalBanners() {
         </div>
 
         {/* Banner 2: Table Sets with Chairs */}
-        <div className="relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-900 via-yellow-900 to-amber-900">
+        <div className="promo-card relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-900 via-yellow-900 to-amber-900">
           {/* Background Image */}
           <div className="absolute inset-0 opacity-40">
             <img
@@ -47,9 +48,10 @@ export default function PromotionalBanners() {
               className="w-full h-full object-cover"
             />
           </div>
+          <div className="overlay" />
 
           {/* Content Overlay */}
-          <div className="relative z-10 px-8 md:px-12 flex flex-col justify-center h-full w-full">
+          <div className="content relative z-10 px-8 md:px-12 flex flex-col justify-center h-full w-full">
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light text-white mb-2 tracking-wide">
                 ENSEMBLES<br />DE TABLE<br />AVEC<br />CHAISES
@@ -58,7 +60,7 @@ export default function PromotionalBanners() {
                 Jusqu&apos;à -30%
               </p>
               <Link href="/all-products?category=chambres">
-                <button className="bg-white text-amber-900 px-6 md:px-8 py-2 md:py-3 font-serif font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-gray-100 transition-all duration-300">
+                <button className="btn bg-white text-amber-900 px-6 md:px-8 py-2 md:py-3 font-serif font-bold text-xs md:text-sm tracking-widest uppercase hover:bg-gray-100 transition-all duration-300">
                   ACHETER MAINTENANT
                 </button>
               </Link>
