@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+import { Reveal } from "@/components/Reveal"
 
 export default function WhyChooseUs() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -52,13 +53,16 @@ export default function WhyChooseUs() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 md:mb-16 text-center">
-          <h2 className="text-xl md:text-5xl font-bold text-white">
-            Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Mobenia</span>
-          </h2>
+          <Reveal>
+            <h2 className="text-xl md:text-5xl font-bold text-white">
+              Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Mobenia</span>
+            </h2>
+          </Reveal>
         </div>
 
         {/* Mobile Layout - Simple List */}
         <div className="md:hidden space-y-0">
+          <Reveal variant="pop" delay={0}>
           <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
               <div className="text-xl text-[#a98661] icon-3d transition-transform duration-200">✦</div>
@@ -68,6 +72,8 @@ export default function WhyChooseUs() {
               <p className="text-[11px] text-gray-300">Gestion complète de votre projet</p>
             </div>
           </div>
+          </Reveal>
+          <Reveal variant="pop" delay={100}>
           <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
               <div className="text-xl text-[#a98661] icon-3d transition-transform duration-200">◆</div>
@@ -77,6 +83,8 @@ export default function WhyChooseUs() {
               <p className="text-[11px] text-gray-300">Assistance continue et fiable</p>
             </div>
           </div>
+          </Reveal>
+          <Reveal variant="pop" delay={200}>
           <div className="bg-[#1B2433] p-3 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
               <div className="text-xl text-[#00BFFF] icon-3d transition-transform duration-200">★</div>
@@ -86,11 +94,13 @@ export default function WhyChooseUs() {
               <p className="text-[11px] text-gray-300">Meilleurs matériaux garantis</p>
             </div>
           </div>
+          </Reveal>
         </div>
 
         {/* Desktop Layout - Bento Grid */}
         <div className="hidden md:grid grid-cols-3 gap-6">
           {/* Card 1: Solutions Complètes */}
+          <Reveal variant="pop" delay={0}>
           <div className="bg-[#1B2433] rounded-3xl p-8 flex flex-col justify-between h-64 animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600">
             <div>
               <h3 className="text-xl font-semibold text-white mb-3">Solutions Complètes</h3>
@@ -100,8 +110,10 @@ export default function WhyChooseUs() {
             </div>
             <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">✦</div>
           </div>
+          </Reveal>
 
           {/* Card 2: Support Après-Vente */}
+          <Reveal variant="pop" delay={100}>
           <div
             className="bg-[#1B2433] rounded-3xl p-8 flex flex-col justify-between h-64 animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600"
             style={{ animationDelay: "0.1s" }}
@@ -114,8 +126,10 @@ export default function WhyChooseUs() {
             </div>
             <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">◆</div>
           </div>
+          </Reveal>
 
           {/* Card 3: Absence de Restrictions */}
+          <Reveal variant="pop" delay={200}>
           <div
             className="bg-[#25344B] rounded-3xl p-8 flex flex-col justify-between h-64 text-[#1a1a1a] animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#7E8EA6]"
             style={{ animationDelay: "0.2s" }}
@@ -129,8 +143,10 @@ export default function WhyChooseUs() {
             </div>
             <div className="text-5xl icon-3d transition-transform duration-200 text-[#a98661]">★</div>
           </div>
+          </Reveal>
 
           {/* Card 4: Qualité Supérieure */}
+          <Reveal variant="pop" delay={300} className="md:col-span-2">
           <Link
             href="/inspirations"
             className="md:col-span-2 rounded-3xl overflow-hidden h-80 flex items-end bg-cover bg-center relative animate-fade-in-up hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-600"
@@ -149,8 +165,10 @@ export default function WhyChooseUs() {
               </p>
             </div>
           </Link>
+          </Reveal>
 
           {/* Card 5: Mobilier Personnalisé */}
+          <Reveal variant="pop" delay={400}>
           <div
             className="bg-[#1B2433] rounded-3xl p-8 flex flex-col justify-between h-80 text-white animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600"
             style={{ animationDelay: "0.4s" }}
@@ -164,6 +182,7 @@ export default function WhyChooseUs() {
             </div>
             <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">◇</div>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>

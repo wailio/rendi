@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { Reveal } from "@/components/Reveal"
 
 export default function PromotionalBanners() {
   return (
@@ -9,6 +10,7 @@ export default function PromotionalBanners() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
         {/* Banner 1: Perfect Armchair */}
+        <Reveal variant="pop" delay={0}>
         <div className="promo-card relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
           {/* Background Image */}
           <div className="absolute inset-0 opacity-30">
@@ -37,8 +39,10 @@ export default function PromotionalBanners() {
             </div>
           </div>
         </div>
+        </Reveal>
 
         {/* Banner 2: Table Sets with Chairs */}
+        <Reveal variant="pop" delay={150}>
         <div className="promo-card relative h-96 md:h-[500px] lg:h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-b from-amber-900 via-yellow-900 to-amber-900">
           {/* Background Image */}
           <div className="absolute inset-0 opacity-40">
@@ -67,6 +71,7 @@ export default function PromotionalBanners() {
             </div>
           </div>
         </div>
+        </Reveal>
       </div>
       
       <div className="h-6 md:h-12 bg-white"></div>
