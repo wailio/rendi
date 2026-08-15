@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Star } from 'lucide-react'
 
 const reviews = [
@@ -12,9 +12,26 @@ const reviews = [
 
 export default function CustomerReviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const scrollContainerRef = useRef(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const hasAutoScrolled = useRef(false)
 
-  const scroll = (direction) => {
+  useEffect(() => {
+    const element = scrollContainerRef.current
+    if (!element) return
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting || hasAutoScrolled.current || prefersReducedMotion) return
+      hasAutoScrolled.current = true
+      window.setTimeout(() => element.scrollBy({ left: 350, behavior: "smooth" }), 250)
+      observer.disconnect()
+    }, { threshold: 0.35 })
+
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
+
+  const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 350
       if (direction === 'left') {

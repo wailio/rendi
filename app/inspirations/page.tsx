@@ -142,6 +142,11 @@ export default function InspirationsPage() {
         </div>
       </section>
 
+      <div
+        aria-hidden="true"
+        className="h-24 bg-[#f7f1e5] bg-[url('/inspirations-wallpaper.png')] bg-repeat bg-top bg-[length:auto_32rem] md:h-40"
+      />
+
       <Footer />
     </main>
   )

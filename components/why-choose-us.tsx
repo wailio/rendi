@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 md:mb-16 text-center">
           <h2 className="text-xl md:text-5xl font-bold text-white">
-            Nous <span className="text-[#7E8EA6] md:hidden">sommes là</span><span className="hidden md:inline text-[#7E8EA6]">sommes là pour vous aider</span>
+            Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Mobenia</span>
           </h2>
         </div>
 
@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
         <div className="md:hidden space-y-0">
           <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#7E8EA6] icon-3d transition-transform duration-200">✦</div>
+              <div className="text-xl text-[#a98661] icon-3d transition-transform duration-200">✦</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Solutions Complètes</h3>
@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
           </div>
           <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#7E8EA6] icon-3d transition-transform duration-200">◆</div>
+              <div className="text-xl text-[#a98661] icon-3d transition-transform duration-200">◆</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Support 24/7</h3>
@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
                 Nous gérons chaque aspect de votre projet d'ameublement, vous faisant gagner du temps et des ressources.
               </p>
             </div>
-            <div className="text-5xl text-[#7E8EA6] icon-3d transition-transform duration-200">✦</div>
+            <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">✦</div>
           </div>
 
           {/* Card 2: Support Après-Vente */}
@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
                 Nous nous engageons à fournir un support continu et un service après-vente pour répondre à vos besoins.
               </p>
             </div>
-            <div className="text-5xl text-[#7E8EA6] icon-3d transition-transform duration-200">◆</div>
+            <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">◆</div>
           </div>
 
           {/* Card 3: Absence de Restrictions */}
@@ -121,13 +121,13 @@ export default function WhyChooseUs() {
             style={{ animationDelay: "0.2s" }}
           >
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-[#7E8EA6]">Absence de Restrictions</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#a98661]">Absence de Restrictions</h3>
               <p className="text-[#111827] text-sm leading-relaxed">
                 Nous nous associons à tous les fournisseurs pour offrir la plus large sélection de solutions
                 d'ameublement.
               </p>
             </div>
-            <div className="text-5xl icon-3d transition-transform duration-200 text-[#7E8EA6]">★</div>
+            <div className="text-5xl icon-3d transition-transform duration-200 text-[#a98661]">★</div>
           </div>
 
           {/* Card 4: Qualité Supérieure */}
@@ -162,7 +162,7 @@ export default function WhyChooseUs() {
                 unique et vos besoins.
               </p>
             </div>
-            <div className="text-5xl text-[#7E8EA6] icon-3d transition-transform duration-200">◇</div>
+            <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">◇</div>
           </div>
         </div>
       </div>

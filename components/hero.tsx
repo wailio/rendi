@@ -83,12 +83,12 @@ export default function Hero() {
       {/* Delivery Banner */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#06112A] via-[#132848] to-[#8b7344] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div className="flex items-center justify-center gap-3">
-            <Check className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
+          <div className="delivery-benefit flex items-center justify-center gap-3">
+            <Check className="delivery-benefit-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
             <span className="text-xs md:text-base font-medium text-white">Livraison + montage dans les 58 wilayas</span>
           </div>
-          <div className="flex items-center justify-center gap-3">
-            <Truck className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
+          <div className="delivery-benefit flex items-center justify-center gap-3 [animation-delay:1.1s]">
+            <Truck className="delivery-benefit-icon w-5 h-5 md:w-6 md:h-6 flex-shrink-0 text-[#7E8EA6]" />
             <span className="text-xs md:text-base font-medium text-white">Gratuit sur Alger – Blida – Boumerdès – Médéa – Tipaza</span>
           </div>
         </div>
