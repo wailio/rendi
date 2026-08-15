@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section className="relative">
       {/* Main Hero with Rolling Images */}
-      <div className="relative w-full h-[400px] md:h-[700px] lg:h-[850px] overflow-hidden">
+      <div className="relative w-full h-[520px] md:h-[700px] lg:h-[850px] overflow-hidden">
         {/* Image Carousel */}
         {heroImages.map((image, index) => (
           <Image
@@ -41,15 +41,15 @@ export default function Hero() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,16,0.45)] via-[rgba(8,10,16,0.6)] to-[rgba(8,10,16,0.82)]"></div>
 
-        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center md:px-6">
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-8 text-center md:px-6 md:pb-0">
           <div className="flex max-w-3xl flex-col items-center">
             <Reveal delay={0}>
               <p className="font-sans text-[11px] font-semibold tracking-[5px] text-[#d4af5f] md:text-[13px]">MOBENIA FURNITURE</p>
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-[22px] text-balance leading-none">
-                <span className="block font-[family-name:var(--font-playfair)] text-[30px] font-normal text-[#f5f2ea]">Meubles uniques pour</span>
-                <span className="relative mt-2 inline-block px-1 pb-8 font-[family-name:var(--font-great-vibes)] text-[clamp(4.75rem,13vw,6.5rem)] font-normal leading-none text-[#d4af5f]">
+                <span className="block font-[family-name:var(--font-playfair)] text-[22px] font-normal leading-tight text-[#f5f2ea] md:text-[30px]">Meubles uniques pour</span>
+                <span className="relative mt-1 inline-block px-1 pb-5 font-[family-name:var(--font-great-vibes)] text-[clamp(3.75rem,17vw,6.5rem)] font-normal leading-none text-[#d4af5f] md:mt-2 md:pb-8">
                   espaces modernes
                   <svg aria-hidden="true" viewBox="0 0 360 34" className="absolute bottom-0 left-1/2 h-7 w-[115%] -translate-x-1/2 overflow-visible">
                     <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#d4af5f" strokeWidth="2.2" strokeLinecap="round" />
@@ -58,13 +58,13 @@ export default function Hero() {
               </h1>
             </Reveal>
             <Reveal delay={240}>
-              <p className="mt-[38px] max-w-[440px] font-sans text-[17px] font-normal leading-[1.5] text-[#efece4]">
+              <p className="mt-6 max-w-[300px] font-sans text-sm font-normal leading-6 text-[#efece4] md:mt-[38px] md:max-w-[440px] md:text-[17px] md:leading-[1.5]">
                 Des meubles conçus pour transformer votre espace
               </p>
             </Reveal>
             <Reveal delay={360}>
-              <Link href="/contact" className="mt-7 inline-block">
-                <Button className="rounded-[2px] border border-[#d4af5f] bg-[#06112a] px-8 py-[13px] font-serif text-xs font-normal uppercase tracking-[3px] text-[#d4af5f] shadow-none hover:bg-[#d4af5f] hover:text-[#081016] focus-visible:bg-[#d4af5f] focus-visible:text-[#081016]">
+              <Link href="/contact" className="mt-5 inline-block md:mt-7">
+                <Button className="min-h-11 rounded-[2px] border border-[#d4af5f] bg-[#06112a] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#d4af5f] shadow-none hover:bg-[#d4af5f] hover:text-[#081016] focus-visible:bg-[#d4af5f] focus-visible:text-[#081016] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
                   Nous contacter
                 </Button>
               </Link>
