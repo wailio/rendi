@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 
 const contactDetails = [
   { icon: Phone, label: "Téléphone", value: "+213 656 373 378" },
-  { icon: Mail, label: "Email", value: "info@mobenia.dz" },
+  { icon: Mail, label: "Email", value: "mobenia23@gmail.com" },
   { icon: MapPin, label: "Adresse", value: "Aïn Naâdja, Algérie" },
   { icon: Clock3, label: "Horaires", value: "9:00 — 19:00" },
 ]

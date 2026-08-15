@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     const mailOptions = {
       from: process.env.GMAIL_USER,
-      to: 'khebbab.wail1000@gmail.com',
+      to: 'mobenia23@gmail.com',
       subject: `Nouveau message de contact: ${subject || 'Message'}`,
       html: `
         <h2>Nouveau message de contact</h2>
