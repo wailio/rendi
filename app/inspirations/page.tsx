@@ -9,7 +9,7 @@ export default function InspirationsPage() {
   const inspirations = allProducts
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f7f1e5] bg-[url('/inspirations-wallpaper.png')] bg-repeat bg-top bg-[length:auto_32rem]">
       <LuxuryHeader />
       <Header />
 
@@ -44,7 +44,7 @@ export default function InspirationsPage() {
       `}</style>
 
       {/* Hero Section */}
-      <div className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <div className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-base md:text-4xl font-serif font-bold text-gray-900 mb-3 leading-tight md:mb-4">
             Get <span className="text-[#a89163]">Inspired</span> by Design
@@ -56,7 +56,7 @@ export default function InspirationsPage() {
       </div>
 
       {/* Inspirations Grid */}
-      <section className="py-12 md:py-20 px-4 md:px-8 bg-white">
+      <section className="py-12 md:py-20 px-4 md:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
             {inspirations.map((item, idx) => (
@@ -95,7 +95,7 @@ export default function InspirationsPage() {
       </section>
 
       {/* Inspiration Tips Section */}
-      <section className="py-16 md:py-24 px-4 md:px-8 bg-gray-50">
+      <section className="py-16 md:py-24 px-4 md:px-8 bg-transparent">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-lg md:text-3xl font-serif font-bold text-gray-900 text-center mb-6 md:mb-12">
             Design Tips & Ideas

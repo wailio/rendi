@@ -82,7 +82,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <div className="relative z-10 mx-auto max-w-[18rem] text-center text-[#272b2d] drop-shadow-[0_1px_1px_rgba(244,241,233,0.7)]">
               <p className="font-[family-name:var(--font-great-vibes)] text-5xl font-normal leading-none text-[#c9a24b] [text-shadow:1px_0_0_#111,-1px_0_0_#111,0_1px_0_#111,0_-1px_0_#111]">Mobenia Furniture</p>
             </div>
-            <p className="absolute bottom-5 left-6 z-10 max-w-[13rem] text-left text-xs leading-5 text-[#454844] sm:bottom-7 sm:left-8">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
+            <p className="absolute bottom-5 left-1/2 z-10 w-[calc(100%-3rem)] max-w-[18rem] -translate-x-1/2 text-center text-xs leading-5 text-[#454844] sm:bottom-7">Des meubles inspirants pour des intérieurs qui vous ressemblent.</p>
           </section>
 
           <section className="hidden min-w-0 bg-[#26313b] lg:block">
