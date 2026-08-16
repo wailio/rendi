@@ -18,7 +18,8 @@ export default function CustomerReviews() {
 
   useEffect(() => {
     const element = scrollContainerRef.current
-    if (!element) return
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    if (!element || isMobile) return
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     const observer = new IntersectionObserver(([entry]) => {
@@ -30,6 +31,18 @@ export default function CustomerReviews() {
 
     observer.observe(element)
     return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (!isMobile || prefersReducedMotion) return
+
+    const interval = window.setInterval(() => {
+      setCurrentIndex((previous) => (previous + 1) % reviews.length)
+    }, 1500)
+
+    return () => window.clearInterval(interval)
   }, [])
 
   const scroll = (direction: "left" | "right") => {

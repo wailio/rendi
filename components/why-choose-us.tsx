@@ -185,6 +185,16 @@ export default function WhyChooseUs() {
           </Reveal>
         </div>
       </div>
+      <style>{`
+        @keyframes mobileIconTurn {
+          0%, 12% { transform: rotateY(0deg); }
+          28% { transform: rotateY(360deg); }
+          100% { transform: rotateY(360deg); }
+        }
+        @media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+          .icon-3d { animation: mobileIconTurn 3s ease-in-out infinite; transform-style: preserve-3d; }
+        }
+      `}</style>
     </section>
   )
 }
