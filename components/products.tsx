@@ -301,7 +301,7 @@ export default function Products() {
         {/* NOS PRODUITS Section */}
         <div className="mb-8 md:mb-12">
           <Reveal>
-            <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -343,7 +343,7 @@ export default function Products() {
         {/* Modèles Prêts Section */}
         <div className="mb-8 md:mb-12">
           <Reveal>
-            <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left">Modèles prêts</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
