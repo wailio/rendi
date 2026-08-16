@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const armchairImage =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2016%20ao%C3%BBt%202026%2C%2011_55_00-owSrfOACK3bIK2nak1TVncCAGHfQvM.png"
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2016%20ao%C3%BBt%202026%2C%2012_09_14-THOdm4GL419c34I6gwYzCs54XZcwTq.png"
 
 export default function NotFound() {
   return (
