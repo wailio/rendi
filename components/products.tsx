@@ -189,14 +189,13 @@ const legacyProducts: LegacyProduct[] = [
   }
 ]
 
-function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
+function ProductCard({ product, favorites, toggleFavorite, luxury = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; luxury?: boolean }) {
   return (
     <div className="group flex-shrink-0">
       <Link href={`/product/${product.id}`}>
-        <div className="bg-white overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80">
-          {/* Discount Badge - Red rectangle top left */}
+        <div className={`overflow-hidden transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80 ${luxury ? "rounded-lg bg-[#fffdf8] shadow-[0_2px_12px_rgba(0,0,0,0.06)]" : "bg-white hover:shadow-lg"}`}>
           {product.discount && (
-            <div className="absolute top-0 left-0 bg-red-600 text-white px-3 py-2 font-bold text-xs md:text-sm z-20">
+            <div className={`absolute left-3 top-3 z-20 rounded-full px-3 py-1 font-serif text-[10px] tracking-[1px] md:text-xs ${luxury ? "bg-[#2C2416] text-[#d4af5f]" : "bg-red-600 font-bold text-white"}`}>
               -{product.discount}%
             </div>
           )}
@@ -225,28 +224,21 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover transition-transform duration-[400ms] ease-out ${luxury ? "group-hover:scale-[1.04]" : ""}`}
               />
             </div>
 
             {/* Product Info */}
-            <div className="p-3 md:p-4 flex-1 flex flex-col justify-between">
-              {/* Store name */}
-              <p className="text-xs md:text-sm text-gray-600 font-medium mb-1">{product.name.split(' ')[0]}</p>
-              
-              {/* Product Title */}
-              <h3 className="text-[11px] md:text-base font-serif font-bold text-gray-900 mb-1 md:mb-2 line-clamp-2 flex-1">
+            <div className={`flex-1 flex flex-col justify-between ${luxury ? "p-4 md:p-5" : "p-3 md:p-4"}`}>
+              <p className={`uppercase tracking-[1.5px] ${luxury ? "mb-2 text-[9px] text-[#9b8355] md:text-[10px]" : "mb-1 text-xs font-medium text-gray-600 md:text-sm"}`}>{product.name.split(' ')[0]}</p>
+              <h3 className={`line-clamp-2 flex-1 font-serif font-bold ${luxury ? "mb-2 text-xs leading-5 text-[#2C2416] md:text-base" : "mb-1 text-[11px] text-gray-900 md:mb-2 md:text-base"}`}>
                 {product.name}
               </h3>
-
-              {/* Product Description */}
-              <p className="text-[10px] md:text-sm text-gray-500 mb-1 md:mb-2 line-clamp-1">{product.description}</p>
-
-              {/* Pricing */}
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs md:text-lg font-bold text-[#8b7344]">{product.price}</span>
+              <p className={`line-clamp-1 ${luxury ? "mb-3 text-[10px] leading-4 text-[#776f62] md:text-sm" : "mb-1 text-[10px] text-gray-500 md:mb-2 md:text-sm"}`}>{product.description}</p>
+              <div className="flex items-baseline gap-3 flex-wrap">
+                <span className={`font-semibold ${luxury ? "text-base text-[#2C2416] md:text-xl" : "text-xs text-[#8b7344] md:text-lg"}`}>{product.price}</span>
                 {product.originalPrice && (
-                  <span className="text-xs md:text-sm text-gray-400 line-through">{product.originalPrice}</span>
+                  <span className={`line-through ${luxury ? "text-[10px] text-gray-400 md:text-xs" : "text-xs text-gray-400 md:text-sm"}`}>{product.originalPrice}</span>
                 )}
               </div>
             </div>
@@ -296,12 +288,12 @@ export default function Products() {
   const modelesPrets = catalogProducts.filter(p => p.category === "chambres")
 
   return (
-    <section className="py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
+    <section className="bg-[#F5F1E8] py-8 md:py-16 lg:py-24" id="products">
       <div className="max-w-7xl mx-auto px-3 md:px-6">
         {/* NOS PRODUITS Section */}
         <div className="mb-8 md:mb-12">
           <Reveal>
-            <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-serif text-xl font-semibold tracking-[1px] text-[#6f5831] md:text-4xl">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -310,7 +302,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="hidden md:flex absolute left-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white"
+              className="hidden md:flex absolute left-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-[#d4af5f] bg-[#1E1912]/70 text-[#d4af5f] shadow-sm backdrop-blur-sm transition hover:bg-[#d4af5f]/20 hover:text-[#f5f2ea]"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -318,7 +310,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="hidden md:flex absolute right-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white"
+              className="hidden md:flex absolute right-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-[#d4af5f] bg-[#1E1912]/70 text-[#d4af5f] shadow-sm backdrop-blur-sm transition hover:bg-[#d4af5f]/20 hover:text-[#f5f2ea]"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -333,6 +325,7 @@ export default function Products() {
                   product={product}
                   favorites={favorites}
                   toggleFavorite={toggleFavorite}
+                  luxury
                 />
               </Reveal>
             ))}
