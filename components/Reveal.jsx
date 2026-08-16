@@ -2,7 +2,7 @@
 
 import { useReveal } from "@/hooks/useReveal"
 
-export function Reveal({ children, delay = 0, className = "", variant: _variant = undefined }) {
+export function Reveal({ children, delay = 0, className = "", variant = "fade" }) {
   const { ref, isVisible } = useReveal()
 
   return (
