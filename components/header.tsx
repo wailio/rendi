@@ -51,7 +51,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/all-products" className="hidden sm:inline-block">
             <Button
-              className="bg-[#020817] hover:bg-[#00030A] text-white px-3 py-1.5 text-xs font-semibold"
+              className="bg-[#1E1912] hover:bg-[#00030A] text-white px-3 py-1.5 text-xs font-semibold"
             >
               Découvrir
             </Button>

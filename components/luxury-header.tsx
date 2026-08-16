@@ -125,7 +125,7 @@ export default function LuxuryHeader() {
           {/* Right Side - Explorer Button */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link href="/all-products">
-              <Button className="bg-[#020817] hover:bg-[#00030A] text-white px-6 py-2 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs">
+              <Button className="bg-[#1E1912] hover:bg-[#00030A] text-white px-6 py-2 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs">
                 Découvrir
               </Button>
             </Link>

@@ -222,10 +222,10 @@ export default function AllProductsClientContent() {
                     {product.description}
                   </p>
                   <div className="flex justify-between items-center gap-1">
-                    <span className="text-xs md:text-sm lg:text-base font-bold text-[#020817]">
+                    <span className="text-xs md:text-sm lg:text-base font-bold text-[#1E1912]">
                       {product.price}
                     </span>
-                    <button className="px-2 md:px-3 py-1 bg-[#020817] hover:bg-[#00030A] text-white rounded-lg font-semibold transition-colors text-[8px] md:text-xs lg:text-sm">
+                    <button className="px-2 md:px-3 py-1 bg-[#1E1912] hover:bg-[#00030A] text-white rounded-lg font-semibold transition-colors text-[8px] md:text-xs lg:text-sm">
                       Voir
                     </button>
                   </div>

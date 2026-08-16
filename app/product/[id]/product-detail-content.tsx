@@ -168,7 +168,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                 <p className="text-xs md:text-sm text-gray-600 font-medium mb-1">IdealInstitute</p>
                 <h1 className="text-xl md:text-2xl font-serif font-bold text-gray-900 mb-2">{product.name}</h1>
                 <div className="flex items-center gap-2">
-                  <span className="text-xl md:text-2xl font-bold text-[#020817]">{product.price}</span>
+                  <span className="text-xl md:text-2xl font-bold text-[#1E1912]">{product.price}</span>
                   {product.originalPrice && <span className="text-base md:text-lg text-gray-400 line-through">{product.originalPrice}</span>}
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                 <button onClick={() => setQuantity(quantity + 1)} className="px-2 md:px-3 py-1.5 text-gray-600 hover:bg-gray-100 text-sm">+</button>
               </div>
               <Link href={`/contact?subject=Commande&message=${encodeURIComponent(`Je souhaite commander ce produit: ${product.name}`)}#form`}>
-                <button className="flex-1 md:flex-auto px-6 md:px-8 py-2 md:py-2.5 bg-[#020817] hover:bg-[#00030A] text-white font-semibold rounded-lg transition-colors text-sm md:text-base">Commandez maintenant</button>
+                <button className="flex-1 md:flex-auto px-6 md:px-8 py-2 md:py-2.5 bg-[#1E1912] hover:bg-[#00030A] text-white font-semibold rounded-lg transition-colors text-sm md:text-base">Commandez maintenant</button>
               </Link>
             </div>
 
@@ -253,7 +253,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                       </div>
                       <div className="pt-1.5 border-t border-gray-200 mt-1.5">
                         <div className="flex justify-between items-center gap-1">
-                          <span className="text-[8px] md:text-xs font-bold text-[#020817]">{relProduct.price}</span>
+                          <span className="text-[8px] md:text-xs font-bold text-[#1E1912]">{relProduct.price}</span>
                           {relProduct.originalPrice && <span className="text-[7px] md:text-[8px] text-gray-400 line-through">{relProduct.originalPrice}</span>}
                         </div>
                       </div>

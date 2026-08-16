@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const armchairImage =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2016%20ao%C3%BBt%202026%2C%2011_43_55-aFmLhq2V2pcSc0s8OJlvrQNhMQETsI.png"
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2016%20ao%C3%BBt%202026%2C%2011_55_00-owSrfOACK3bIK2nak1TVncCAGHfQvM.png"
 
 export default function NotFound() {
   return (
@@ -37,7 +37,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="mt-5 inline-flex min-h-12 items-center justify-center rounded-[2px] border border-[#d4af5f] px-8 py-[13px] font-serif text-xs font-normal uppercase tracking-[3px] text-[#d4af5f] transition-colors hover:bg-[#d4af5f] hover:text-[#081016] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d4af5f]"
+          className="mt-5 inline-flex min-h-12 items-center justify-center rounded-[2px] border border-[#d4af5f] px-8 py-[13px] font-serif text-xs font-normal uppercase tracking-[3px] text-[#d4af5f] transition-colors hover:bg-[#d4af5f] hover:text-[#1E1912] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d4af5f]"
         >
           Retour à l&apos;accueil
         </Link>
