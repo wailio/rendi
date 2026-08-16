@@ -189,14 +189,15 @@ const legacyProducts: LegacyProduct[] = [
   }
 ]
 
-function ProductCard({ product, favorites, toggleFavorite, luxury = false }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void; luxury?: boolean }) {
+function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
   return (
     <div className="group flex-shrink-0">
       <Link href={`/product/${product.id}`}>
-        <div className={`overflow-hidden transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80 ${luxury ? "bg-[#fffdf8] shadow-[0_2px_12px_rgba(0,0,0,0.06)] [clip-path:polygon(28%_0%,100%_0%,100%_82%,72%_100%,0%_100%,0%_18%)]" : "bg-white hover:shadow-lg"}`}>
+        <div className="bg-white overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80">
+          {/* Discount Badge - Red rectangle top left */}
           {product.discount && (
-            <div className={`absolute left-0 top-0 z-20 h-[18%] w-[28%] [clip-path:polygon(0_0,100%_0,0_100%)] ${luxury ? "bg-[#F5B800]" : "bg-red-600"}`} aria-label={`Réduction de ${product.discount}%`}>
-              {luxury && <span className="absolute left-2 top-2 font-sans text-[8px] font-bold text-[#1E1912] md:left-3 md:top-3 md:text-[10px]">-{product.discount}%</span>}
+            <div className="absolute top-0 left-0 bg-red-600 text-white px-3 py-2 font-bold text-xs md:text-sm z-20">
+              -{product.discount}%
             </div>
           )}
 
@@ -224,21 +225,28 @@ function ProductCard({ product, favorites, toggleFavorite, luxury = false }: { p
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
-                className={`w-full h-full object-cover transition-transform duration-[400ms] ease-out ${luxury ? "group-hover:scale-[1.04]" : ""}`}
+                className="w-full h-full object-cover"
               />
             </div>
 
             {/* Product Info */}
-            <div className={`flex-1 flex flex-col justify-between ${luxury ? "p-4 md:p-5" : "p-3 md:p-4"}`}>
-              <p className={`uppercase tracking-[1.5px] ${luxury ? "mb-2 text-[9px] text-[#9b8355] md:text-[10px]" : "mb-1 text-xs font-medium text-gray-600 md:text-sm"}`}>{product.name.split(' ')[0]}</p>
-              <h3 className={`line-clamp-2 flex-1 font-serif font-bold ${luxury ? "mb-2 text-xs leading-5 text-[#2C2416] md:text-base" : "mb-1 text-[11px] text-gray-900 md:mb-2 md:text-base"}`}>
+            <div className="p-3 md:p-4 flex-1 flex flex-col justify-between">
+              {/* Store name */}
+              <p className="text-xs md:text-sm text-gray-600 font-medium mb-1">{product.name.split(' ')[0]}</p>
+              
+              {/* Product Title */}
+              <h3 className="text-[11px] md:text-base font-serif font-bold text-gray-900 mb-1 md:mb-2 line-clamp-2 flex-1">
                 {product.name}
               </h3>
-              <p className={`line-clamp-1 ${luxury ? "mb-3 text-[10px] leading-4 text-[#776f62] md:text-sm" : "mb-1 text-[10px] text-gray-500 md:mb-2 md:text-sm"}`}>{product.description}</p>
-              <div className="flex items-baseline gap-3 flex-wrap">
-                <span className={`font-semibold ${luxury ? "text-base text-[#2C2416] md:text-xl" : "text-xs text-[#8b7344] md:text-lg"}`}>{product.price}</span>
+
+              {/* Product Description */}
+              <p className="text-[10px] md:text-sm text-gray-500 mb-1 md:mb-2 line-clamp-1">{product.description}</p>
+
+              {/* Pricing */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-xs md:text-lg font-bold text-[#8b7344]">{product.price}</span>
                 {product.originalPrice && (
-                  <span className={`line-through ${luxury ? "text-[10px] text-gray-400 md:text-xs" : "text-xs text-gray-400 md:text-sm"}`}>{product.originalPrice}</span>
+                  <span className="text-xs md:text-sm text-gray-400 line-through">{product.originalPrice}</span>
                 )}
               </div>
             </div>
@@ -288,12 +296,12 @@ export default function Products() {
   const modelesPrets = catalogProducts.filter(p => p.category === "chambres")
 
   return (
-    <section className="bg-[#F5F1E8] py-8 md:py-16 lg:py-24" id="products">
+    <section className="py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
       <div className="max-w-7xl mx-auto px-3 md:px-6">
         {/* NOS PRODUITS Section */}
         <div className="mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
+            <h2 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-6 md:mb-6 text-left">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -302,7 +310,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="hidden md:flex absolute left-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-[#d4af5f] bg-[#1E1912]/70 text-[#d4af5f] shadow-sm backdrop-blur-sm transition hover:bg-[#d4af5f]/20 hover:text-[#f5f2ea]"
+              className="hidden md:flex absolute left-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -310,13 +318,13 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="hidden md:flex absolute right-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-[#d4af5f] bg-[#1E1912]/70 text-[#d4af5f] shadow-sm backdrop-blur-sm transition hover:bg-[#d4af5f]/20 hover:text-[#f5f2ea]"
+              className="hidden md:flex absolute right-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
             <div
               ref={nosProduitRef}
-              className="pc-scroll-lane flex gap-5 md:gap-6 overflow-x-auto pb-3 scrollbar-hide touch-pan-x"
+              className="pc-scroll-lane flex gap-4 md:gap-6 overflow-x-auto pb-3 scrollbar-hide touch-pan-x"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
             {nosProduits.map((product, i) => (
@@ -325,7 +333,6 @@ export default function Products() {
                   product={product}
                   favorites={favorites}
                   toggleFavorite={toggleFavorite}
-                  luxury
                 />
               </Reveal>
             ))}
