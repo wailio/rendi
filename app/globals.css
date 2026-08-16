@@ -325,6 +325,51 @@ body {
     min-height: 7rem;
     border-radius: 0.75rem;
   }
+
+  .product-message-wrap {
+    position: relative;
+  }
+
+  .product-message-spotlight .contact-field {
+    animation: productMessageGlow 3.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .product-message-streak {
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    z-index: 1;
+    width: 2px;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(to bottom, transparent, #d4af5f 30%, #d4af5f 70%, transparent);
+  }
+
+  .product-message-streak-left { left: -7px; }
+  .product-message-streak-right { right: -7px; }
+
+  .product-message-spotlight .product-message-streak {
+    animation: productMessageStreak 3.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes productMessageGlow {
+    0% { box-shadow: none; }
+    17% { box-shadow: 0 0 0 1px rgba(212,175,95,0.4), 0 0 20px 4px rgba(212,175,95,0.25), 0 0 40px 10px rgba(212,175,95,0.1); }
+    58% { box-shadow: 0 0 0 1px rgba(212,175,95,0.4), 0 0 24px 5px rgba(212,175,95,0.3), 0 0 46px 12px rgba(212,175,95,0.13); }
+    78% { box-shadow: 0 0 0 1px rgba(212,175,95,0.4), 0 0 14px 3px rgba(212,175,95,0.18), 0 0 28px 7px rgba(212,175,95,0.08); }
+    100% { box-shadow: 0 0 12px 2px rgba(212,175,95,0.15); }
+  }
+
+  @keyframes productMessageStreak {
+    0%, 17% { opacity: 0; }
+    28%, 68% { opacity: 0.85; }
+    100% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .product-message-spotlight .contact-field { animation: none; box-shadow: 0 0 12px 2px rgba(212,175,95,0.15); }
+    .product-message-spotlight .product-message-streak { animation: none; opacity: 0.45; }
+  }
 }
 
 @layer base {

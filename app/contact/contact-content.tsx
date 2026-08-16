@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import { Clock3, Mail, MapPin, Phone } from "lucide-react"
 import { MapReveal } from "@/components/MapReveal"
@@ -19,12 +19,25 @@ export default function ContactContent() {
   const searchParams = useSearchParams()
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" })
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
+  const [productSpotlight, setProductSpotlight] = useState(false)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
     const subject = searchParams.get("subject")
     const message = searchParams.get("message")
-    if (subject || message) setFormData((prev) => ({ ...prev, subject: subject || "", message: message || "" }))
+    if (!(subject || message)) return
+
+    setFormData((prev) => ({ ...prev, subject: subject || "", message: message || "" }))
+    setProductSpotlight(true)
+
+    const scrollTimeout = window.setTimeout(() => {
+      messageRef.current?.scrollIntoView({ behavior: "smooth", block: "center" })
+    }, 400)
+
+    return () => window.clearTimeout(scrollTimeout)
   }, [searchParams])
+
+  const dismissProductSpotlight = () => setProductSpotlight(false)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [event.target.name]: event.target.value }))
@@ -96,7 +109,25 @@ export default function ContactContent() {
             <Reveal variant="pop" delay={70}><div><label className="sr-only" htmlFor="email">Email</label><input id="email" type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Email" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
             <Reveal variant="pop" delay={140}><div><label className="sr-only" htmlFor="phone">Téléphone</label><input id="phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Téléphone" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
             <Reveal variant="pop" delay={210}><div><label className="sr-only" htmlFor="subject">Sujet</label><input id="subject" name="subject" value={formData.subject} onChange={handleChange} required placeholder="Sujet" className="contact-field w-full rounded-full px-4 py-3.5" /></div></Reveal>
-            <Reveal variant="pop" delay={280}><div><label className="sr-only" htmlFor="message">Message</label><textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={4} placeholder="Message" className="contact-field w-full resize-none rounded-xl px-4 py-3.5" /></div></Reveal>
+            <Reveal variant="pop" delay={280}>
+              <div className={`product-message-wrap ${productSpotlight ? "product-message-spotlight" : ""}`}>
+                <span className="product-message-streak product-message-streak-left" aria-hidden="true" />
+                <label className="sr-only" htmlFor="message">Message</label>
+                <textarea
+                  ref={messageRef}
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onFocus={dismissProductSpotlight}
+                  onChange={(event) => { dismissProductSpotlight(); handleChange(event) }}
+                  required
+                  rows={4}
+                  placeholder="Message"
+                  className="contact-field w-full resize-none rounded-xl px-4 py-3.5"
+                />
+                <span className="product-message-streak product-message-streak-right" aria-hidden="true" />
+              </div>
+            </Reveal>
             <Reveal delay={300}>
               <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#e8b843] px-8 py-3 text-xs font-medium text-[#282014] hover:bg-[#f0ca55]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
             </Reveal>
