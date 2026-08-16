@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const armchairImage =
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2016%20ao%C3%BBt%202026%2C%2012_09_14-THOdm4GL419c34I6gwYzCs54XZcwTq.png"
+  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2016%20ao%C3%BBt%202026%2C%2012_09_55-2YvojC1ctjiO4pStIvpnEMpgehzVP5.png"
 
 export default function NotFound() {
   return (
@@ -10,7 +10,7 @@ export default function NotFound() {
         <img
           src={armchairImage}
           alt="Illustration dorée d'un fauteuil"
-          className="mb-8 h-auto w-full max-w-[320px] object-contain"
+          className="mb-8 h-auto w-[min(108vw,560px)] max-w-none object-contain drop-shadow-[0_22px_28px_rgba(0,0,0,0.45)] md:drop-shadow-[0_30px_40px_rgba(0,0,0,0.55)]"
         />
 
         <h1 className="font-[family-name:var(--font-great-vibes)] text-[clamp(3.75rem,12vw,4.5rem)] font-normal leading-none text-[#d4af5f]">
