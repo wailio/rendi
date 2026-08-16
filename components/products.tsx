@@ -193,10 +193,10 @@ function ProductCard({ product, favorites, toggleFavorite, luxury = false }: { p
   return (
     <div className="group flex-shrink-0">
       <Link href={`/product/${product.id}`}>
-        <div className={`overflow-hidden transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80 ${luxury ? "border border-[#c9b088]/30 bg-[#fffdf8] shadow-[0_2px_12px_rgba(0,0,0,0.06)] [clip-path:polygon(10%_0,100%_0,100%_90%,90%_100%,0_100%,0_10%)]" : "bg-white hover:shadow-lg"}`}>
+        <div className={`overflow-hidden transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80 ${luxury ? "bg-[#fffdf8] shadow-[0_2px_12px_rgba(0,0,0,0.06)] [clip-path:polygon(28%_0%,100%_0%,100%_82%,72%_100%,0%_100%,0%_18%)]" : "bg-white hover:shadow-lg"}`}>
           {product.discount && (
-            <div className={`absolute left-0 top-0 z-20 h-[22%] w-[22%] [clip-path:polygon(0_0,100%_0,0_100%)] ${luxury ? "bg-[#d4af5f]" : "bg-red-600"}`} aria-label={`Réduction de ${product.discount}%`}>
-              {luxury && <span className="absolute left-1 top-1 font-sans text-[8px] font-bold text-[#1E1912] md:left-2 md:top-2 md:text-[10px]">-{product.discount}%</span>}
+            <div className={`absolute left-0 top-0 z-20 h-[18%] w-[28%] [clip-path:polygon(0_0,100%_0,0_100%)] ${luxury ? "bg-[#F5B800]" : "bg-red-600"}`} aria-label={`Réduction de ${product.discount}%`}>
+              {luxury && <span className="absolute left-2 top-2 font-sans text-[8px] font-bold text-[#1E1912] md:left-3 md:top-3 md:text-[10px]">-{product.discount}%</span>}
             </div>
           )}
 
