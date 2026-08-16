@@ -193,9 +193,9 @@ function ProductCard({ product, favorites, toggleFavorite, luxury = false }: { p
   return (
     <div className="group flex-shrink-0">
       <Link href={`/product/${product.id}`}>
-        <div className={`overflow-hidden transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80 ${luxury ? "rounded-lg bg-[#fffdf8] shadow-[0_2px_12px_rgba(0,0,0,0.06)]" : "bg-white hover:shadow-lg"}`}>
+        <div className={`overflow-hidden transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80 ${luxury ? "rounded-none border border-[#c9b088]/30 bg-[#fffdf8] shadow-[0_2px_12px_rgba(0,0,0,0.06)]" : "bg-white hover:shadow-lg"}`}>
           {product.discount && (
-            <div className={`absolute left-3 top-3 z-20 rounded-full px-3 py-1 font-serif text-[10px] tracking-[1px] md:text-xs ${luxury ? "bg-[#2C2416] text-[#d4af5f]" : "bg-red-600 font-bold text-white"}`}>
+            <div className={`absolute left-3 top-3 z-20 rounded-full px-3 py-1 font-serif text-[10px] tracking-[1px] md:text-xs ${luxury ? "h-10 w-14 bg-[#2C2416] px-2 py-2 text-center text-[#d4af5f] [clip-path:polygon(0_0,100%_0,100%_70%,70%_100%,0_100%)]" : "bg-red-600 font-bold text-white"}`}>
               -{product.discount}%
             </div>
           )}
@@ -220,7 +220,7 @@ function ProductCard({ product, favorites, toggleFavorite, luxury = false }: { p
           {/* Image and Content in unified container */}
           <div className="h-full flex flex-col">
             {/* Image Container */}
-            <div className="relative overflow-hidden bg-gray-100 h-32 md:h-56 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
+            <div className={`relative overflow-hidden bg-gray-100 h-32 md:h-56 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full ${luxury ? "rounded-none [clip-path:polygon(0_0,100%_0,100%_100%,12px_100%,0_calc(100%-12px))]" : ""}`}>
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
@@ -293,7 +293,7 @@ export default function Products() {
         {/* NOS PRODUITS Section */}
         <div className="mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-serif text-xl font-semibold tracking-[1px] text-[#6f5831] md:text-4xl">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
