@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Great_Vibes, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import ClientLayout from "./_client-layout"
@@ -13,12 +13,6 @@ export const metadata: Metadata = {
   title: "Mobenia Furniture | Meubles Luxe",
   description: "Découvrez notre collection exclusive de meubles de luxe pour transformer votre espace",
   generator: "v0.app",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
   icons: {
     icon: [
       {
@@ -36,6 +30,13 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({

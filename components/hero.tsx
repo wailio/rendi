@@ -39,7 +39,7 @@ export default function Hero() {
             priority={index === 0}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,16,0.45)] via-[rgba(8,10,16,0.6)] to-[rgba(8,10,16,0.82)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(30,25,18,0.45)] via-[rgba(30,25,18,0.6)] to-[rgba(30,25,18,0.82)]"></div>
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-8 text-center md:px-6 md:pb-0">
           <div className="flex max-w-3xl flex-col items-center">
@@ -64,7 +64,7 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={360}>
               <Link href="/contact" className="mt-5 inline-block md:mt-7">
-                <Button className="min-h-11 rounded-[2px] border border-[#d4af5f] bg-[#06112a] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#d4af5f] shadow-none hover:bg-[#d4af5f] hover:text-[#081016] focus-visible:bg-[#d4af5f] focus-visible:text-[#081016] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
+                <Button className="min-h-11 rounded-[2px] border border-[#d4af5f] bg-[#1E1912] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#d4af5f] shadow-none hover:bg-[#d4af5f] hover:text-[#1E1912] focus-visible:bg-[#d4af5f] focus-visible:text-[#1E1912] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
                   Nous contacter
                 </Button>
               </Link>
@@ -90,7 +90,7 @@ export default function Hero() {
       </div>
 
       {/* Delivery Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-[#06112A] via-[#132848] to-[#8b7344] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#1E1912] to-[#8b7344] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
         <Reveal delay={480} className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="delivery-benefit flex items-center justify-center gap-3">

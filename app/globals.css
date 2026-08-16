@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+:root {
+  --background: #1E1912;
+  --foreground: #f5f2ea;
+}
+
+html,
+body {
+  background: #1E1912;
+}
+
 @keyframes mobenia-delivery-pulse {
   0%, 100% { opacity: 0.78; transform: translateY(0); }
   50% { opacity: 1; transform: translateY(-2px); }
@@ -22,6 +32,16 @@
 }
 
 @custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #1E1912;
+  --foreground: #f5f2ea;
+}
+
+html,
+body {
+  background: #1E1912;
+}
 
 @keyframes slideInUp {
   from {
