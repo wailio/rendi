@@ -5,7 +5,7 @@ const armchairImage =
 
 export default function NotFound() {
   return (
-    <main className="flex min-h-screen items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#080a10_0%,#06112a_62%,#081016_100%)] px-6 py-12 text-center">
+    <main className="flex min-h-screen items-center justify-center overflow-hidden bg-[linear-gradient(180deg,#1a1611_0%,#17130f_62%,#15120e_100%)] px-6 py-12 text-center">
       <div className="flex w-full max-w-[520px] flex-col items-center">
         <img
           src={armchairImage}
@@ -35,13 +35,9 @@ export default function NotFound() {
           Page introuvable
         </h2>
 
-        <p className="mt-8 max-w-[380px] font-sans text-[15px] leading-6 text-[#efece4]">
-          Il semble que cet espace n&apos;ait pas encore été aménagé.
-        </p>
-
         <Link
           href="/"
-          className="mt-9 inline-flex min-h-12 items-center justify-center rounded-[2px] border border-[#d4af5f] px-8 py-[13px] font-serif text-xs font-normal uppercase tracking-[3px] text-[#d4af5f] transition-colors hover:bg-[#d4af5f] hover:text-[#081016] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d4af5f]"
+          className="mt-5 inline-flex min-h-12 items-center justify-center rounded-[2px] border border-[#d4af5f] px-8 py-[13px] font-serif text-xs font-normal uppercase tracking-[3px] text-[#d4af5f] transition-colors hover:bg-[#d4af5f] hover:text-[#081016] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d4af5f]"
         >
           Retour à l&apos;accueil
         </Link>
