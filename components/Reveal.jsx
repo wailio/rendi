@@ -2,17 +2,18 @@
 
 import { useReveal } from "@/hooks/useReveal"
 
-export function Reveal({ children, variant = "fade", delay = 0, className = "" }) {
+export function Reveal({ children, delay = 0, className = "", variant: _variant = undefined }) {
   const { ref, isVisible } = useReveal()
-  const base = "transition-all duration-700 ease-out"
-  const hidden = variant === "pop" ? "opacity-0 translate-y-7 scale-95" : "opacity-0 translate-y-6"
-  const shown = "opacity-100 translate-y-0 scale-100"
 
   return (
     <div
       ref={ref}
-      className={`${base} ${isVisible ? shown : hidden} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(18px)",
+        transition: `opacity 1s cubic-bezier(0.22,1,0.36,1) ${delay}ms, transform 1s cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
+      }}
     >
       {children}
     </div>
