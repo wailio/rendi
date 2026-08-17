@@ -115,7 +115,6 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
               <FooterLink href="/contact">Nous trouver</FooterLink>
-              <FooterLink href="mailto:mobenia23@gmail.com">mobenia23@gmail.com</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
@@ -133,7 +132,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
           <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
 
-        <div className="mt-0 flex flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:text-left">
+        <div className="mx-auto mt-0 flex max-w-5xl flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-left">
           <p>© 2026 Mobenia Furniture. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
