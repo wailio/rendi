@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Facebook, Instagram, Mail, Music2, Check, ArrowUpRight } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import type React from "react"
 
@@ -12,10 +12,18 @@ const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d319
 
 function NewArrivalsForm() {
   const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "error" | "network-error" | "success">("idle")
+  const [status, setStatus] = useState<"idle" | "error" | "loading" | "network-error" | "success">("idle")
+
+  useEffect(() => {
+    if (status !== "success") return
+    const timer = window.setTimeout(() => setStatus("idle"), 4000)
+    return () => window.clearTimeout(timer)
+  }, [status])
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    if (status === "loading") return
+
     const trimmedEmail = email.trim()
     const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(trimmedEmail)
 
@@ -24,19 +32,27 @@ function NewArrivalsForm() {
       return
     }
 
+    setStatus("loading")
+    const controller = new AbortController()
+    const timeout = window.setTimeout(() => controller.abort(), 8000)
+
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbxnmwbXbsHkeYp3ZPERAUhgAYIxYhCZx_aQB-8meGSbblE9hQyBSgIjQh6KL8B_noXY/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbwjNct1-7VnCZ_33EhI0k34WNKQuUf991AK1u465OL-RrxNtSPKXLkU3-O9Wzy8uVM84w/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: new URLSearchParams({ email: trimmedEmail }).toString(),
+        signal: controller.signal,
       })
       setEmail("")
       setStatus("success")
-    } catch {
+    } catch (error) {
+      console.error("[Newsletter Signup Error]", error)
       setStatus("network-error")
+    } finally {
+      window.clearTimeout(timeout)
     }
   }
 
@@ -65,8 +81,8 @@ function NewArrivalsForm() {
             aria-describedby="new-arrivals-feedback"
             className="min-w-0 flex-1 bg-transparent px-2.5 py-2 text-xs text-[#26313b] outline-none placeholder:text-[#77766f]"
           />
-          <button type="submit" className="bg-[#a98661] px-3 text-[10px] font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#92734f]">
-            Recevoir
+          <button type="submit" disabled={status === "loading"} className="bg-[#a98661] px-3 text-[10px] font-medium uppercase tracking-wide text-[#fffaf1] transition-colors hover:bg-[#92734f] disabled:cursor-wait disabled:opacity-60">
+            {status === "loading" ? "Envoi..." : "Recevoir"}
           </button>
         </div>
         <p id="new-arrivals-feedback" role="status" className="mt-2 min-h-5 text-xs text-[#d1d2cd]">
