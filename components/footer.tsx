@@ -82,9 +82,6 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
           background: "linear-gradient(180deg, #f4f1e9 0%, #f4f1e9 20%, rgba(44,36,22,0.08) 40%, rgba(44,36,22,0.25) 60%, rgba(44,36,22,0.55) 80%, #2c2416 100%)",
         }}
       >
-        <svg aria-hidden="true" viewBox="0 0 360 34" className="absolute bottom-8 left-1/2 h-5 w-[88%] -translate-x-1/2 overflow-visible opacity-60" preserveAspectRatio="none">
-          <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#d4af5f" strokeWidth="2.2" strokeLinecap="round" />
-        </svg>
       </div>
       <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-0">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
