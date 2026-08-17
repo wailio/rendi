@@ -82,9 +82,6 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
           background: "linear-gradient(180deg, #f4f1e9 0%, #f4f1e9 20%, rgba(44,36,22,0.08) 40%, rgba(44,36,22,0.25) 60%, rgba(44,36,22,0.55) 80%, #2c2416 100%)",
         }}
       >
-        <svg aria-hidden="true" viewBox="0 0 360 34" className="absolute bottom-8 left-1/2 h-5 w-[88%] -translate-x-1/2 overflow-visible opacity-60" preserveAspectRatio="none">
-          <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#d4af5f" strokeWidth="2.2" strokeLinecap="round" />
-        </svg>
       </div>
       <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-0">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
@@ -118,7 +115,6 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
               <FooterLink href="/contact">Nous trouver</FooterLink>
-              <FooterLink href="mailto:mobenia23@gmail.com">mobenia23@gmail.com</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
@@ -136,7 +132,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
           <iframe title="Mobenia Furniture sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
 
-        <div className="mt-0 flex flex-col items-center justify-center gap-3 border-t border-[#bdb8ad] pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:text-left">
+        <div className="mx-auto mt-0 flex max-w-5xl flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-[#5c5d5a] sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-left">
           <p>© 2026 Mobenia Furniture. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#a98661]">Conditions</Link><Link href="/privacy" className="hover:text-[#a98661]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#a98661]">Cookies</Link></div>
         </div>
