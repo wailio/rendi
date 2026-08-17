@@ -67,8 +67,6 @@ export default function ArmoinePage() {
           </div>
         </div>
 
-        {/* Professional Spacing */}
-        <div className="h-12 md:h-24 md:h-32"></div>
       </main>
 
       <Footer />

@@ -218,7 +218,6 @@ export default function SleepingRoomProductPage({ params }: { params: { id: stri
           </div>
         </div>
 
-        <div className="h-24 md:h-32"></div>
       </main>
 
       <Footer />

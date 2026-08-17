@@ -130,8 +130,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Spacing before footer */}
-      <section className="h-24 md:h-32 bg-[#1f1f1f]"></section>
     </main>
   )
 }
