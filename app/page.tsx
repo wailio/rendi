@@ -22,7 +22,6 @@ export default function Home() {
       <InstagramSection />
       <CustomerReviews />
       <WhyChooseUs />
-      <div className="h-24 md:h-32" style={{ backgroundColor: "#eff0f1" }}></div>
       <Footer />
     </main>
   )
