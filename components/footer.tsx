@@ -12,19 +12,32 @@ const footerMapEmbed = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d319
 
 function NewArrivalsForm() {
   const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "error" | "success">("idle")
+  const [status, setStatus] = useState<"idle" | "error" | "network-error" | "success">("idle")
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(email.trim())
+    const trimmedEmail = email.trim()
+    const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(trimmedEmail)
 
     if (!validEmail) {
       setStatus("error")
       return
     }
 
-    setStatus("success")
-    setEmail("")
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbxnmwbXbsHkeYp3ZPERAUhgAYIxYhCZx_aQB-8meGSbblE9hQyBSgIjQh6KL8B_noXY/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({ email: trimmedEmail }).toString(),
+      })
+      setEmail("")
+      setStatus("success")
+    } catch {
+      setStatus("network-error")
+    }
   }
 
   return (
@@ -57,8 +70,9 @@ function NewArrivalsForm() {
           </button>
         </div>
         <p id="new-arrivals-feedback" role="status" className="mt-2 min-h-5 text-xs text-[#d1d2cd]">
-          {status === "error" && "Veuillez saisir une adresse email valide."}
-          {status === "success" && <span className="inline-flex items-center gap-1"><Check className="h-3.5 w-3.5" /> Merci, vous serez informé de nos nouveaux arrivages.</span>}
+          {status === "error" && <span className="text-[#c98f82]">Veuillez entrer un email valide.</span>}
+          {status === "network-error" && <span className="text-[#c98f82]">Une erreur est survenue, veuillez réessayer.</span>}
+          {status === "success" && <span className="inline-flex items-center gap-1 text-[#d5b66a]"><Check className="h-3.5 w-3.5" /> Merci, vous êtes inscrit.</span>}
         </p>
       </form>
     </div>
