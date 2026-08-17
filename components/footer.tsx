@@ -75,6 +75,17 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
 
   return (
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
+      <div
+        aria-hidden="true"
+        className="relative hidden h-[160px] items-end justify-center lg:flex"
+        style={{
+          background: "linear-gradient(180deg, #f4f1e9 0%, rgba(44,36,22,0.15) 25%, rgba(44,36,22,0.4) 50%, rgba(44,36,22,0.75) 75%, #2c2416 100%)",
+        }}
+      >
+        <svg viewBox="0 0 360 34" className="absolute bottom-[38px] left-1/2 h-7 w-[88%] -translate-x-1/2 overflow-visible" preserveAspectRatio="none">
+          <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#d4af5f" strokeWidth="2.2" strokeLinecap="round" />
+        </svg>
+      </div>
       <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-0">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
           <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#e9e5dc] p-6 sm:p-8 lg:flex lg:min-h-[415px] lg:p-10">
