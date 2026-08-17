@@ -72,17 +72,19 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 export default function Footer({ hideMobileMap = false }: { hideMobileMap?: boolean }) {
   const pathname = usePathname()
   const shouldHideMobileMap = hideMobileMap && pathname === "/contact"
+  const shouldHideDesktopPanel = ["/inspirations", "/offers", "/contact", "/all-products"].includes(pathname)
 
   return (
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
-      <div
-        aria-hidden="true"
-        className="relative hidden h-[240px] items-end justify-center lg:flex"
-        style={{
-          background: "linear-gradient(180deg, #f4f1e9 0%, #f4f1e9 20%, rgba(44,36,22,0.08) 40%, rgba(44,36,22,0.25) 60%, rgba(44,36,22,0.55) 80%, #2c2416 100%)",
-        }}
-      >
-      </div>
+      {!shouldHideDesktopPanel && (
+        <div
+          aria-hidden="true"
+          className="relative hidden h-[240px] items-end justify-center lg:flex"
+          style={{
+            background: "linear-gradient(180deg, #f4f1e9 0%, #f4f1e9 20%, rgba(44,36,22,0.08) 40%, rgba(44,36,22,0.25) 60%, rgba(44,36,22,0.55) 80%, #2c2416 100%)",
+          }}
+        />
+      )}
       <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-0">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
           <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#e9e5dc] p-6 sm:p-8 lg:flex lg:min-h-[415px] lg:p-10">
