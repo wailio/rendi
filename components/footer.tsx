@@ -28,7 +28,7 @@ function NewArrivalsForm() {
   }
 
   return (
-    <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#26313b] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6">
+    <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#2d2518] px-4 py-5 text-[#f1eee7] sm:px-6 sm:py-6 lg:min-h-[415px] lg:px-7 lg:py-8">
       <img src={atelierLampImage} alt="Lampe de bureau articulée" className="pointer-events-none absolute left-1/2 top-[6rem] z-0 w-36 -translate-x-1/2 object-contain opacity-90 sm:top-[6.5rem] sm:w-40" />
       <div className="relative z-10">
         <p className="font-serif text-[clamp(1.2rem,1.7vw,1.7rem)] leading-tight tracking-[-0.03em]">Nouveautés | Arrivages</p>
@@ -75,9 +75,20 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
 
   return (
     <footer className="w-full overflow-hidden bg-[#ece9e1] text-[#272b2d]">
-      <div className="w-full pb-3 pt-0 sm:pb-4">
-        <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:grid-cols-4">
-          <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#f4f1e9] p-6 sm:p-8 lg:flex">
+      <div
+        aria-hidden="true"
+        className="relative hidden h-[240px] items-end justify-center lg:flex"
+        style={{
+          background: "linear-gradient(180deg, #f4f1e9 0%, #f4f1e9 20%, rgba(44,36,22,0.08) 40%, rgba(44,36,22,0.25) 60%, rgba(44,36,22,0.55) 80%, #2c2416 100%)",
+        }}
+      >
+        <svg aria-hidden="true" viewBox="0 0 360 34" className="absolute bottom-8 left-1/2 h-5 w-[88%] -translate-x-1/2 overflow-visible opacity-60" preserveAspectRatio="none">
+          <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#d4af5f" strokeWidth="2.2" strokeLinecap="round" />
+        </svg>
+      </div>
+      <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-0">
+        <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
+          <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#e9e5dc] p-6 sm:p-8 lg:flex lg:min-h-[415px] lg:p-10">
             <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
             <div className="relative z-10 mx-auto max-w-[18rem] text-center text-[#272b2d] drop-shadow-[0_1px_1px_rgba(244,241,233,0.7)]">
               <p className="font-[family-name:var(--font-great-vibes)] text-5xl font-normal leading-none text-[#c9a24b] [text-shadow:1px_0_0_#111,-1px_0_0_#111,0_1px_0_#111,0_-1px_0_#111]">Mobenia Furniture</p>
@@ -89,8 +100,8 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             <NewArrivalsForm />
           </section>
 
-          <section className="order-1 min-w-0 bg-[#f4f1e9] px-4 py-5 sm:px-8 sm:py-8 lg:order-none">
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.12em]">Explorer</h3>
+          <section className="order-1 min-w-0 bg-[#f4f1e9] px-4 py-5 sm:px-8 sm:py-8 lg:order-none lg:px-8 lg:py-9">
+            <h3 className="relative mb-3 w-fit text-xs font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Explorer</h3>
             <nav className="flex flex-col">
               <FooterLink href="/all-products">Tous les produits</FooterLink>
               <FooterLink href="/offers">Offres & promotions</FooterLink>
@@ -102,8 +113,8 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             </div>
           </section>
 
-          <section className="min-w-0 bg-[#f4f1e9] px-6 py-7 sm:px-8 sm:py-8">
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-[0.12em]">Mobenia Furniture</h3>
+          <section className="min-w-0 bg-[#f4f1e9] px-6 py-7 sm:px-8 sm:py-8 lg:px-8 lg:py-9">
+            <h3 className="relative mb-3 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Mobenia Furniture</h3>
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
               <FooterLink href="/contact">Nous trouver</FooterLink>
@@ -111,7 +122,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
               <FooterLink href="/contact">Contact</FooterLink>
               <FooterLink href="/faq">Aide & conseils</FooterLink>
             </nav>
-            <h3 className="mb-3 mt-7 text-sm font-semibold uppercase tracking-[0.12em]">Assistance</h3>
+            <h3 className="relative mb-3 mt-7 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#c99b4d]">Assistance</h3>
             <nav className="flex flex-col"><FooterLink href="/contact">Livraison & retours</FooterLink><FooterLink href="/contact">Service client</FooterLink></nav>
             <div className="mt-6 flex gap-4 text-[#a98661]">
               <Link href="https://facebook.com/MOBENIA23" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook className="h-5 w-5" /></Link>
