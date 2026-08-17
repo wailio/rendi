@@ -2,6 +2,7 @@ import LuxuryHeader from "@/components/luxury-header"
 import Header from "@/components/header"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Footer from "@/components/footer"
 
 export default function AboutPage() {
   return (
@@ -130,6 +131,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <Footer />
     </main>
   )
 }

@@ -85,7 +85,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
           }}
         />
       )}
-      <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-0">
+      <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-4">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
           <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#e9e5dc] p-6 sm:p-8 lg:flex lg:min-h-[415px] lg:p-10">
             <img src={footerBackgroundImage} alt="Illustration vintage d’un fauteuil Mobenia" className="absolute inset-0 h-full w-full object-cover object-center" />
