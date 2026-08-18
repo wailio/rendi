@@ -5,7 +5,6 @@ import { ChevronLeft, ChevronRight, Heart } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { allProducts as catalogProducts, type Product } from "@/lib/products"
 import { Reveal } from "@/components/Reveal"
-import { ProductCard } from "@/components/product-card"
 
 interface LegacyProduct {
   id: number
@@ -190,7 +189,7 @@ const legacyProducts: LegacyProduct[] = [
   }
 ]
 
-function LegacyProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
+function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
   return (
     <div className="group flex-shrink-0 snap-center transition-[transform,opacity] duration-300 ease-out">
       <Link href={`/product/${product.id}`}>
@@ -264,13 +263,11 @@ function LegacyProductCard({ product, favorites, toggleFavorite }: { product: Pr
 export default function Products() {
   const [favorites, setFavorites] = useState<number[]>([])
   const nosProduitRef = useRef<HTMLDivElement>(null)
-  const desktopNosProduitRef = useRef<HTMLDivElement>(null)
   const modelesPretsRef = useRef<HTMLDivElement>(null)
-  const desktopModelesPretsRef = useRef<HTMLDivElement>(null)
   const hasAutoScrolled = useRef(false)
 
   useEffect(() => {
-    const element = desktopNosProduitRef.current
+    const element = nosProduitRef.current
     if (!element) return
 
   if (window.matchMedia("(max-width: 767px)").matches) return
@@ -287,7 +284,7 @@ export default function Products() {
   }, [])
 
   useEffect(() => {
-    const element = desktopNosProduitRef.current
+    const element = nosProduitRef.current
     if (!element) return
 
     let frame = 0
@@ -325,14 +322,14 @@ export default function Products() {
   }
 
   const scrollNosProduits = (direction: "left" | "right") => {
-    desktopNosProduitRef.current?.scrollBy({
+    nosProduitRef.current?.scrollBy({
       left: direction === "left" ? -420 : 420,
       behavior: "smooth",
     })
   }
 
   const scrollModelesPrets = (direction: "left" | "right") => {
-    desktopModelesPretsRef.current?.scrollBy({
+    modelesPretsRef.current?.scrollBy({
       left: direction === "left" ? -420 : 420,
       behavior: "smooth",
     })
@@ -340,9 +337,6 @@ export default function Products() {
 
   const nosProduits = catalogProducts.filter(p => p.category === "sofas" || p.category === "salle-a-manger")
   const modelesPrets = catalogProducts.filter(p => p.category === "chambres")
-  const autresProduits = catalogProducts.filter(
-    (product) => product.category === "armoire" || product.category === "accessories"
-  )
 
   return (
     <section className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
@@ -353,70 +347,8 @@ export default function Products() {
         className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-70 md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"
       />
       <div className="relative z-10 mx-auto max-w-7xl px-3 md:px-6">
-        {/* NOS PRODUITS — Mobile only */}
-        <section className="mb-8 block md:hidden">
-          <Reveal>
-            <h2 className="mb-5 text-left font-[family-name:var(--font-cormorant)] text-[30px] font-light italic uppercase tracking-[2px] text-[#4A3826]">
-              NOS PRODUITS
-            </h2>
-          </Reveal>
-          <div
-            ref={nosProduitRef}
-            className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide"
-            style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
-          >
-            {nosProduits.map((product, index) => (
-              <Reveal key={product.id} variant="pop" delay={Math.min(index * 60, 300)}>
-                <div className="w-[78vw] shrink-0">
-                  <ProductCard product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        {/* Modèles prêts — Mobile only */}
-        <section className="mb-8 block md:hidden">
-          <Reveal>
-            <h2 className="mb-5 text-left font-[family-name:var(--font-cormorant)] text-[30px] font-light italic tracking-[2px] text-[#4A3826]">
-              Modèles prêts
-            </h2>
-          </Reveal>
-          <div
-            ref={modelesPretsRef}
-            className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide"
-            style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
-          >
-            {modelesPrets.map((product, index) => (
-              <Reveal key={product.id} variant="pop" delay={Math.min(index * 60, 300)}>
-                <div className="w-[78vw] shrink-0">
-                  <ProductCard product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
-        {/* Autres produits — Mobile only */}
-        <section className="mb-8 block md:hidden">
-          <Reveal>
-            <h2 className="mb-5 text-left font-[family-name:var(--font-cormorant)] text-[30px] font-light italic tracking-[2px] text-[#4A3826]">
-              Autres produits
-            </h2>
-          </Reveal>
-          <div className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide" style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}>
-            {autresProduits.map((product, index) => (
-              <Reveal key={product.id} variant="pop" delay={Math.min(index * 60, 300)}>
-                <div className="w-[78vw] shrink-0">
-                  <ProductCard product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
         {/* NOS PRODUITS Section */}
-        <div className="relative z-10 mb-8 hidden md:mb-12 md:block">
+        <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
@@ -440,7 +372,7 @@ export default function Products() {
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
             <div
-              ref={desktopNosProduitRef}
+              ref={nosProduitRef}
               className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
@@ -458,7 +390,7 @@ export default function Products() {
         </div>
 
         {/* Modèles Prêts Section */}
-        <div className="relative z-10 mb-8 hidden md:mb-12 md:block">
+        <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
@@ -482,7 +414,7 @@ export default function Products() {
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
             <div
-              ref={desktopModelesPretsRef}
+              ref={modelesPretsRef}
               className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
