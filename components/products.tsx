@@ -191,9 +191,12 @@ const legacyProducts: LegacyProduct[] = [
 
 function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
   return (
-    <div className="group flex-shrink-0">
+    <div className="group flex-shrink-0 snap-center transition-[transform,opacity] duration-300 ease-out">
       <Link href={`/product/${product.id}`}>
-        <div className="bg-white overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80">
+        <div
+          className="group/card relative flex h-full w-48 flex-col overflow-hidden bg-white cursor-pointer shadow-none transition-[transform,box-shadow,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:shadow-[0_8px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.06)] md:hover:-translate-y-1 md:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:w-80 lg:w-[22rem]"
+          style={{ clipPath: "polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%)" }}
+        >
           {/* Discount Badge - Red rectangle top left */}
           {product.discount && (
             <div className="absolute top-0 left-0 bg-red-600 text-white px-3 py-2 font-bold text-xs md:text-sm z-20">
@@ -221,11 +224,11 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
           {/* Image and Content in unified container */}
           <div className="h-full flex flex-col">
             {/* Image Container */}
-            <div className="relative overflow-hidden bg-gray-100 h-32 md:h-56 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
+            <div className="relative overflow-hidden bg-gray-100 h-40 md:h-64 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:group-hover/card:scale-[1.03]"
               />
             </div>
 
@@ -267,8 +270,9 @@ export default function Products() {
     const element = nosProduitRef.current
     if (!element) return
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    const observer = new IntersectionObserver(([entry]) => {
+  if (window.matchMedia("(max-width: 767px)").matches) return
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting || hasAutoScrolled.current || prefersReducedMotion) return
       hasAutoScrolled.current = true
       window.setTimeout(() => element.scrollBy({ left: 420, behavior: "smooth" }), 250)
@@ -279,6 +283,38 @@ export default function Products() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const element = nosProduitRef.current
+    if (!element) return
+
+    let frame = 0
+    const updateEdgeCards = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const laneBounds = element.getBoundingClientRect()
+        Array.from(element.children).forEach((child) => {
+          const bounds = child.getBoundingClientRect()
+          const visibleWidth = Math.max(0, Math.min(bounds.right, laneBounds.right) - Math.max(bounds.left, laneBounds.left))
+          const ratio = bounds.width ? visibleWidth / bounds.width : 1
+          const isEdge = ratio < 0.72
+          const card = child as HTMLElement
+          card.style.transform = isEdge ? "scale(0.92)" : "scale(1)"
+          card.style.opacity = isEdge ? "0.55" : "1"
+          card.style.transition = "transform 350ms ease, opacity 350ms ease"
+        })
+      })
+    }
+
+    updateEdgeCards()
+    element.addEventListener("scroll", updateEdgeCards, { passive: true })
+    window.addEventListener("resize", updateEdgeCards)
+    return () => {
+      cancelAnimationFrame(frame)
+      element.removeEventListener("scroll", updateEdgeCards)
+      window.removeEventListener("resize", updateEdgeCards)
+    }
+  }, [])
+  
   const toggleFavorite = (id: number) => {
     setFavorites((prev) =>
       prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
@@ -287,6 +323,13 @@ export default function Products() {
 
   const scrollNosProduits = (direction: "left" | "right") => {
     nosProduitRef.current?.scrollBy({
+      left: direction === "left" ? -420 : 420,
+      behavior: "smooth",
+    })
+  }
+
+  const scrollModelesPrets = (direction: "left" | "right") => {
+    modelesPretsRef.current?.scrollBy({
       left: direction === "left" ? -420 : 420,
       behavior: "smooth",
     })
@@ -311,7 +354,7 @@ export default function Products() {
           </Reveal>
 
           {/* Horizontal Scroll Container */}
-          <div className="relative group">
+          <div className="relative left-0 md:left-1/2 md:w-screen md:-translate-x-1/2 group">
             <button
               type="button"
               aria-label="Produits précédents"
@@ -330,11 +373,11 @@ export default function Products() {
             </button>
             <div
               ref={nosProduitRef}
-              className="pc-scroll-lane flex gap-4 md:gap-6 overflow-x-auto pb-3 scrollbar-hide touch-pan-x"
+              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
             {nosProduits.map((product, i) => (
-              <Reveal key={product.id} variant="pop" delay={Math.min(i * 60, 300)}>
+              <Reveal key={product.id} variant="pop" delay={i * 80}>
                 <ProductCard
                   product={product}
                   favorites={favorites}
@@ -353,20 +396,38 @@ export default function Products() {
           </Reveal>
 
           {/* Horizontal Scroll Container */}
-          <div
-            ref={modelesPretsRef}
-            className="flex gap-4 md:gap-6 overflow-x-auto pb-2 scrollbar-hide touch-pan-x"
-            style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
-          >
-            {modelesPrets.map((product, i) => (
-              <Reveal key={product.id} variant="pop" delay={i * 80}>
-                <ProductCard
-                  product={product}
-                  favorites={favorites}
-                  toggleFavorite={toggleFavorite}
-                />
-              </Reveal>
-            ))}
+          <div className="relative left-0 md:left-1/2 md:w-screen md:-translate-x-1/2 group">
+            <button
+              type="button"
+              aria-label="Modèles précédents"
+              onClick={() => scrollModelesPrets("left")}
+              className="absolute left-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white md:flex"
+            >
+              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              aria-label="Modèles suivants"
+              onClick={() => scrollModelesPrets("right")}
+              className="absolute right-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white md:flex"
+            >
+              <ChevronRight className="h-5 w-5" aria-hidden="true" />
+            </button>
+            <div
+              ref={modelesPretsRef}
+              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
+            >
+              {modelesPrets.map((product, i) => (
+                <Reveal key={product.id} variant="pop" delay={i * 80}>
+                  <ProductCard
+                    product={product}
+                    favorites={favorites}
+                    toggleFavorite={toggleFavorite}
+                  />
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
 
