@@ -340,6 +340,9 @@ export default function Products() {
 
   const nosProduits = catalogProducts.filter(p => p.category === "sofas" || p.category === "salle-a-manger")
   const modelesPrets = catalogProducts.filter(p => p.category === "chambres")
+  const autresProduits = catalogProducts.filter(
+    (product) => product.category === "armoire" || product.category === "accessories"
+  )
 
   return (
     <section className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
@@ -385,6 +388,24 @@ export default function Products() {
             style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
           >
             {modelesPrets.map((product, index) => (
+              <Reveal key={product.id} variant="pop" delay={Math.min(index * 60, 300)}>
+                <div className="w-[78vw] shrink-0">
+                  <ProductCard product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
+        {/* Autres produits — Mobile only */}
+        <section className="mb-8 block md:hidden">
+          <Reveal>
+            <h2 className="mb-5 text-left font-[family-name:var(--font-cormorant)] text-[30px] font-light italic tracking-[2px] text-[#4A3826]">
+              Autres produits
+            </h2>
+          </Reveal>
+          <div className="flex gap-4 overflow-x-auto pb-3 scrollbar-hide" style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}>
+            {autresProduits.map((product, index) => (
               <Reveal key={product.id} variant="pop" delay={Math.min(index * 60, 300)}>
                 <div className="w-[78vw] shrink-0">
                   <ProductCard product={product} favorites={favorites} toggleFavorite={toggleFavorite} />
@@ -461,7 +482,7 @@ export default function Products() {
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
             <div
-              ref={modelesPretsRef}
+              ref={desktopModelesPretsRef}
               className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
