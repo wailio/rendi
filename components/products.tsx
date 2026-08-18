@@ -346,7 +346,7 @@ export default function Products() {
           </Reveal>
 
           {/* Horizontal Scroll Container */}
-          <div className="relative group">
+          <div className="relative left-1/2 w-screen -translate-x-1/2 group">
             <button
               type="button"
               aria-label="Produits précédents"
