@@ -193,7 +193,10 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
   return (
     <div className="group flex-shrink-0">
       <Link href={`/product/${product.id}`}>
-        <div className="bg-white overflow-hidden hover:shadow-lg transition-all duration-300 h-full flex flex-col relative cursor-pointer w-40 md:w-72 lg:w-80">
+        <div
+          className="group/card relative flex h-full w-40 flex-col overflow-hidden bg-white cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.08),0_1px_4px_rgba(0,0,0,0.04)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:w-72 lg:w-80"
+          style={{ clipPath: "polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%)" }}
+        >
           {/* Discount Badge - Red rectangle top left */}
           {product.discount && (
             <div className="absolute top-0 left-0 bg-red-600 text-white px-3 py-2 font-bold text-xs md:text-sm z-20">
@@ -225,7 +228,7 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/card:scale-[1.03]"
               />
             </div>
 
