@@ -270,8 +270,9 @@ export default function Products() {
     const element = nosProduitRef.current
     if (!element) return
 
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    const observer = new IntersectionObserver(([entry]) => {
+  if (window.matchMedia("(max-width: 767px)").matches) return
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting || hasAutoScrolled.current || prefersReducedMotion) return
       hasAutoScrolled.current = true
       window.setTimeout(() => element.scrollBy({ left: 420, behavior: "smooth" }), 250)
@@ -353,7 +354,7 @@ export default function Products() {
           </Reveal>
 
           {/* Horizontal Scroll Container */}
-          <div className="relative left-1/2 w-screen -translate-x-1/2 group">
+          <div className="relative left-0 md:left-1/2 md:w-screen md:-translate-x-1/2 group">
             <button
               type="button"
               aria-label="Produits précédents"
@@ -372,11 +373,11 @@ export default function Products() {
             </button>
             <div
               ref={nosProduitRef}
-              className="pc-scroll-lane flex gap-4 md:gap-6 overflow-x-auto px-[12%] pb-3 scrollbar-hide touch-pan-x snap-x snap-mandatory [mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] [-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
             {nosProduits.map((product, i) => (
-              <Reveal key={product.id} variant="pop" delay={Math.min(i * 60, 300)}>
+              <Reveal key={product.id} variant="pop" delay={i * 80}>
                 <ProductCard
                   product={product}
                   favorites={favorites}
