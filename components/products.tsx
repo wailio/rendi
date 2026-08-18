@@ -191,10 +191,10 @@ const legacyProducts: LegacyProduct[] = [
 
 function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
   return (
-    <div className="group flex-shrink-0">
+    <div className="group flex-shrink-0 snap-center transition-[transform,opacity] duration-300 ease-out">
       <Link href={`/product/${product.id}`}>
         <div
-          className="group/card relative flex h-full w-40 flex-col overflow-hidden bg-white cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.08),0_1px_4px_rgba(0,0,0,0.04)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:w-72 lg:w-80"
+          className="group/card relative flex h-full w-48 flex-col overflow-hidden bg-white cursor-pointer shadow-[0_8px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.06)] transition-[transform,box-shadow,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:w-80 lg:w-[22rem]"
           style={{ clipPath: "polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%)" }}
         >
           {/* Discount Badge - Red rectangle top left */}
@@ -224,7 +224,7 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
           {/* Image and Content in unified container */}
           <div className="h-full flex flex-col">
             {/* Image Container */}
-            <div className="relative overflow-hidden bg-gray-100 h-32 md:h-56 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
+            <div className="relative overflow-hidden bg-gray-100 h-40 md:h-64 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
@@ -282,6 +282,38 @@ export default function Products() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    const element = nosProduitRef.current
+    if (!element) return
+
+    let frame = 0
+    const updateEdgeCards = () => {
+      cancelAnimationFrame(frame)
+      frame = requestAnimationFrame(() => {
+        const laneBounds = element.getBoundingClientRect()
+        Array.from(element.children).forEach((child) => {
+          const bounds = child.getBoundingClientRect()
+          const visibleWidth = Math.max(0, Math.min(bounds.right, laneBounds.right) - Math.max(bounds.left, laneBounds.left))
+          const ratio = bounds.width ? visibleWidth / bounds.width : 1
+          const isEdge = ratio < 0.72
+          const card = child as HTMLElement
+          card.style.transform = isEdge ? "scale(0.92)" : "scale(1)"
+          card.style.opacity = isEdge ? "0.55" : "1"
+          card.style.transition = "transform 350ms ease, opacity 350ms ease"
+        })
+      })
+    }
+
+    updateEdgeCards()
+    element.addEventListener("scroll", updateEdgeCards, { passive: true })
+    window.addEventListener("resize", updateEdgeCards)
+    return () => {
+      cancelAnimationFrame(frame)
+      element.removeEventListener("scroll", updateEdgeCards)
+      window.removeEventListener("resize", updateEdgeCards)
+    }
+  }, [])
+  
   const toggleFavorite = (id: number) => {
     setFavorites((prev) =>
       prev.includes(id) ? prev.filter((fav) => fav !== id) : [...prev, id]
@@ -333,7 +365,7 @@ export default function Products() {
             </button>
             <div
               ref={nosProduitRef}
-              className="pc-scroll-lane flex gap-4 md:gap-6 overflow-x-auto pb-3 scrollbar-hide touch-pan-x"
+              className="pc-scroll-lane flex gap-4 md:gap-6 overflow-x-auto px-[12%] pb-3 scrollbar-hide touch-pan-x snap-x snap-mandatory [mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] [-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
             >
             {nosProduits.map((product, i) => (
