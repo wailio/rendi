@@ -296,10 +296,16 @@ export default function Products() {
   const modelesPrets = catalogProducts.filter(p => p.category === "chambres")
 
   return (
-    <section className="py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
-      <div className="max-w-7xl mx-auto px-3 md:px-6">
+    <section className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
+      <img
+        src="/products-gold-blob.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-70 md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"
+      />
+      <div className="relative z-10 mx-auto max-w-7xl px-3 md:px-6">
         {/* NOS PRODUITS Section */}
-        <div className="mb-8 md:mb-12">
+        <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
@@ -341,7 +347,7 @@ export default function Products() {
         </div>
 
         {/* Modèles Prêts Section */}
-        <div className="mb-8 md:mb-12">
+        <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
