@@ -373,8 +373,8 @@ export default function Products() {
             </button>
             <div
               ref={nosProduitRef}
-              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
-              style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
+              className="flex min-w-0 gap-4 overflow-x-auto overscroll-x-contain scroll-smooth pb-3 scrollbar-hide touch-pan-x select-none snap-x snap-proximity md:gap-6 md:px-[12%] md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              style={{ WebkitOverflowScrolling: "touch" }}
             >
             {nosProduits.map((product, i) => (
               <Reveal key={product.id} variant="pop" delay={i * 80}>
@@ -415,8 +415,8 @@ export default function Products() {
             </button>
             <div
               ref={modelesPretsRef}
-              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
-              style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
+              className="flex min-w-0 gap-4 overflow-x-auto overscroll-x-contain scroll-smooth pb-3 scrollbar-hide touch-pan-x select-none snap-x snap-proximity md:gap-6 md:px-[12%] md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              style={{ WebkitOverflowScrolling: "touch" }}
             >
               {modelesPrets.map((product, i) => (
                 <Reveal key={product.id} variant="pop" delay={i * 80}>
