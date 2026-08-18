@@ -327,6 +327,13 @@ export default function Products() {
     })
   }
 
+  const scrollModelesPrets = (direction: "left" | "right") => {
+    modelesPretsRef.current?.scrollBy({
+      left: direction === "left" ? -420 : 420,
+      behavior: "smooth",
+    })
+  }
+
   const nosProduits = catalogProducts.filter(p => p.category === "sofas" || p.category === "salle-a-manger")
   const modelesPrets = catalogProducts.filter(p => p.category === "chambres")
 
@@ -388,20 +395,38 @@ export default function Products() {
           </Reveal>
 
           {/* Horizontal Scroll Container */}
-          <div
-            ref={modelesPretsRef}
-            className="flex gap-4 md:gap-6 overflow-x-auto pb-2 scrollbar-hide touch-pan-x"
-            style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
-          >
-            {modelesPrets.map((product, i) => (
-              <Reveal key={product.id} variant="pop" delay={i * 80}>
-                <ProductCard
-                  product={product}
-                  favorites={favorites}
-                  toggleFavorite={toggleFavorite}
-                />
-              </Reveal>
-            ))}
+          <div className="relative left-0 md:left-1/2 md:w-screen md:-translate-x-1/2 group">
+            <button
+              type="button"
+              aria-label="Modèles précédents"
+              onClick={() => scrollModelesPrets("left")}
+              className="absolute left-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white md:flex"
+            >
+              <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              aria-label="Modèles suivants"
+              onClick={() => scrollModelesPrets("right")}
+              className="absolute right-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white md:flex"
+            >
+              <ChevronRight className="h-5 w-5" aria-hidden="true" />
+            </button>
+            <div
+              ref={modelesPretsRef}
+              className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:gap-6 md:px-[12%] md:snap-x md:snap-mandatory md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}
+            >
+              {modelesPrets.map((product, i) => (
+                <Reveal key={product.id} variant="pop" delay={i * 80}>
+                  <ProductCard
+                    product={product}
+                    favorites={favorites}
+                    toggleFavorite={toggleFavorite}
+                  />
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
 
