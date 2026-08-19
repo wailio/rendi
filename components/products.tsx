@@ -374,7 +374,7 @@ export default function Products() {
             </button>
             <div
               ref={nosProduitRef}
-              className="flex min-w-0 gap-4 overflow-x-scroll overscroll-x-contain scroll-smooth pb-3 scrollbar-hide touch-pan-x select-none md:gap-6 md:px-[12%] md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              className="flex min-w-0 gap-4 overflow-x-auto overscroll-x-contain pb-3 scrollbar-hide touch-pan-x select-none md:gap-6 md:scroll-smooth md:px-[12%] md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ WebkitOverflowScrolling: "touch" }}
             >
             {nosProduits.map((product, i) => (
@@ -418,7 +418,7 @@ export default function Products() {
             </button>
             <div
               ref={modelesPretsRef}
-              className="flex min-w-0 gap-4 overflow-x-scroll overscroll-x-contain scroll-smooth pb-3 scrollbar-hide touch-pan-x select-none md:gap-6 md:px-[12%] md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
+              className="flex min-w-0 gap-4 overflow-x-auto overscroll-x-contain pb-3 scrollbar-hide touch-pan-x select-none md:gap-6 md:scroll-smooth md:px-[12%] md:[mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)] md:[-webkit-mask-image:linear-gradient(90deg,transparent_0%,black_12%,black_88%,transparent_100%)]"
               style={{ WebkitOverflowScrolling: "touch" }}
             >
               {modelesPrets.map((product, i) => (
