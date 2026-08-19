@@ -283,6 +283,8 @@ export default function Products() {
   }, [])
 
   useEffect(() => {
+    if (window.matchMedia("(max-width: 767px)").matches) return
+
     const element = nosProduitRef.current
     if (!element) return
 
