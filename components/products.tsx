@@ -191,11 +191,10 @@ const legacyProducts: LegacyProduct[] = [
 
 function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
   return (
-    <div className="group flex-shrink-0 md:snap-center md:transition-[transform,opacity] md:duration-300 md:ease-out">
+    <div className="group flex-shrink-0 snap-center transition-[transform,opacity] duration-300 ease-out">
       <Link href={`/product/${product.id}`}>
         <div
-          className="group/card relative flex h-full w-40 flex-col overflow-hidden bg-white cursor-pointer shadow-[0_4px_16px_rgba(0,0,0,0.08),0_1px_4px_rgba(0,0,0,0.04)] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:w-80 lg:w-[22rem]"
-          style={{ clipPath: "polygon(0 0, 96% 0, 100% 4%, 100% 100%, 4% 100%, 0 96%)" }}
+          className="group/card relative flex h-full w-48 flex-col overflow-hidden bg-white cursor-pointer shadow-[0_8px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.06)] transition-[transform,box-shadow,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:w-80 lg:w-[22rem] md:[clip-path:polygon(0_0,96%_0,100%_4%,100%_100%,4%_100%,0_96%)]"
         >
           {/* Discount Badge - Red rectangle top left */}
           {product.discount && (
@@ -224,7 +223,7 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
           {/* Image and Content in unified container */}
           <div className="h-full flex flex-col">
             {/* Image Container */}
-            <div className="relative overflow-hidden bg-gray-100 h-32 md:h-64 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
+            <div className="relative overflow-hidden bg-gray-100 h-40 md:h-64 flex items-center justify-center group-hover:opacity-95 transition-opacity duration-300 w-full">
               <img
                 src={product.images[0] || "/placeholder.svg"}
                 alt={product.name}
