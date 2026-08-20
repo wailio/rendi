@@ -11,7 +11,8 @@ export function useReveal() {
     if (!el) return
 
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion || typeof IntersectionObserver === "undefined") {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    if (isMobile || prefersReducedMotion || typeof IntersectionObserver === "undefined") {
       setIsVisible(true)
       return
     }
