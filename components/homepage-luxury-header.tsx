@@ -11,13 +11,13 @@ export default function HomepageLuxuryHeader() {
       {/* Top Bar */}
       <div className="w-full py-3 px-6" style={{ backgroundColor: "#1a1a1a" }}>
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-8 text-white text-sm">
-          <Link href="/rooms" className="flex items-center gap-2 hover:text-[#9AAAC1] transition-colors duration-300">
+          <Link href="/rooms" className="flex items-center gap-2 hover:text-[#6f9f87] transition-colors duration-300">
             <Sofa className="h-4 w-4" aria-hidden="true" /> ROOMS
           </Link>
-          <Link href="/inspirations" className="flex items-center gap-2 hover:text-[#9AAAC1] transition-colors duration-300">
+          <Link href="/inspirations" className="flex items-center gap-2 hover:text-[#6f9f87] transition-colors duration-300">
             <Lightbulb className="h-4 w-4" aria-hidden="true" /> INSPIRATIONS
           </Link>
-          <Link href="/offers" className="flex items-center gap-2 hover:text-[#9AAAC1] transition-colors duration-300">
+          <Link href="/offers" className="flex items-center gap-2 hover:text-[#6f9f87] transition-colors duration-300">
             <Gift className="h-4 w-4" aria-hidden="true" /> OFFERS & PROMOTIONS
           </Link>
         </div>
@@ -30,8 +30,8 @@ export default function HomepageLuxuryHeader() {
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-block cursor-pointer">
               <Image
-                src="/logo-mobenia-furniture.png"
-                alt="Mobenia Furniture"
+                src="/rendi-logo.png"
+                alt="Rendi Shop"
                 width={400}
                 height={120}
                 className="h-24 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
@@ -55,7 +55,7 @@ export default function HomepageLuxuryHeader() {
           {/* Right Side - Only Explorer Button */}
           <div className="flex items-center gap-6">
             <Link href="/all-products">
-              <Button className="bg-[#0B5DA0] hover:bg-[#061632] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 text-base">
+              <Button className="bg-[#123b32] hover:bg-[#050907] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 text-base">
                 Explorer
               </Button>
             </Link>

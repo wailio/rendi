@@ -1,10 +1,11 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
-import { Facebook, Gift, Instagram, Lightbulb, Mail, Music2, Sofa } from "lucide-react"
+import { Facebook, Gift, Instagram, Lightbulb, Mail, Sofa, Youtube } from "lucide-react"
 
 export default function LuxuryHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -61,28 +62,28 @@ export default function LuxuryHeader() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 text-xs">
           {/* Left Side - Social Icons */}
           <div className="flex items-center gap-3">
-            <Link href="https://facebook.com/MOBENIA23" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://facebook.com/profile.php?id=100063996253630" target="_blank" rel="noopener noreferrer" className={`hover:text-[#6f9f87] transition-colors duration-300 ${topBarTextColor}`}>
               <Facebook className="w-4 h-4" />
             </Link>
-            <Link href="https://instagram.com/mobenia_furniture" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="https://instagram.com/rendi_shop_dz" target="_blank" rel="noopener noreferrer" className={`hover:text-[#6f9f87] transition-colors duration-300 ${topBarTextColor}`}>
               <Instagram className="w-4 h-4" />
             </Link>
-            <Link href="https://tiktok.com/@mobenia.furniture23" target="_blank" rel="noopener noreferrer" className={`hover:text-[#0B5DA0] transition-colors duration-300 ${topBarTextColor}`}>
-              <Music2 className="w-4 h-4" />
+            <Link href="https://youtube.com/channel/UCwzQlW9G9jvJeYrNBjX-rbA" target="_blank" rel="noopener noreferrer" className={`hover:text-[#6f9f87] transition-colors duration-300 ${topBarTextColor}`}>
+              <Youtube className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Center - Navigation Links */}
           <div className="flex items-center gap-6">
-            <Link href="/rooms" className={`flex items-center gap-1 hover:text-[#9AAAC1] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="/rooms" className={`flex items-center gap-1 hover:text-[#6f9f87] transition-colors duration-300 ${topBarTextColor}`}>
               <Sofa className="h-3.5 w-3.5" aria-hidden="true" /> PIÈCES
             </Link>
             <span className={`${topBarTextColor}`}>•</span>
-            <Link href="/inspirations" className={`flex items-center gap-1 hover:text-[#9AAAC1] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="/inspirations" className={`flex items-center gap-1 hover:text-[#6f9f87] transition-colors duration-300 ${topBarTextColor}`}>
               <Lightbulb className="h-3.5 w-3.5" aria-hidden="true" /> INSPIRATIONS
             </Link>
             <span className={`${topBarTextColor}`}>•</span>
-            <Link href="/offers" className={`flex items-center gap-1 hover:text-[#9AAAC1] transition-colors duration-300 ${topBarTextColor}`}>
+            <Link href="/offers" className={`flex items-center gap-1 hover:text-[#6f9f87] transition-colors duration-300 ${topBarTextColor}`}>
               <Gift className="h-3.5 w-3.5" aria-hidden="true" /> OFFRES
             </Link>
           </div>
@@ -97,21 +98,20 @@ export default function LuxuryHeader() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo - Simple and clean */}
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
-            <span className="group inline-flex items-center gap-2 cursor-pointer">
-              <span className="flex size-10 items-center justify-center rounded-full border border-[#8fb8a8] font-serif text-lg text-[#8fb8a8] transition-transform duration-[450ms] ease-out group-hover:scale-110 group-hover:rotate-[8deg]">R</span>
-              <span className={`font-serif text-xl tracking-[0.16em] ${headerTextColor}`}>Rendi Shop</span>
+            <span className="group inline-flex items-center cursor-pointer">
+              <Image src="/rendi-logo.png" alt="Rendi Shop" width={240} height={80} className="h-14 w-auto object-contain transition-transform duration-[450ms] ease-out group-hover:scale-105" />
             </span>
           </Link>
 
           {/* Center Menu - Compact */}
           <nav className="flex items-center gap-8 flex-1 justify-center px-8 min-w-0">
-            <Link href="/all-products" className={`font-semibold hover:text-[#0B5DA0] transition-colors duration-300 text-sm whitespace-nowrap ${headerTextColor}`}>
+            <Link href="/all-products" className={`font-semibold hover:text-[#6f9f87] transition-colors duration-300 text-sm whitespace-nowrap ${headerTextColor}`}>
               Produits
             </Link>
-            <Link href="/contact" className={`font-semibold hover:text-[#0B5DA0] transition-colors duration-300 text-sm whitespace-nowrap ${headerTextColor}`}>
+            <Link href="/contact" className={`font-semibold hover:text-[#6f9f87] transition-colors duration-300 text-sm whitespace-nowrap ${headerTextColor}`}>
               Contact
             </Link>
-            <Link href="/about" className={`font-semibold hover:text-[#0B5DA0] transition-colors duration-300 text-sm whitespace-nowrap ${headerTextColor}`}>
+            <Link href="/about" className={`font-semibold hover:text-[#6f9f87] transition-colors duration-300 text-sm whitespace-nowrap ${headerTextColor}`}>
               À Propos
             </Link>
           </nav>
@@ -119,7 +119,7 @@ export default function LuxuryHeader() {
           {/* Right Side - Explorer Button */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <Link href="/all-products">
-              <Button className="bg-[#1E1912] hover:bg-[#00030A] text-white px-6 py-2 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs">
+              <Button className="bg-[#050907] hover:bg-[#123b32] text-white px-6 py-2 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 text-xs">
                 Découvrir
               </Button>
             </Link>

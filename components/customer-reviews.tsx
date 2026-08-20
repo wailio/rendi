@@ -97,7 +97,7 @@ export default function CustomerReviews() {
           {/* Hover Controls - Left */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#1E90FF] hover:bg-[#0B5DA0] text-white rounded-full"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#123b32] hover:bg-[#050907] text-white rounded-full"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -107,7 +107,7 @@ export default function CustomerReviews() {
           {/* Hover Controls - Right */}
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#1E90FF] hover:bg-[#0B5DA0] text-white rounded-full"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#123b32] hover:bg-[#050907] text-white rounded-full"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -135,7 +135,7 @@ export default function CustomerReviews() {
           <div className="flex justify-between items-center gap-3">
             <button
               onClick={() => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
-              className="p-2 rounded-lg bg-[#0B5DA0] hover:bg-[#061632] transition-colors flex-shrink-0"
+              className="p-2 rounded-lg bg-[#123b32] hover:bg-[#050907] transition-colors flex-shrink-0"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -146,14 +146,14 @@ export default function CustomerReviews() {
                 <div
                   key={i}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    i === currentIndex ? "bg-[#0B5DA0]" : "bg-gray-300"
+                    i === currentIndex ? "bg-[#123b32]" : "bg-gray-300"
                   }`}
                 />
               ))}
             </div>
             <button
               onClick={() => setCurrentIndex((prev) => (prev + 1) % reviews.length)}
-              className="p-2 rounded-lg bg-[#0B5DA0] hover:bg-[#061632] transition-colors flex-shrink-0"
+              className="p-2 rounded-lg bg-[#123b32] hover:bg-[#050907] transition-colors flex-shrink-0"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

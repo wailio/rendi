@@ -342,7 +342,7 @@ export default function Products() {
   return (
     <section className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
       <img
-        src="/products-gold-blob.png"
+        src="/products-green-blob.png"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-70 md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"

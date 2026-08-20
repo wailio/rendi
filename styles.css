@@ -38,7 +38,7 @@ body {
 }
 
 .contact-field::placeholder { color: #918e88; }
-.contact-field:focus { border-color: #d2b979; background: rgba(168, 145, 99, 0.06); }
+.contact-field:focus { border-color: #174f3d; background: rgba(23, 79, 61, 0.08); }
 textarea.contact-field { border-radius: 1rem; }
 select.contact-field { appearance: none; }
 
@@ -166,7 +166,7 @@ select.contact-field { appearance: none; }
 
 .contact-btn {
   display: none;
-  background-color: #1E90FF;
+  background-color: #123b32;
   color: white;
   border: none;
   padding: 8px 24px;
@@ -184,7 +184,7 @@ select.contact-field { appearance: none; }
 }
 
 .contact-btn:hover {
-  background-color: #0B5DA0;
+  background-color: #050907;
 }
 
 .menu-toggle {
@@ -297,7 +297,7 @@ select.contact-field { appearance: none; }
 }
 
 .cta-button {
-  background-color: #1E90FF;
+  background-color: #123b32;
   color: white;
   border: none;
   padding: 16px 32px;
@@ -309,7 +309,7 @@ select.contact-field { appearance: none; }
 }
 
 .cta-button:hover {
-  background-color: #0B5DA0;
+  background-color: #050907;
 }
 
 /* Showcase Section */
@@ -472,7 +472,7 @@ select.contact-field { appearance: none; }
 
 /* Products Section */
 .products {
-  background-color: #1E90FF;
+  background-color: #123b32;
   padding: 64px 24px;
 }
 
@@ -629,7 +629,7 @@ select.contact-field { appearance: none; }
 }
 
 .footer-links a:hover {
-  color: #1E90FF;
+  color: #123b32;
 }
 
 .footer-links li {
@@ -678,7 +678,7 @@ select.contact-field { appearance: none; }
 
 .social-link:hover {
   background-color: rgba(208, 208, 208, 0.1);
-  color: #1E90FF;
+  color: #123b32;
 }
 
 .social-link svg {

@@ -127,7 +127,7 @@ export default function Showcase() {
                       {/* View Products Link */}
                       <Link
                         href={product.link}
-                        className="inline-block w-full bg-[#0B5DA0] hover:bg-[#111615] text-white font-bold py-2 px-4 rounded transition-colors text-center text-xs"
+                        className="inline-block w-full bg-[#123b32] hover:bg-[#050907] text-white font-bold py-2 px-4 rounded transition-colors text-center text-xs"
                       >
                         View Products
                       </Link>
