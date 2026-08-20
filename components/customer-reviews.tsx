@@ -5,10 +5,12 @@ import { Star } from 'lucide-react'
 import { Reveal } from '@/components/Reveal'
 
 const reviews = [
-  { image: "/review-rahim.png", author: "Rahim Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "Soyez les bienvenus" },
-  { image: "/review-mehdi.png", author: "Mehdi", role: "", rating: 5, years: "il y a 3 mois", text: "" },
-  { image: "/review-zakaria.png", author: "ZAKARIA BENAMARA", role: "1 avis · 1 photo", rating: 2, years: "il y a 8 mois", text: "Bon produit" },
-  { image: "/review-illyes.png", author: "Illyes Hamdi", role: "1 avis", rating: 5, years: "il y a 3 ans", text: "" },
+  { image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TiEmm3SQ4xEneTLYtokM291vlsN27Z.png", author: "Fafi Bylka", role: "Local Guide · 2 avis · 40 photos", rating: 5, years: "il y a 4 ans", text: "Bien" },
+  { image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-o48V0mIs0hjBa8uS2dqldiwgeY8IfP.png", author: "Ayoub Guir", role: "Local Guide · 5 avis", rating: 5, years: "il y a 9 ans", text: "" },
+  { image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bMvxzt947EZTdcgAABJOkBfgUo6MeH.png", author: "Mohamed Djamel Eddine Guenanou", role: "Local Guide · 11 avis · 22 photos", rating: 5, years: "il y a 6 mois", text: "" },
+  { image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lgV5B02waBN27Bcg1iPe6LygsAu2vT.png", author: "El_Nomade_Dz (El_Nomade_DZ)", role: "Local Guide · 17 avis · 66 photos", rating: 4, years: "il y a 4 ans", text: "" },
+  { image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-EsotSGumPRq93AuTBUTj2LNFLMn31G.png", author: "JUST IMAGINE", role: "Local Guide · 48 avis · 66 photos", rating: 4, years: "Modifié il y a 5 ans", text: "produit de haute qualité\nprix raisonnable\nRéception a la hauteur\nService Livraison impeccable\nShowroom rendi Lido Bordj elkiffan" },
+  { image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-AetiLjFgfAc9ApFWlxfpAGpfB8en9G.png", author: "F. Zohra Lalami", role: "Local Guide · 66 avis · 44 photos", rating: 5, years: "il y a 2 ans", text: "" },
 ]
 
 export default function CustomerReviews() {
@@ -97,7 +99,7 @@ export default function CustomerReviews() {
           {/* Hover Controls - Left */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#123b32] hover:bg-[#050907] text-white rounded-full"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#08220e] hover:bg-[#050907] text-white rounded-full"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -107,7 +109,7 @@ export default function CustomerReviews() {
           {/* Hover Controls - Right */}
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#123b32] hover:bg-[#050907] text-white rounded-full"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-16 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 p-3 bg-[#08220e] hover:bg-[#050907] text-white rounded-full"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -135,7 +137,7 @@ export default function CustomerReviews() {
           <div className="flex justify-between items-center gap-3">
             <button
               onClick={() => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
-              className="p-2 rounded-lg bg-[#123b32] hover:bg-[#050907] transition-colors flex-shrink-0"
+              className="p-2 rounded-lg bg-[#08220e] hover:bg-[#050907] transition-colors flex-shrink-0"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -146,14 +148,14 @@ export default function CustomerReviews() {
                 <div
                   key={i}
                   className={`h-2 w-2 rounded-full transition-colors ${
-                    i === currentIndex ? "bg-[#123b32]" : "bg-gray-300"
+                    i === currentIndex ? "bg-[#08220e]" : "bg-gray-300"
                   }`}
                 />
               ))}
             </div>
             <button
               onClick={() => setCurrentIndex((prev) => (prev + 1) % reviews.length)}
-              className="p-2 rounded-lg bg-[#123b32] hover:bg-[#050907] transition-colors flex-shrink-0"
+              className="p-2 rounded-lg bg-[#08220e] hover:bg-[#050907] transition-colors flex-shrink-0"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

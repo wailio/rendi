@@ -54,7 +54,7 @@ export default function AboutPage() {
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-12 text-center">Nos Valeurs Fondamentales</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8">
             {/* Value 1 */}
-            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#8b7344] hover:shadow-lg transition-all duration-300 hover:border-[#d2b979]">
+            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#134c1f] hover:shadow-lg transition-all duration-300 hover:border-[#134c1f]">
               <h3 className="text-xs md:text-xl font-semibold text-white mb-1 md:mb-4">Excellence</h3>
               <p className="text-gray-300 leading-relaxed font-light">
                 Nous poursuivons l&apos;excellence dans chaque détail, de la conceptualisation du design à la livraison finale. La qualité n&apos;est jamais compromise.
@@ -62,7 +62,7 @@ export default function AboutPage() {
             </div>
 
             {/* Value 2 */}
-            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#8b7344] hover:shadow-lg transition-all duration-300 hover:border-[#d2b979]">
+            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#134c1f] hover:shadow-lg transition-all duration-300 hover:border-[#134c1f]">
               <h3 className="text-xs md:text-xl font-semibold text-white mb-1 md:mb-4">Authenticité</h3>
               <p className="text-gray-300 leading-relaxed font-light">
                 Chaque pièce raconte une histoire. Nous croyons en un design authentique qui résiste à l&apos;épreuve du temps, sans tendances ni artifices.
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </div>
 
             {/* Value 3 */}
-            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#8b7344] hover:shadow-lg transition-all duration-300 hover:border-[#d2b979]">
+            <div className="p-3 md:p-8 bg-[#1f1f1f] rounded-lg border-t-2 md:border-l-4 md:border-t-0 border-[#134c1f] hover:shadow-lg transition-all duration-300 hover:border-[#134c1f]">
               <h3 className="text-xs md:text-xl font-semibold text-white mb-1 md:mb-4">Service Client</h3>
               <p className="text-gray-300 leading-relaxed font-light">
                 Votre satisfaction est notre priorité. Nous offrons un soutien complet avant, pendant et après votre achat.
@@ -84,7 +84,7 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 px-6 md:px-12 bg-[#1f1f1f]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-lg h-96 order-2 md:order-1 border-l-4 border-[#8b7344]">
+            <div className="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-lg h-96 order-2 md:order-1 border-l-4 border-[#134c1f]">
               <Image
                 src="/about-history.jpg"
                 alt="Our Story"
@@ -118,12 +118,12 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/all-products">
-              <Button className="bg-[#8b7344] hover:bg-[#6f5b35] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <Button className="bg-[#134c1f] hover:bg-[#6f5b35] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Explorer Collection
               </Button>
             </a>
             <a href="/contact">
-              <Button className="border-2 border-[#8b7344] text-white hover:bg-[#8b7344] hover:text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300">
+              <Button className="border-2 border-[#134c1f] text-white hover:bg-[#134c1f] hover:text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300">
                 Nous Contacter
               </Button>
             </a>

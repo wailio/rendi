@@ -23,7 +23,7 @@ export default function LuxuryHeader() {
   const topBarTextColor = "text-white"
 
   return (
-    <header className="hidden md:block fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
+    <header className={`hidden md:block fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${isScrolled ? "translate-y-0" : "translate-y-0"}`}>
       {/* Top Bar - Thinner */}
       <div className={`w-full py-2 px-6 ${topBarBgClass}`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 text-xs">
@@ -66,7 +66,7 @@ export default function LuxuryHeader() {
           {/* Logo - Simple and clean */}
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
             <span className="group inline-flex items-center cursor-pointer">
-              <Image src="/rendi-logo.png" alt="Rendi Shop" width={240} height={80} className="h-14 w-auto object-contain transition-transform duration-[450ms] ease-out group-hover:scale-105" />
+              <Image src="/rendi-logo.png" alt="Rendi Shop" width={240} height={80} className="h-10 w-auto object-contain drop-shadow-[0_3px_8px_rgba(8,34,14,0.8)] transition-transform duration-[450ms] ease-out group-hover:scale-105" />
             </span>
           </Link>
 

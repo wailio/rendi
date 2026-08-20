@@ -102,7 +102,7 @@ export default function RoomsPage() {
       <div className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-8 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-xl md:text-4xl font-serif font-bold text-gray-900 mb-4 leading-tight">
-            Explore Our <span className="text-[#0B5DA0]">Room Collections</span>
+            Explore Our <span className="text-[#134c1f]">Room Collections</span>
           </h1>
           <p className="text-xs md:text-lg text-gray-700 max-w-2xl mx-auto font-light">
             Discover curated collections designed to transform every space in your home into a sanctuary of luxury and comfort.
@@ -136,11 +136,11 @@ export default function RoomsPage() {
                     {room.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-[#0B5DA0]">
+                    <span className="text-sm font-medium text-[#134c1f]">
                       {room.products} Products
                     </span>
                     <Link href={`/product/${room.id}`}>
-                      <button className="border border-[#0B5DA0] text-[#0B5DA0] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#0B5DA0] hover:text-white transition-all duration-300">
+                      <button className="border border-[#134c1f] text-[#134c1f] px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#134c1f] hover:text-white transition-all duration-300">
                         Explore
                       </button>
                     </Link>
@@ -166,7 +166,7 @@ export default function RoomsPage() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link href="/all-products">
-              <button className="bg-[#0B5DA0] hover:bg-[#061632] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <button className="bg-[#134c1f] hover:bg-[#061632] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                 View All Products
               </button>
             </Link>

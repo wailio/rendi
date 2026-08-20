@@ -49,13 +49,13 @@ export default function WhyChooseUs() {
     <section 
       ref={containerRef}
       className="py-8 md:py-24 px-4 md:px-8 lg:px-16" 
-      style={{ backgroundColor: "#111827" }}
+      style={{ backgroundColor: "#000000" }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="mb-6 md:mb-16 text-center">
           <Reveal>
             <h2 className="text-xl md:text-5xl font-bold text-white">
-              Pourquoi <span className="text-[#6f9f87] md:hidden">nous choisir</span><span className="hidden md:inline text-[#6f9f87]">choisir Rendi Shop</span>
+              Pourquoi <span className="text-[#134c1f] md:hidden">nous choisir</span><span className="hidden md:inline text-[#134c1f]">choisir Rendi Shop</span>
             </h2>
           </Reveal>
         </div>
@@ -63,9 +63,9 @@ export default function WhyChooseUs() {
         {/* Mobile Layout - Simple List */}
         <div className="md:hidden space-y-0">
           <Reveal variant="pop" delay={0}>
-          <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
+          <div className="bg-[#111111] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#6f9f87] icon-3d transition-transform duration-200">✦</div>
+              <div className="text-xl text-[#134c1f] icon-3d transition-transform duration-200">✦</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Solutions Complètes</h3>
@@ -74,9 +74,9 @@ export default function WhyChooseUs() {
           </div>
           </Reveal>
           <Reveal variant="pop" delay={100}>
-          <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
+          <div className="bg-[#111111] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#6f9f87] icon-3d transition-transform duration-200">◆</div>
+              <div className="text-xl text-[#134c1f] icon-3d transition-transform duration-200">◆</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Support 24/7</h3>
@@ -85,9 +85,9 @@ export default function WhyChooseUs() {
           </div>
           </Reveal>
           <Reveal variant="pop" delay={200}>
-          <div className="bg-[#1B2433] p-3 flex items-start gap-3">
+          <div className="bg-[#111111] p-3 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#00BFFF] icon-3d transition-transform duration-200">★</div>
+              <div className="text-xl text-[#134c1f] icon-3d transition-transform duration-200">★</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Qualité Supérieure</h3>
@@ -101,21 +101,21 @@ export default function WhyChooseUs() {
         <div className="hidden md:grid grid-cols-3 gap-6">
           {/* Card 1: Solutions Complètes */}
           <Reveal variant="pop" delay={0}>
-          <div className="bg-[#1B2433] rounded-3xl p-8 flex flex-col justify-between h-64 animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600">
+          <div className="bg-[#111111] rounded-3xl p-8 flex flex-col justify-between h-64 animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600">
             <div>
               <h3 className="text-xl font-semibold text-white mb-3">Solutions Complètes</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Nous gérons chaque aspect de votre projet d'ameublement, vous faisant gagner du temps et des ressources.
               </p>
             </div>
-            <div className="text-5xl text-[#6f9f87] icon-3d transition-transform duration-200">✦</div>
+            <div className="text-5xl text-[#134c1f] icon-3d transition-transform duration-200">✦</div>
           </div>
           </Reveal>
 
           {/* Card 2: Support Après-Vente */}
           <Reveal variant="pop" delay={100}>
           <div
-            className="bg-[#1B2433] rounded-3xl p-8 flex flex-col justify-between h-64 animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600"
+            className="bg-[#111111] rounded-3xl p-8 flex flex-col justify-between h-64 animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600"
             style={{ animationDelay: "0.1s" }}
           >
             <div>
@@ -124,24 +124,24 @@ export default function WhyChooseUs() {
                 Nous nous engageons à fournir un support continu et un service après-vente pour répondre à vos besoins.
               </p>
             </div>
-            <div className="text-5xl text-[#6f9f87] icon-3d transition-transform duration-200">◆</div>
+            <div className="text-5xl text-[#134c1f] icon-3d transition-transform duration-200">◆</div>
           </div>
           </Reveal>
 
           {/* Card 3: Absence de Restrictions */}
           <Reveal variant="pop" delay={200}>
           <div
-            className="bg-[#25344B] rounded-3xl p-8 flex flex-col justify-between h-64 text-[#1a1a1a] animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#7E8EA6]"
+            className="bg-[#111111] rounded-3xl p-8 flex flex-col justify-between h-64 text-[#1a1a1a] animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#7E8EA6]"
             style={{ animationDelay: "0.2s" }}
           >
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-[#6f9f87]">Absence de Restrictions</h3>
-              <p className="text-[#111827] text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold mb-3 text-[#134c1f]">Absence de Restrictions</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
                 Nous nous associons à tous les fournisseurs pour offrir la plus large sélection de solutions
                 d'ameublement.
               </p>
             </div>
-            <div className="text-5xl icon-3d transition-transform duration-200 text-[#6f9f87]">★</div>
+            <div className="text-5xl icon-3d transition-transform duration-200 text-[#134c1f]">★</div>
           </div>
           </Reveal>
 
@@ -170,7 +170,7 @@ export default function WhyChooseUs() {
           {/* Card 5: Mobilier Personnalisé */}
           <Reveal variant="pop" delay={400}>
           <div
-            className="bg-[#1B2433] rounded-3xl p-8 flex flex-col justify-between h-80 text-white animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600"
+            className="bg-[#111111] rounded-3xl p-8 flex flex-col justify-between h-80 text-white animate-fade-in-up hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#444444] border border-gray-600"
             style={{ animationDelay: "0.4s" }}
           >
             <div>
@@ -180,7 +180,7 @@ export default function WhyChooseUs() {
                 unique et vos besoins.
               </p>
             </div>
-            <div className="text-5xl text-[#6f9f87] icon-3d transition-transform duration-200">◇</div>
+            <div className="text-5xl text-[#134c1f] icon-3d transition-transform duration-200">◇</div>
           </div>
           </Reveal>
         </div>

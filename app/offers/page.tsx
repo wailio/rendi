@@ -120,10 +120,10 @@ export default function OffersPage() {
             {currentOffers.map((offer, idx) => (
               <div
                 key={idx}
-                className="offer-card bg-[#2a2a2a] border border-[#a89163] rounded-xl md:rounded-2xl overflow-hidden hover:border-[#d2b979] transition-all duration-500 shadow-md hover:shadow-xl"
+                className="offer-card bg-[#2a2a2a] border border-[#134c1f] rounded-xl md:rounded-2xl overflow-hidden hover:border-[#134c1f] transition-all duration-500 shadow-md hover:shadow-xl"
               >
                 {/* Discount Badge */}
-                <div className="discount-badge bg-[#8b7344] text-white px-2 py-2 md:px-6 md:py-4 text-center">
+                <div className="discount-badge bg-[#08220e] text-white px-2 py-2 md:px-6 md:py-4 text-center">
                   <div className="text-lg md:text-4xl font-bold font-serif">
                     {offer.discount}
                   </div>
@@ -147,13 +147,13 @@ export default function OffersPage() {
                   </div>
 
                   <div className="flex items-center justify-between mb-2 md:mb-4">
-                    <span className="text-[10px] md:text-sm font-medium text-[#d2b979]">
+                    <span className="text-[10px] md:text-sm font-medium text-[#134c1f]">
                       {offer.products} Produits
                     </span>
                   </div>
 
                   <Link href="/all-products">
-                    <button className="w-full bg-[#a89163] hover:bg-[#8b7344] text-white px-2 md:px-4 py-1.5 md:py-3 rounded-lg font-semibold text-[10px] md:text-sm transition-all duration-300 hover:shadow-lg">
+                    <button className="w-full bg-[#134c1f] hover:bg-[#08220e] text-white px-2 md:px-4 py-1.5 md:py-3 rounded-lg font-semibold text-[10px] md:text-sm transition-all duration-300 hover:shadow-lg">
                       Acheter
                     </button>
                   </Link>
@@ -172,20 +172,20 @@ export default function OffersPage() {
           </h2>
 
           <div className="grid grid-cols-3 gap-2 md:gap-8">
-            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#a89163]">
-              <Award className="h-6 w-6 md:h-16 md:w-16 text-[#d2b979] mx-auto mb-2 md:mb-4" />
+            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#134c1f]">
+              <Award className="h-6 w-6 md:h-16 md:w-16 text-[#134c1f] mx-auto mb-2 md:mb-4" />
               <h3 className="text-[10px] md:text-lg font-serif font-bold text-white mb-1 md:mb-3">Économies</h3>
               <p className="text-[9px] md:text-base text-gray-300 font-light leading-tight">Réductions réelles</p>
             </div>
 
-            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#a89163]">
-              <CheckCircle className="h-6 w-6 md:h-16 md:w-16 text-[#d2b979] mx-auto mb-2 md:mb-4" />
+            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#134c1f]">
+              <CheckCircle className="h-6 w-6 md:h-16 md:w-16 text-[#134c1f] mx-auto mb-2 md:mb-4" />
               <h3 className="text-[10px] md:text-lg font-serif font-bold text-white mb-1 md:mb-3">Qualité</h3>
               <p className="text-[9px] md:text-base text-gray-300 font-light leading-tight">Garantie premium</p>
             </div>
 
-            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#a89163]">
-              <Truck className="h-6 w-6 md:h-16 md:w-16 text-[#d2b979] mx-auto mb-2 md:mb-4" />
+            <div className="bg-[#1f1f1f] p-2 md:p-8 rounded-lg md:rounded-2xl shadow-md text-center border-t-2 md:border-l-4 md:border-t-0 border-[#134c1f]">
+              <Truck className="h-6 w-6 md:h-16 md:w-16 text-[#134c1f] mx-auto mb-2 md:mb-4" />
               <h3 className="text-[10px] md:text-lg font-serif font-bold text-white mb-1 md:mb-3">Livraison</h3>
               <p className="text-[9px] md:text-base text-gray-300 font-light leading-tight">Expédition rapide</p>
             </div>
@@ -208,7 +208,7 @@ export default function OffersPage() {
               placeholder="Entrez votre email"
               className="flex-1 px-6 py-3 rounded-lg text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-[#0B5DA0]"
             />
-            <button               className="bg-[#a89163] hover:bg-[#8b7344] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+            <button               className="bg-[#134c1f] hover:bg-[#08220e] text-white px-8 py-3 font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
               S&apos;abonner
             </button>
           </div>

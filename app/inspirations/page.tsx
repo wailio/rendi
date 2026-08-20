@@ -9,7 +9,7 @@ export default function InspirationsPage() {
   const inspirations = allProducts
 
   return (
-    <main className="min-h-screen bg-[#f7f1e5] bg-[url('/inspirations-wallpaper.png')] bg-repeat bg-top bg-[length:auto_32rem]">
+    <main className="min-h-screen bg-white">
       <LuxuryHeader />
       <Header />
 
@@ -47,7 +47,7 @@ export default function InspirationsPage() {
       <div className="pt-32 md:pt-48 pb-16 md:pb-24 px-4 md:px-8 bg-transparent">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-base md:text-4xl font-serif font-bold text-gray-900 mb-3 leading-tight md:mb-4">
-            Get <span className="text-[#a89163]">Inspired</span> by Design
+            Get <span className="text-[#134c1f]">Inspired</span> by Design
           </h1>
           <p className="text-xs md:text-lg text-gray-600 max-w-2xl mx-auto font-light">
             Explore design styles and interior trends that will transform your living spaces.
@@ -80,10 +80,10 @@ export default function InspirationsPage() {
                   <p className="text-gray-600 mb-2 md:mb-4 text-[10px] md:text-sm leading-relaxed font-light line-clamp-1 md:line-clamp-2">
                     {item.description}
                   </p>
-                  <div className="text-xs md:text-sm font-semibold text-[#a89163] mb-2 md:mb-4">{item.price}</div>
+                  <div className="text-xs md:text-sm font-semibold text-[#134c1f] mb-2 md:mb-4">{item.price}</div>
 
                   <Link href={`/product/${item.id}`}>
-                    <button className="w-full border border-[#a89163] text-[#a89163] px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold text-[10px] md:text-sm hover:bg-[#a89163] hover:text-white transition-all duration-300">
+                    <button className="w-full border border-[#134c1f] text-[#134c1f] px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-semibold text-[10px] md:text-sm hover:bg-[#134c1f] hover:text-white transition-all duration-300">
                       Explore Style
                     </button>
                   </Link>
@@ -109,7 +109,7 @@ export default function InspirationsPage() {
               [Gem, "Quality", "Choose fewer pieces that last."],
             ].map(([Icon, title, description]) => (
               <div key={title} className="bg-white p-3 md:p-8 rounded-lg md:rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="mb-1 flex size-6 items-center justify-center rounded-full border border-[#a89163] text-[#8b7344] md:mb-3 md:size-10"><Icon className="size-3 md:size-5" aria-hidden="true" /></div>
+                <div className="mb-1 flex size-6 items-center justify-center rounded-full border border-[#134c1f] text-[#08220e] md:mb-3 md:size-10"><Icon className="size-3 md:size-5" aria-hidden="true" /></div>
                 <h3 className="text-[11px] md:text-lg font-serif font-bold text-gray-900 mb-1 md:mb-3">{title}</h3>
                 <p className="text-[10px] md:text-base text-gray-700 leading-tight md:leading-relaxed font-light">{description}</p>
               </div>
@@ -129,12 +129,12 @@ export default function InspirationsPage() {
           </p>
           <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/all-products">
-              <button className="bg-[#a89163] hover:bg-[#8b7344] text-white px-6 md:px-8 py-2 md:py-3 font-semibold text-sm md:text-base rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <button className="bg-[#134c1f] hover:bg-[#08220e] text-white px-6 md:px-8 py-2 md:py-3 font-semibold text-sm md:text-base rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Browse Collection
               </button>
             </Link>
             <Link href="/contact">
-              <button className="border-2 border-[#a89163] text-[#a89163] px-6 md:px-8 py-2 md:py-3 font-semibold text-sm md:text-base rounded-lg hover:bg-[#a89163] hover:text-white transition-all duration-300">
+              <button className="border-2 border-[#134c1f] text-[#134c1f] px-6 md:px-8 py-2 md:py-3 font-semibold text-sm md:text-base rounded-lg hover:bg-[#134c1f] hover:text-white transition-all duration-300">
                 Contact Us
               </button>
             </Link>
@@ -144,7 +144,7 @@ export default function InspirationsPage() {
 
       <div
         aria-hidden="true"
-        className="h-24 bg-[#f7f1e5] bg-[url('/inspirations-wallpaper.png')] bg-repeat bg-top bg-[length:auto_32rem] md:h-40"
+        className="h-24 bg-white md:h-40"
       />
 
       <Footer />

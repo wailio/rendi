@@ -30,7 +30,7 @@ export default function AllProductsPage() {
                   Découvrez notre sélection exclusive de meubles de luxe
                 </p>
               </Reveal>
-              <div className="h-1 w-12 bg-[#8b7344] mx-auto"></div>
+              <div className="h-1 w-12 bg-[#134c1f] mx-auto"></div>
             </div>
 
             <Suspense

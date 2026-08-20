@@ -106,7 +106,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
       <div className="pt-8 md:pt-12 pb-12 md:pb-20 text-center">
         <h1 className="text-2xl font-bold text-gray-900 mb-4">Produit non trouvé</h1>
         <Link href="/">
-          <button className="px-8 py-3 bg-[#0B5DA0] text-white rounded-lg">Retour à l&apos;accueil</button>
+          <button className="px-8 py-3 bg-[#134c1f] text-white rounded-lg">Retour à l&apos;accueil</button>
         </Link>
       </div>
     )
@@ -150,8 +150,8 @@ export default function ProductDetailContent({ productId }: { productId: string 
                   onClick={() => setSelectedImageIndex(idx)}
                   className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all ${
                     selectedImageIndex === idx 
-                      ? 'border-2 border-[#0B5DA0] scale-105' 
-                      : 'border-2 border-gray-200 hover:border-[#0B5DA0]'
+                      ? 'border-2 border-[#134c1f] scale-105' 
+                      : 'border-2 border-gray-200 hover:border-[#134c1f]'
                   }`}
                 >
                   <img src={img} alt={`View ${idx + 1}`} className="w-full h-full object-cover" />
@@ -213,8 +213,8 @@ export default function ProductDetailContent({ productId }: { productId: string 
               </Link>
             </div>
 
-              <button onClick={() => toggleFavorite(product.id)} className="flex items-center gap-2 text-xs md:text-sm text-gray-600 hover:text-[#0B5DA0] transition-colors">
-                <Heart className={`w-4 h-4 ${favorites.includes(product.id) ? "fill-current text-[#0B5DA0]" : ""}`} />
+              <button onClick={() => toggleFavorite(product.id)} className="flex items-center gap-2 text-xs md:text-sm text-gray-600 hover:text-[#134c1f] transition-colors">
+                <Heart className={`w-4 h-4 ${favorites.includes(product.id) ? "fill-current text-[#134c1f]" : ""}`} />
                 <span>Ajouter à la liste de souhaits</span>
               </button>
             </Reveal>
@@ -233,7 +233,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <div className="mb-12 md:mb-16">
-            <h2 className="inline-block border-b border-[#0B2A4A] px-1 pb-2 text-base md:text-xl font-serif font-semibold tracking-wide text-[#0B2A4A] shadow-[0_2px_3px_-2px_rgba(11,42,74,0.45)] mb-4 md:mb-6">RELATED PRODUCTS</h2>
+            <h2 className="inline-block border-b border-[#134c1f] px-1 pb-2 text-base md:text-xl font-serif font-semibold tracking-wide text-[#134c1f] shadow-[0_2px_3px_-2px_rgba(11,42,74,0.45)] mb-4 md:mb-6">RELATED PRODUCTS</h2>
             <div ref={relatedProductsRef} className="flex gap-2 md:gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x" style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}>
               {relatedProducts.map((relProduct, i) => (
                 <Reveal key={relProduct.id} delay={i * 100}>
@@ -272,7 +272,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
             <div className="flex flex-wrap gap-2 md:gap-3 p-4 md:p-6 bg-white rounded-xl border border-gray-200 shadow-sm justify-center">
               {['Tous les Produits', 'Chaises', 'Canapés', 'Chambres', 'Éclairage', 'Accessoires'].map((category) => (
                 <Link key={category} href="/all-products">
-                  <button className="px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-medium transition-all duration-300 text-xs md:text-sm bg-gray-900 text-white hover:bg-[#0B5DA0] border border-gray-300 whitespace-nowrap">
+                  <button className="px-2 md:px-4 py-1.5 md:py-2 rounded-lg font-medium transition-all duration-300 text-xs md:text-sm bg-gray-900 text-white hover:bg-[#134c1f] border border-gray-300 whitespace-nowrap">
                     {category}
                   </button>
                 </Link>

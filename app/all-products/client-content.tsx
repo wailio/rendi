@@ -181,7 +181,7 @@ export default function AllProductsClientContent() {
               }}
               className={`px-3 md:px-5 py-2 md:py-2.5 rounded-lg font-medium transition-all duration-300 text-xs md:text-sm flex items-center gap-2 whitespace-nowrap cursor-pointer ${
                 selectedCategory === category.id
-                  ? "bg-gray-900 text-white shadow-lg scale-105"
+                  ? "bg-[#134c1f] text-white shadow-lg scale-105"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-300"
               }`}
             >
@@ -225,7 +225,7 @@ export default function AllProductsClientContent() {
                     <span className="text-xs md:text-sm lg:text-base font-bold text-[#111615]">
                       {product.price}
                     </span>
-                    <button className="px-2 md:px-3 py-1 bg-[#111615] hover:bg-[#00030A] text-white rounded-lg font-semibold transition-colors text-[8px] md:text-xs lg:text-sm">
+                    <button className="px-2 md:px-3 py-1 bg-[#134c1f] hover:bg-[#08220e] text-white rounded-lg font-semibold transition-colors text-[8px] md:text-xs lg:text-sm">
                       Voir
                     </button>
                   </div>
