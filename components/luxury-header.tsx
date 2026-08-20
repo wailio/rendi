@@ -5,12 +5,14 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
-import { Facebook, Gift, Instagram, Lightbulb, Mail, Sofa, Youtube } from "lucide-react"
+import { Facebook, Gift, Instagram, Lightbulb, Sofa, Youtube } from "lucide-react"
 
 export default function LuxuryHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === "/"
+  const stablePathname = hasMounted ? pathname : ""
+  const isHomePage = stablePathname === "/"
   const isSpecialPage = 
     pathname.startsWith("/rooms") || 
     pathname.startsWith("/inspirations") || 
@@ -21,6 +23,8 @@ export default function LuxuryHeader() {
   const isDarkHeaderPage = isSpecialPage && !isHomePage
 
   useEffect(() => {
+    setHasMounted(true)
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100)
     }
