@@ -1,7 +1,6 @@
 import LuxuryHeader from "@/components/luxury-header"
 import Header from "@/components/header"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import Footer from "@/components/footer"
 
 export default function AboutPage() {
@@ -14,7 +13,7 @@ export default function AboutPage() {
       <section className="pt-28 pb-8 px-4 md:pt-48 md:pb-16 md:px-12 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f]">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-xl md:text-4xl font-serif font-bold text-white mb-6">
-            À Propos Mobenia Furniture
+            À Propos de Rendi Shop
           </h1>
           <p className="text-xs md:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
             Nous nous consacrons à apporter le luxe et l&apos;élégance à votre maison grâce à des collections de mobilier minutieusement sélectionnées qui allient design intemporel et confort moderne.
@@ -29,18 +28,16 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Mission</h2>
               <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
-                Chez Mobenia Furniture, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
+                Chez Rendi Shop, nous croyons que votre maison doit refléter votre style personnel et vos valeurs. Notre mission est de fournir des meubles exceptionnels qui transforment les espaces en havres de confort et d&apos;élégance.
               </p>
               <p className="text-gray-300 text-xs md:text-lg leading-relaxed font-light">
                 Nous travaillons avec les meilleurs artisans et fournisseurs pour garantir que chaque pièce de notre collection répond à nos normes rigoureuses en matière de qualité, de conception et de durabilité.
               </p>
             </div>
             <div className="bg-white rounded-lg overflow-hidden shadow-lg h-96">
-              <Image
-                src="/about-mission.jpg"
-                alt="Our Mission"
-                width={500}
-                height={400}
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/495642507_1130874542389077_8589020906352356448_n-EWHjcp8PMmhQeBKZZREAAclRyyX4CP.jpg"
+                alt="Façade du magasin Rendi Shop"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -85,18 +82,16 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-lg h-96 order-2 md:order-1 border-l-4 border-[#134c1f]">
-              <Image
-                src="/about-history.jpg"
-                alt="Our Story"
-                width={500}
-                height={400}
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%2020%20ao%C3%BBt%202026%2C%2015_51_54-TfEH6wdNQ9GPqSayFbZgJDXjNgZe5u.png"
+                alt="Logo Rendi Mobilya"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Notre Histoire</h2>
               <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
-                Fondée avec une vision de redéfinir le mobilier de luxe, Mobenia Furniture a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
+                Fondée avec une vision de redéfinir le mobilier de luxe, Rendi Shop a commencé comme un projet passionné pour apporter des pièces soigneusement sélectionnées et de haute qualité aux clients discernants.
               </p>
               <p className="text-gray-300 text-xs md:text-lg leading-relaxed mb-4 font-light">
                 Au fil des années, nous sommes devenus une destination de confiance pour le mobilier de luxe, reconnue pour notre engagement envers un design exceptionnel, un savoir-faire de qualité et un service client exceptionnel.
@@ -118,7 +113,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/all-products">
-              <Button className="bg-[#134c1f] hover:bg-[#6f5b35] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <Button className="bg-[#134c1f] hover:bg-[#0b3215] text-white px-8 py-3 font-semibold cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Explorer Collection
               </Button>
             </a>

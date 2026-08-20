@@ -165,10 +165,10 @@ export default function ProductDetailContent({ productId }: { productId: string 
           <div className="flex flex-col justify-start space-y-3 md:space-y-4">
             <Reveal delay={0}>
               <div>
-                <p className="text-xs md:text-sm text-gray-600 font-medium mb-1">IdealInstitute</p>
+                <p className="text-xs md:text-sm text-gray-600 font-medium mb-1">Rendi Shop</p>
                 <h1 className="text-xl md:text-2xl font-serif font-bold text-gray-900 mb-2">{product.name}</h1>
                 <div className="flex items-center gap-2">
-                  <span className="text-xl md:text-2xl font-bold text-[#1E1912]">{product.price}</span>
+                  <span className="text-xl md:text-2xl font-bold text-[#134c1f]">{product.price}</span>
                   {product.originalPrice && <span className="text-base md:text-lg text-gray-400 line-through">{product.originalPrice}</span>}
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function ProductDetailContent({ productId }: { productId: string 
                 <button onClick={() => setQuantity(quantity + 1)} className="px-2 md:px-3 py-1.5 text-gray-600 hover:bg-gray-100 text-sm">+</button>
               </div>
               <Link href={`/contact?subject=Commande&message=${encodeURIComponent(`Je souhaite commander ce produit: ${product.name}`)}#form`}>
-                <button className="flex-1 md:flex-auto px-6 md:px-8 py-2 md:py-2.5 bg-[#1E1912] hover:bg-[#00030A] text-white font-semibold rounded-lg transition-colors text-sm md:text-base">Commandez maintenant</button>
+                <button className="flex-1 md:flex-auto px-6 md:px-8 py-2 md:py-2.5 bg-[#134c1f] hover:bg-[#0b3215] text-white font-semibold rounded-lg transition-colors text-sm md:text-base">Commandez maintenant</button>
               </Link>
             </div>
 
@@ -233,8 +233,8 @@ export default function ProductDetailContent({ productId }: { productId: string 
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <div className="mb-12 md:mb-16">
-            <h2 className="inline-block border-b border-[#134c1f] px-1 pb-2 text-base md:text-xl font-serif font-semibold tracking-wide text-[#134c1f] shadow-[0_2px_3px_-2px_rgba(11,42,74,0.45)] mb-4 md:mb-6">RELATED PRODUCTS</h2>
-            <div ref={relatedProductsRef} className="flex gap-2 md:gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x" style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch" }}>
+            <h2 className="inline-block border-b border-[#134c1f] px-1 pb-2 text-base md:text-xl font-serif font-semibold tracking-wide text-[#134c1f] shadow-[0_2px_3px_-2px_rgba(19,76,31,0.35)] mb-4 md:mb-6">RELATED PRODUCTS</h2>
+            <div ref={relatedProductsRef} className="flex gap-2 md:gap-4 overflow-x-auto pb-2 scrollbar-hide touch-pan-x md:scroll-smooth" style={{ WebkitOverflowScrolling: "touch" }}>
               {relatedProducts.map((relProduct, i) => (
                 <Reveal key={relProduct.id} delay={i * 100}>
                   <Link href={`/product/${relProduct.id}`}>
@@ -248,12 +248,12 @@ export default function ProductDetailContent({ productId }: { productId: string 
                     </div>
                     <div className="p-1.5 md:p-2 flex-1 flex flex-col justify-between">
                       <div>
-                        <p className="text-[8px] md:text-[9px] text-gray-600 mb-0.5">IdealInstitute</p>
+                        <p className="text-[8px] md:text-[9px] text-gray-600 mb-0.5">Rendi Shop</p>
                         <h3 className="text-[9px] md:text-xs font-bold text-gray-900 line-clamp-2">{relProduct.name}</h3>
                       </div>
                       <div className="pt-1.5 border-t border-gray-200 mt-1.5">
                         <div className="flex justify-between items-center gap-1">
-                          <span className="text-[8px] md:text-xs font-bold text-[#1E1912]">{relProduct.price}</span>
+                          <span className="text-[8px] md:text-xs font-bold text-[#134c1f]">{relProduct.price}</span>
                           {relProduct.originalPrice && <span className="text-[7px] md:text-[8px] text-gray-400 line-through">{relProduct.originalPrice}</span>}
                         </div>
                       </div>

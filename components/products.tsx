@@ -191,7 +191,7 @@ const legacyProducts: LegacyProduct[] = [
 
 function ProductCard({ product, favorites, toggleFavorite }: { product: Product; favorites: number[]; toggleFavorite: (id: number) => void }) {
   return (
-    <div className="group flex-shrink-0 snap-center transition-[transform,opacity] duration-300 ease-out">
+    <div className="group flex-shrink-0 transition-[transform,opacity] duration-300 ease-out md:snap-center">
       <Link href={`/product/${product.id}`}>
         <div
           className="group/card relative flex h-full w-40 flex-col overflow-hidden bg-white cursor-pointer shadow-none transition-[transform,box-shadow,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:w-80 lg:w-[22rem] md:shadow-[0_8px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.06)] md:hover:-translate-y-1 md:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:[clip-path:polygon(0_0,96%_0,100%_4%,100%_100%,4%_100%,0_96%)]"
@@ -351,7 +351,7 @@ export default function Products() {
         {/* NOS PRODUITS Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#4A3826] md:text-[42px]">NOS PRODUITS</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic uppercase tracking-[2px] text-[#134c1f] md:text-[42px]">NOS PRODUITS</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
@@ -395,7 +395,7 @@ export default function Products() {
         {/* Mod��les Prêts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
-            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
+            <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#134c1f] md:text-[42px]">Modèles prêts</h2>
           </Reveal>
 
           {/* Horizontal Scroll Container */}
