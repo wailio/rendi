@@ -2,13 +2,13 @@
 @import "tw-animate-css";
 
 :root {
-  --background: #1E1912;
+  --background: #111615;
   --foreground: #f5f2ea;
 }
 
 html,
 body {
-  background: #1E1912;
+  background: #111615;
 }
 
 @keyframes mobenia-delivery-pulse {
@@ -34,13 +34,13 @@ body {
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #1E1912;
+  --background: #111615;
   --foreground: #f5f2ea;
 }
 
 html,
 body {
-  background: #1E1912;
+  background: #111615;
 }
 
 @keyframes slideInUp {
@@ -165,7 +165,7 @@ body {
 @media (min-width: 768px) {
   .pc-scroll-lane {
     scrollbar-width: thin;
-    scrollbar-color: #0b2a4a #d9dde3;
+    scrollbar-color: #123b32 #d9dde3;
   }
 
   .pc-scroll-lane::-webkit-scrollbar {
@@ -178,12 +178,12 @@ body {
   }
 
   .pc-scroll-lane::-webkit-scrollbar-thumb {
-    background: #0b2a4a;
+    background: #123b32;
     border-radius: 999px;
   }
 
   .pc-scroll-lane::-webkit-scrollbar-thumb:hover {
-    background: #123e68;
+    background: #1e5a49;
   }
 }
 
@@ -342,7 +342,7 @@ body {
     width: 2px;
     pointer-events: none;
     opacity: 0;
-    background: linear-gradient(to bottom, transparent, #d4af5f 30%, #d4af5f 70%, transparent);
+    background: linear-gradient(to bottom, transparent, #1d6b55 30%, #1d6b55 70%, transparent);
   }
 
   .product-message-streak-left { left: -7px; }

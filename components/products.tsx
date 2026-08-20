@@ -246,7 +246,7 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
 
               {/* Pricing */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs md:text-lg font-bold text-[#8b7344]">{product.price}</span>
+                <span className="text-xs md:text-lg font-bold text-[#1d6b55]">{product.price}</span>
                 {product.originalPrice && (
                   <span className="text-xs md:text-sm text-gray-400 line-through">{product.originalPrice}</span>
                 )}
@@ -342,7 +342,7 @@ export default function Products() {
   return (
     <section className="relative overflow-hidden py-8 md:py-16 lg:py-24" id="products" style={{ backgroundColor: "#f5f5f5" }}>
       <img
-        src="/products-gold-blob.png"
+        src="/products-green-blob.png"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute left-[-180px] top-[-100px] z-0 hidden h-auto w-[500px] max-w-none opacity-70 md:block lg:left-[-120px] lg:top-[-80px] lg:w-[560px]"
@@ -392,7 +392,7 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Modèles Prêts Section */}
+        {/* Mod��les Prêts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>

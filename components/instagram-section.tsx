@@ -25,12 +25,12 @@ export default function InstagramSection() {
             NOUS SUIVRE SUR INSTAGRAM{' '}
             <span className="italic">
               <Link 
-                href="https://www.instagram.com/mobenia_furniture/" 
+                href="https://www.instagram.com/rendi_shop_dz" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:opacity-70 transition-opacity text-[#9AAAC1]"
+                className="hover:opacity-70 transition-opacity text-[#174f3d]"
               >
-                @mobenia_furniture
+                @rendi_shop_dz
               </Link>
             </span>
           </h2>
@@ -44,10 +44,10 @@ export default function InstagramSection() {
         {/* Call to Action */}
         <div className="text-center">
           <Link
-            href="https://www.instagram.com/mobenia_furniture/"
+            href="https://www.instagram.com/rendi_shop_dz"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border-2 border-[#9AAAC1] text-white px-8 py-3 font-serif uppercase text-sm tracking-widest hover:bg-[#9AAAC1] hover:text-white transition-all duration-300"
+            className="inline-block border-2 border-[#174f3d] text-white px-8 py-3 font-serif uppercase text-sm tracking-widest hover:bg-[#174f3d] hover:text-white transition-all duration-300"
           >
             Nous Suivre
           </Link>

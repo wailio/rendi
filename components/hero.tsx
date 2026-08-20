@@ -44,15 +44,15 @@ export default function Hero() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 pb-8 text-center md:px-6 md:pb-0">
           <div className="flex max-w-3xl flex-col items-center">
             <Reveal delay={0}>
-              <p className="font-sans text-[5px] font-semibold tracking-[2px] text-[#d4af5f] md:text-[13px] md:tracking-[5px]">MOBENIA FURNITURE</p>
+              <p className="font-sans text-[5px] font-semibold tracking-[2px] text-[#8fb8a8] md:text-[13px] md:tracking-[5px]">RENDI SHOP</p>
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-1 text-balance leading-none md:mt-[22px]">
                 <span className="block font-[family-name:var(--font-playfair)] text-[20px] font-normal leading-tight text-[#f5f2ea] md:text-[30px]">Meubles uniques pour</span>
-                <span className="relative mt-0 inline-block px-1 pb-4 font-[family-name:var(--font-great-vibes)] text-[clamp(3.35rem,15vw,6.5rem)] font-normal leading-none text-[#d4af5f] md:mt-2 md:pb-8">
+                <span className="relative mt-0 inline-block px-1 pb-4 font-[family-name:var(--font-great-vibes)] text-[clamp(3.35rem,15vw,6.5rem)] font-normal leading-none text-[#8fb8a8] md:mt-2 md:pb-8">
                   espaces modernes
                   <svg aria-hidden="true" viewBox="0 0 360 34" className="hero-underline absolute bottom-0 left-1/2 h-5 w-[88%] -translate-x-1/2 overflow-visible md:h-7 md:w-[115%]">
-                    <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#d4af5f" strokeWidth="2.2" strokeLinecap="round" />
+                    <path d="M7 18 C55 5, 83 28, 128 17 S205 6, 246 18 S306 27, 353 10" fill="none" stroke="#8fb8a8" strokeWidth="2.2" strokeLinecap="round" />
                   </svg>
                 </span>
               </h1>
@@ -64,7 +64,7 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={360}>
               <Link href="/contact" className="mt-5 inline-block md:mt-7">
-                <Button className="min-h-11 rounded-[2px] border border-[#d4af5f] bg-[#1E1912] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#d4af5f] shadow-none hover:bg-[#d4af5f] hover:text-[#1E1912] focus-visible:bg-[#d4af5f] focus-visible:text-[#1E1912] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
+                <Button className="min-h-11 rounded-[2px] border border-[#8fb8a8] bg-[#111615] px-5 py-3 font-serif text-[10px] font-normal uppercase tracking-[2px] text-[#8fb8a8] shadow-none hover:bg-[#8fb8a8] hover:text-[#111615] focus-visible:bg-[#8fb8a8] focus-visible:text-[#111615] md:px-8 md:py-[13px] md:text-xs md:tracking-[3px]">
                   Nous contacter
                 </Button>
               </Link>
@@ -90,7 +90,7 @@ export default function Hero() {
       </div>
 
       {/* Delivery Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-[#1E1912] via-[#1E1912] to-[#8b7344] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#111615] via-[#111615] to-[#1d6b55] text-white py-4 md:py-6 px-4 md:px-6 before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:opacity-70">
         <Reveal delay={480} className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div className="delivery-benefit flex items-center justify-center gap-3">

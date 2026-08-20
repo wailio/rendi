@@ -38,14 +38,14 @@ export default function Header() {
         <Link href="/" className="site-logo flex items-center gap-2">
           <span className="group inline-block cursor-pointer">
             <Image
-              src="/logo-mobenia-furniture.png"
-              alt="Mobenia Furniture"
+              src="/rendi-logo.png"
+              alt="Rendi Shop"
               width={120}
               height={50}
               className="h-10 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
             />
           </span>
-          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Mobenia Furniture</span>
+          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Rendi Shop</span>
         </Link>
 
         <div className="flex items-center gap-2">
@@ -74,21 +74,21 @@ export default function Header() {
             <div className="pb-2 border-b border-gray-300/50 flex flex-col gap-2">
               <Link
                 href="/rooms"
-                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#0B5DA0]`}
+                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#6f9f87]`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="flex items-center gap-2"><Sofa className="h-4 w-4" aria-hidden="true" /> PIÈCES</span>
               </Link>
               <Link
                 href="/inspirations"
-                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#0B5DA0]`}
+                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#6f9f87]`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="flex items-center gap-2"><Lightbulb className="h-4 w-4" aria-hidden="true" /> INSPIRATIONS</span>
               </Link>
               <Link
                 href="/offers"
-                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#0B5DA0]`}
+                className={`transition-colors py-1.5 text-xs font-medium text-white hover:text-[#6f9f87]`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="flex items-center gap-2"><Gift className="h-4 w-4" aria-hidden="true" /> OFFRES & PROMOTIONS</span>
@@ -98,21 +98,21 @@ export default function Header() {
             {/* Main nav items */}
             <Link
               href="/all-products"
-              className={`transition-colors py-2 text-sm text-white hover:text-[#0B5DA0]`}
+              className={`transition-colors py-2 text-sm text-white hover:text-[#6f9f87]`}
               onClick={() => setIsOpen(false)}
             >
               Produits
             </Link>
             <Link
               href="/contact"
-              className={`transition-colors py-2 text-sm text-white hover:text-[#0B5DA0]`}
+              className={`transition-colors py-2 text-sm text-white hover:text-[#6f9f87]`}
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
             <Link
               href="/about"
-              className={`transition-colors py-2 text-sm text-white hover:text-[#0B5DA0]`}
+              className={`transition-colors py-2 text-sm text-white hover:text-[#6f9f87]`}
               onClick={() => setIsOpen(false)}
             >
               À Propos

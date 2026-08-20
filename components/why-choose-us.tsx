@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
         <div className="mb-6 md:mb-16 text-center">
           <Reveal>
             <h2 className="text-xl md:text-5xl font-bold text-white">
-              Pourquoi <span className="text-[#a98661] md:hidden">nous choisir</span><span className="hidden md:inline text-[#a98661]">choisir Mobenia</span>
+              Pourquoi <span className="text-[#6f9f87] md:hidden">nous choisir</span><span className="hidden md:inline text-[#6f9f87]">choisir Rendi Shop</span>
             </h2>
           </Reveal>
         </div>
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
           <Reveal variant="pop" delay={0}>
           <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#a98661] icon-3d transition-transform duration-200">✦</div>
+              <div className="text-xl text-[#6f9f87] icon-3d transition-transform duration-200">✦</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Solutions Complètes</h3>
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
           <Reveal variant="pop" delay={100}>
           <div className="bg-[#1B2433] p-3 border-b border-gray-600 flex items-start gap-3">
             <div className="flex-shrink-0 pt-1">
-              <div className="text-xl text-[#a98661] icon-3d transition-transform duration-200">◆</div>
+              <div className="text-xl text-[#6f9f87] icon-3d transition-transform duration-200">◆</div>
             </div>
             <div>
               <h3 className="text-xs font-semibold text-white mb-0.5">Support 24/7</h3>
@@ -108,7 +108,7 @@ export default function WhyChooseUs() {
                 Nous gérons chaque aspect de votre projet d'ameublement, vous faisant gagner du temps et des ressources.
               </p>
             </div>
-            <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">✦</div>
+            <div className="text-5xl text-[#6f9f87] icon-3d transition-transform duration-200">✦</div>
           </div>
           </Reveal>
 
@@ -124,7 +124,7 @@ export default function WhyChooseUs() {
                 Nous nous engageons à fournir un support continu et un service après-vente pour répondre à vos besoins.
               </p>
             </div>
-            <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">◆</div>
+            <div className="text-5xl text-[#6f9f87] icon-3d transition-transform duration-200">◆</div>
           </div>
           </Reveal>
 
@@ -135,13 +135,13 @@ export default function WhyChooseUs() {
             style={{ animationDelay: "0.2s" }}
           >
             <div>
-              <h3 className="text-xl font-semibold mb-3 text-[#a98661]">Absence de Restrictions</h3>
+              <h3 className="text-xl font-semibold mb-3 text-[#6f9f87]">Absence de Restrictions</h3>
               <p className="text-[#111827] text-sm leading-relaxed">
                 Nous nous associons à tous les fournisseurs pour offrir la plus large sélection de solutions
                 d'ameublement.
               </p>
             </div>
-            <div className="text-5xl icon-3d transition-transform duration-200 text-[#a98661]">★</div>
+            <div className="text-5xl icon-3d transition-transform duration-200 text-[#6f9f87]">★</div>
           </div>
           </Reveal>
 
@@ -180,7 +180,7 @@ export default function WhyChooseUs() {
                 unique et vos besoins.
               </p>
             </div>
-            <div className="text-5xl text-[#a98661] icon-3d transition-transform duration-200">◇</div>
+            <div className="text-5xl text-[#6f9f87] icon-3d transition-transform duration-200">◇</div>
           </div>
           </Reveal>
         </div>

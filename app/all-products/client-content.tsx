@@ -203,7 +203,7 @@ export default function AllProductsClientContent() {
           {filteredProducts.map((product, i) => (
             <Reveal key={product.id} variant="pop" delay={Math.min(i * 60, 300)}>
             <Link href={`/product/${product.id}`}>
-              <div className="group h-full bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden hover:border-[#0B5DA0] cursor-pointer flex flex-col">
+              <div className="group h-full bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden hover:border-[#1d6b55] cursor-pointer flex flex-col">
                 {/* Image */}
                 <div className="relative w-full h-24 md:h-40 lg:h-48 bg-gray-100 overflow-hidden rounded-t-xl">
                   <img
@@ -215,17 +215,17 @@ export default function AllProductsClientContent() {
 
                 {/* Content */}
                 <div className="p-2 md:p-3 lg:p-4 flex-1 flex flex-col justify-between">
-                  <h3 className="text-[11px] md:text-sm lg:text-base font-serif font-bold text-gray-900 mb-1 group-hover:text-[#0B5DA0] transition-colors line-clamp-2">
+                  <h3 className="text-[11px] md:text-sm lg:text-base font-serif font-bold text-gray-900 mb-1 group-hover:text-[#1d6b55] transition-colors line-clamp-2">
                     {product.name}
                   </h3>
                   <p className="text-[8px] md:text-xs text-gray-600 mb-2 line-clamp-2 hidden md:block">
                     {product.description}
                   </p>
                   <div className="flex justify-between items-center gap-1">
-                    <span className="text-xs md:text-sm lg:text-base font-bold text-[#1E1912]">
+                    <span className="text-xs md:text-sm lg:text-base font-bold text-[#111615]">
                       {product.price}
                     </span>
-                    <button className="px-2 md:px-3 py-1 bg-[#1E1912] hover:bg-[#00030A] text-white rounded-lg font-semibold transition-colors text-[8px] md:text-xs lg:text-sm">
+                    <button className="px-2 md:px-3 py-1 bg-[#111615] hover:bg-[#00030A] text-white rounded-lg font-semibold transition-colors text-[8px] md:text-xs lg:text-sm">
                       Voir
                     </button>
                   </div>

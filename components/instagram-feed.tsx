@@ -22,7 +22,7 @@ export default function InstagramFeed() {
             Suivez-nous sur Instagram
           </h2>
           <p className="text-gray-400 text-lg">
-            @mobenia_furniture
+            @rendi_shop_dz
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function InstagramFeed() {
             className="w-full max-w-4xl rounded-lg overflow-hidden"
             style={{ 
               backgroundColor: "#1a1a1a",
-              border: "1px solid #52647D"
+              border: "1px solid #174f3d"
             }}
           >
             <div 
