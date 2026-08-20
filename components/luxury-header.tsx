@@ -4,60 +4,23 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
-import { usePathname } from "next/navigation"
 import { Facebook, Gift, Instagram, Lightbulb, Sofa, Youtube } from "lucide-react"
 
 export default function LuxuryHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [hasMounted, setHasMounted] = useState(false)
-  const pathname = usePathname()
-  const stablePathname = hasMounted ? pathname : ""
-  const isHomePage = stablePathname === "/"
-  const isSpecialPage =
-    stablePathname.startsWith("/rooms") ||
-    stablePathname.startsWith("/inspirations") ||
-    stablePathname.startsWith("/offers") ||
-    stablePathname.startsWith("/all-products") ||
-    stablePathname.startsWith("/contact") ||
-    stablePathname === "/about"
-  const isDarkHeaderPage = isSpecialPage && !isHomePage
 
   useEffect(() => {
-    setHasMounted(true)
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 100)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Determine header style based on page
-  let headerBgClass = "bg-white/95 backdrop-blur-md border-b border-gray-200/50"
-  let topBarBgClass = "bg-gradient-to-r from-gray-50 to-gray-100"
-  let headerTextColor = "text-gray-900"
-  let topBarTextColor = "text-gray-600"
-
-  if (isDarkHeaderPage) {
-    // Glassy header for special pages
-    headerBgClass = "bg-black/40 backdrop-blur-2xl border-b border-white/20 shadow-xl"
-    topBarBgClass = "bg-black" // Keep top bar fully black
-    headerTextColor = "text-white"
-    topBarTextColor = "text-white"
-  } else if (isHomePage) {
-    // Home page - dynamic based on scroll
-    if (isScrolled) {
-      headerBgClass = "bg-white shadow-md"
-      topBarBgClass = "bg-gray-50"
-      headerTextColor = "text-gray-800"
-      topBarTextColor = "text-gray-700"
-    } else {
-      headerBgClass = "bg-transparent"
-      topBarBgClass = "bg-[#1a1a1a]"
-      headerTextColor = "text-white"
-      topBarTextColor = "text-white"
-    }
-  }
+  const headerBgClass = isScrolled
+    ? "bg-black/90 backdrop-blur-md border-b border-white/10 shadow-md"
+    : "bg-black/60 backdrop-blur-md border-b border-white/10"
+  const topBarBgClass = "bg-black"
+  const headerTextColor = "text-white"
+  const topBarTextColor = "text-white"
 
   return (
     <header className="hidden md:block fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300">
