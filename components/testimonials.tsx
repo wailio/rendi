@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "AB",
     rating: 5,
-    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Mobenia Furniture. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
+    text: "Excellente qualité de meubles ! J'ai acheté un canapé et une table basse chez Rendi Shop. Les produits sont vraiment magnifiques et bien finis. L'équipe a été très attentive et m'a conseillée sur les meilleures options. Je recommande vivement !",
     date: "Il y a 2 mois"
   },
   {
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "KB",
     rating: 5,
-    text: "Transformé mon salon complètement ! Les meubles de Mobenia Furniture ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
+    text: "Transformé mon salon complètement ! Les meubles de Rendi Shop ont une qualité exceptionnelle. Le design est moderne et élégant, exactement ce que je cherchais. Livraison rapide et service client très professionnel.",
     date: "Il y a 1 mois"
   },
   {
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "HM",
     rating: 5,
-    text: "Réception à la hauteur ! L'équipe de Mobenia Furniture a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
+    text: "Réception à la hauteur ! L'équipe de Rendi Shop a été très accueillante et professionnelle. Ils m'ont aidé à choisir les meilleurs meubles pour mon espace. Je suis très heureux du résultat final.",
     date: "Il y a 1 mois"
   },
   {
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "YL",
     rating: 5,
-    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Mobenia Furniture, c'est mon choix désormais !",
+    text: "Produit de haute qualité ! J'ai commandé plusieurs pièces et elles sont toutes impeccables. Les finitions sont soignées et les matériaux utilisés sont de premier ordre. Rendi Shop, c'est mon choix désormais !",
     date: "Il y a 2 semaines"
   },
   {
@@ -57,7 +57,7 @@ const testimonials: Testimonial[] = [
     role: "Client Vérifiée",
     avatar: "OB",
     rating: 5,
-    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Mobenia Furniture à tous mes amis.",
+    text: "Excellent choix pour les meubles. Prix raisonnable et qualité au rendez-vous. Le mobilier que j'ai choisi a transformé mon intérieur. Je conseille Rendi Shop à tous mes amis.",
     date: "Il y a 3 jours"
   }
 ]
@@ -81,14 +81,14 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-800/50 backdrop-blur border border-[#1E90FF]/30 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300"
+              className="bg-gray-800/50 backdrop-blur border border-[#1d6b55]/30 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 fill-[#1E90FF] text-[#1E90FF]"
+                    className="w-5 h-5 fill-[#1d6b55] text-[#1d6b55]"
                   />
                 ))}
               </div>
@@ -100,7 +100,7 @@ export default function Testimonials() {
 
               {/* User Info */}
               <div className="flex items-center gap-3 pt-4 border-t border-gray-700">
-                <div className="w-10 h-10 bg-[#1E90FF] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 bg-[#1d6b55] rounded-full flex items-center justify-center text-white font-bold text-sm">
                   {testimonial.avatar}
                 </div>
                 <div className="flex-1">

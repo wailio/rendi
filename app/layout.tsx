@@ -11,8 +11,8 @@ const _greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400", variable: "
 const _cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: "300", style: "italic", variable: "--font-cormorant" })
 
 export const metadata: Metadata = {
-  title: "Mobenia Furniture | Meubles Luxe",
-  description: "Découvrez notre collection exclusive de meubles de luxe pour transformer votre espace",
+  title: "Rendi Shop | Meubles Luxe",
+  description: "Rendi Shop — une collection de meubles élégants pour transformer votre intérieur",
   generator: "v0.app",
   icons: {
     icon: [

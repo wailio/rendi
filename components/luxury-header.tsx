@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
@@ -98,14 +97,9 @@ export default function LuxuryHeader() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           {/* Logo - Simple and clean */}
           <Link href="/" className="site-logo flex items-center flex-shrink-0 hover:opacity-80 transition-opacity">
-            <span className="group inline-block cursor-pointer">
-              <Image
-                src="/logo-mobenia-furniture.png"
-                alt="Mobenia Furniture"
-                width={140}
-                height={60}
-                className="h-12 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
-              />
+            <span className="group inline-flex items-center gap-2 cursor-pointer">
+              <span className="flex size-10 items-center justify-center rounded-full border border-[#8fb8a8] font-serif text-lg text-[#8fb8a8] transition-transform duration-[450ms] ease-out group-hover:scale-110 group-hover:rotate-[8deg]">R</span>
+              <span className={`font-serif text-xl tracking-[0.16em] ${headerTextColor}`}>Rendi Shop</span>
             </span>
           </Link>
 

@@ -39,13 +39,13 @@ export default function Header() {
           <span className="group inline-block cursor-pointer">
             <Image
               src="/logo-mobenia-furniture.png"
-              alt="Mobenia Furniture"
+              alt="Rendi Shop"
               width={120}
               height={50}
               className="h-10 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
             />
           </span>
-          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Mobenia Furniture</span>
+          <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Rendi Shop</span>
         </Link>
 
         <div className="flex items-center gap-2">

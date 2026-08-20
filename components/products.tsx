@@ -246,7 +246,7 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
 
               {/* Pricing */}
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs md:text-lg font-bold text-[#8b7344]">{product.price}</span>
+                <span className="text-xs md:text-lg font-bold text-[#1d6b55]">{product.price}</span>
                 {product.originalPrice && (
                   <span className="text-xs md:text-sm text-gray-400 line-through">{product.originalPrice}</span>
                 )}
@@ -392,7 +392,7 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Modèles Prêts Section */}
+        {/* Mod��les Prêts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#4A3826] md:text-[42px]">Modèles prêts</h2>
