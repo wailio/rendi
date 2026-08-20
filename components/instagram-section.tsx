@@ -38,7 +38,7 @@ export default function InstagramSection() {
 
         {/* Elfsight Instagram Feed */}
         <div className="flex justify-center mb-8">
-          <div className="elfsight-app-8279c824-14e6-42db-965a-1da4672515d1" data-elfsight-app-lazy></div>
+          <div className="elfsight-app-db7b59f6-f374-477a-944d-768556aef606" data-elfsight-app-lazy></div>
         </div>
 
         {/* Call to Action */}
