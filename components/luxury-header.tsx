@@ -13,13 +13,13 @@ export default function LuxuryHeader() {
   const pathname = usePathname()
   const stablePathname = hasMounted ? pathname : ""
   const isHomePage = stablePathname === "/"
-  const isSpecialPage = 
-    pathname.startsWith("/rooms") || 
-    pathname.startsWith("/inspirations") || 
-    pathname.startsWith("/offers") || 
-    pathname.startsWith("/all-products") || 
-    pathname.startsWith("/contact") || 
-    pathname === "/about"
+  const isSpecialPage =
+    stablePathname.startsWith("/rooms") ||
+    stablePathname.startsWith("/inspirations") ||
+    stablePathname.startsWith("/offers") ||
+    stablePathname.startsWith("/all-products") ||
+    stablePathname.startsWith("/contact") ||
+    stablePathname === "/about"
   const isDarkHeaderPage = isSpecialPage && !isHomePage
 
   useEffect(() => {
