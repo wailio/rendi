@@ -5,8 +5,8 @@ export default function MapContent() {
     <div
       className="overflow-hidden shadow-lg border-0 sticky top-20 z-40 w-full h-56 md:h-96"
       style={{ 
-        borderLeft: "3px solid #123b32",
-        borderRight: "3px solid #123b32",
+        borderLeft: "3px solid #0f3917",
+        borderRight: "3px solid #0f3917",
         minHeight: "400px"
       }}
     >

@@ -61,9 +61,10 @@ export default function ContactContent() {
   }
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[#1b1b1b] text-white">
       <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
-        <div className="absolute inset-0 bg-black" />
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/unnamed%20%281%29-VpBi1HUaVW5rV8iozd52OuZk6RKtoe.jpg" alt="Façade du showroom Rendi" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-black/65" />
         <Reveal delay={0}>
           <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-[#6fae7e] md:text-6xl">Contactez-nous</h1>
         </Reveal>
