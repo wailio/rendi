@@ -61,11 +61,11 @@ export default function ContactContent() {
   }
 
   return (
-    <main className="min-h-screen bg-white text-[#134c1f]">
+    <main className="min-h-screen bg-black text-white">
       <section className="relative flex min-h-[160px] items-center justify-center overflow-hidden pt-12 md:min-h-[330px] md:pt-28">
-        <div className="absolute inset-0 bg-white" />
+        <div className="absolute inset-0 bg-black" />
         <Reveal delay={0}>
-          <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-[#134c1f] md:text-6xl">Contactez-nous</h1>
+          <h1 className="relative z-10 font-sans text-2xl font-bold tracking-[-0.04em] text-white md:text-6xl">Contactez-nous</h1>
         </Reveal>
       </section>
 
@@ -73,7 +73,7 @@ export default function ContactContent() {
         <Reveal delay={120}>
           <div className="mb-6 text-center md:mb-12">
             <p className="font-serif text-2xl leading-none text-[#08220e]/35 md:text-7xl">Contact</p>
-            <h2 className="-mt-1 text-base font-bold tracking-tight text-[#134c1f] md:text-3xl">Informations de contact</h2>
+            <h2 className="-mt-1 text-base font-bold tracking-tight text-white md:text-3xl">Informations de contact</h2>
           </div>
         </Reveal>
 
@@ -81,8 +81,8 @@ export default function ContactContent() {
           {contactDetails.map(({ icon: Icon, label, value }, index) => (
             <Reveal key={label} variant="pop" delay={index * 80}>
             <div className="flex flex-col items-center md:border-r md:border-[#08220e]/20 md:px-5 md:py-8 md:py-6 md:text-center">
-              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#08220e] text-[#134c1f] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
-              <p className="text-xs font-semibold text-[#134c1f] md:text-sm">{value}</p>
+              <div className="mb-1 flex h-8 w-8 items-center justify-center rounded-full border border-[#134c1f] text-[#134c1f] md:mb-4 md:h-12 md:w-12"><Icon className="h-3.5 w-3.5 md:h-5 md:w-5" strokeWidth={1.4} /></div>
+              <p className="text-xs font-semibold text-white md:text-sm">{value}</p>
               <p className="mt-0.5 text-[10px] leading-3 text-[#aaa59d] md:mt-2 md:text-xs md:leading-5">{label}</p>
             </div>
             </Reveal>
@@ -93,14 +93,14 @@ export default function ContactContent() {
           <Reveal>
           <div className="hidden pt-2 md:block">
             <p className="font-serif text-2xl leading-none text-[#08220e]/35 md:text-6xl">Form</p>
-            <h2 className="-mt-1 text-xl font-bold text-[#134c1f] md:text-3xl">Parlons de votre projet</h2>
+            <h2 className="-mt-1 text-xl font-bold text-white md:text-3xl">Parlons de votre projet</h2>
             <p className="mt-3 max-w-sm text-xs leading-5 text-[#aaa59d] md:mt-5 md:text-sm md:leading-6">Une question, une idée ou un projet d&apos;aménagement ? Notre équipe vous accompagne avec attention pour trouver les pièces qui vous ressemblent.</p>
-            <div className="mt-6 border-l border-[#08220e] pl-3 text-xs leading-4 text-[#134c1f] md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
+            <div className="mt-6 border-l border-[#08220e] pl-3 text-xs leading-4 text-white md:mt-8 md:pl-4 md:text-xs md:leading-5">Pourquoi choisir notre boutique ?<br /><span className="text-[#aaa59d]">Qualité premium, conseil personnalisé et design inspirant.</span></div>
           </div>
           </Reveal>
           <Reveal className="md:hidden mb-2 text-center">
             <p className="font-serif text-xl leading-none text-[#08220e]/35">Form</p>
-            <h2 className="-mt-0.5 text-sm font-bold text-[#134c1f]">Parlons de votre projet</h2>
+            <h2 className="-mt-0.5 text-sm font-bold text-white">Parlons de votre projet</h2>
           </Reveal>
 
           <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4" id="contact-form">
@@ -130,7 +130,7 @@ export default function ContactContent() {
             <Reveal delay={300}>
               <div className="flex justify-start pt-1"><Button type="submit" disabled={status === "sending"} className="rounded-full bg-[#134c1f] px-8 py-3 text-xs font-medium text-white hover:bg-[#08220e]">{status === "sending" ? "Envoi..." : "Envoyer le message"}</Button></div>
             </Reveal>
-            {status === "success" && <p className="text-xs text-[#134c1f]" role="status">Merci, votre message a bien été envoyé.</p>}
+            {status === "success" && <p className="text-xs text-white" role="status">Merci, votre message a bien été envoyé.</p>}
             {status === "error" && <p className="text-xs text-red-300" role="alert">Une erreur est survenue. Veuillez réessayer.</p>}
           </form>
         </div>
