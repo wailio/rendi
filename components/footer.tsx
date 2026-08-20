@@ -57,11 +57,11 @@ function NewArrivalsForm() {
   }
 
   return (
-    <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#08220e] px-4 py-5 text-white sm:px-6 sm:py-6 lg:min-h-[415px] lg:px-7 lg:py-8">
+    <div className="relative flex h-full min-h-[292px] flex-col justify-between overflow-hidden bg-[#f4f1e9] px-4 py-5 text-[#0f3917] sm:px-6 sm:py-6 lg:min-h-[415px] lg:px-7 lg:py-8">
       <img src={atelierLampImage} alt="Lampe de bureau articulée" className="pointer-events-none absolute left-1/2 top-[6rem] z-0 w-36 -translate-x-1/2 object-contain opacity-90 sm:top-[6.5rem] sm:w-40" />
       <div className="relative z-10">
         <p className="font-serif text-[clamp(1.2rem,1.7vw,1.7rem)] leading-tight tracking-[-0.03em]">Nouveautés | Arrivages</p>
-        <p className="mt-1 max-w-[15rem] text-[11px] leading-4 text-white/80">
+        <p className="mt-1 max-w-[15rem] text-[11px] leading-4 text-[#0f3917]/75">
           Soyez les premiers à découvrir nos nouvelles pièces et collections.
         </p>
       </div>
@@ -85,7 +85,7 @@ function NewArrivalsForm() {
             {status === "loading" ? "Envoi..." : "Recevoir"}
           </button>
         </div>
-        <p id="new-arrivals-feedback" role="status" className="mt-2 min-h-5 text-xs text-white/80">
+        <p id="new-arrivals-feedback" role="status" className="mt-2 min-h-5 text-xs text-[#0f3917]/75">
           {status === "error" && <span className="text-[#c98f82]">Veuillez entrer un email valide.</span>}
           {status === "network-error" && <span className="text-[#c98f82]">Une erreur est survenue, veuillez réessayer.</span>}
           {status === "success" && <span className="inline-flex items-center gap-1 text-[#134c1f]"><Check className="h-3.5 w-3.5" /> Merci, vous êtes inscrit.</span>}
@@ -105,7 +105,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
   const shouldHideDesktopPanel = ["/inspirations", "/offers", "/contact", "/all-products"].includes(pathname)
 
   return (
-    <footer className="w-full overflow-hidden bg-black text-white">
+    <footer className="w-full overflow-hidden bg-[#f4f1e9] text-[#0f3917]">
       <div className="w-full pb-3 pt-0 sm:pb-4 lg:pb-4">
         <div className="grid w-full items-stretch gap-px bg-[#d4d0c6] lg:min-h-[415px] lg:grid-cols-[1.02fr_1.02fr_1fr_1.02fr]">
           <section className="relative hidden min-h-[280px] min-w-0 flex-col items-center justify-center overflow-hidden bg-[#e9e5dc] p-6 sm:p-8 lg:flex lg:min-h-[415px] lg:p-10">
@@ -133,7 +133,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
             </div>
           </section>
 
-          <section className="min-w-0 bg-black px-6 py-7 text-white sm:px-8 sm:py-8 lg:px-8 lg:py-9">
+          <section className="min-w-0 bg-[#f4f1e9] px-6 py-7 text-[#0f3917] sm:px-8 sm:py-8 lg:px-8 lg:py-9">
             <h3 className="relative mb-3 w-fit text-sm font-semibold uppercase tracking-[0.16em] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-5 after:bg-[#134c1f]">Rendi Shop</h3>
             <nav className="flex flex-col">
               <FooterLink href="/about">Notre histoire</FooterLink>
@@ -155,7 +155,7 @@ export default function Footer({ hideMobileMap = false }: { hideMobileMap?: bool
           <iframe title="Rendi Shop sur Google Maps" src={footerMapEmbed} className="h-40 w-full grayscale" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" />
         </div>
 
-        <div className="mx-auto mt-0 flex max-w-5xl flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-white sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-left">
+        <div className="mx-auto mt-0 flex max-w-5xl flex-col items-center justify-center gap-3 pt-4 text-center text-xs text-[#0f3917] sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:text-left">
           <p>© 2026 Rendi Shop. Tous droits réservés.</p>
           <div className="flex gap-5"><Link href="/terms" className="hover:text-[#134c1f]">Conditions</Link><Link href="/privacy" className="hover:text-[#134c1f]">Confidentialité</Link><Link href="/cookies" className="hover:text-[#134c1f]">Cookies</Link></div>
         </div>
