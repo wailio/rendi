@@ -42,7 +42,7 @@ export default function Header() {
               alt="Rendi Shop"
               width={120}
               height={50}
-              className="h-10 w-auto transition-transform duration-[450ms] ease-out group-hover:scale-[1.15] group-hover:rotate-[8deg]"
+              className="h-8 w-auto drop-shadow-[0_3px_8px_rgba(8,34,14,0.8)] transition-transform duration-[450ms] ease-out group-hover:scale-[1.1] group-hover:rotate-[5deg]"
             />
           </span>
           <span className="font-serif text-[11px] font-medium tracking-[0.08em] text-white sm:text-xs">Rendi Shop</span>

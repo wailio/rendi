@@ -303,7 +303,7 @@ body {
   .contact-field {
     width: 100%;
     min-height: 3rem;
-    border: 1px solid oklch(0.68 0.08 80 / 0.65);
+    border: 1px solid rgba(19, 76, 31, 0.55);
     border-radius: 9999px;
     background: transparent;
     color: var(--foreground);
@@ -317,8 +317,8 @@ body {
   }
 
   .contact-field:focus {
-    border-color: oklch(0.78 0.1 80);
-    background: oklch(0.68 0.08 80 / 0.06);
+    border-color: #134c1f;
+    background: rgba(19, 76, 31, 0.06);
   }
 
   textarea.contact-field {
@@ -376,7 +376,7 @@ body {
 
     .product-message-spotlight .contact-field {
       animation-duration: 3.6s;
-      box-shadow: 0 0 0 1px rgba(212,175,95,0.35), 0 0 18px 3px rgba(212,175,95,0.2);
+      box-shadow: 0 0 0 1px rgba(8,34,14,0.35), 0 0 18px 3px rgba(8,34,14,0.2);
     }
   }
 

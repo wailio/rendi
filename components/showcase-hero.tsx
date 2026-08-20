@@ -138,15 +138,15 @@ export default function ShowcaseHero() {
       {/* Desktop - 3 Column Layout */}
       <section ref={containerRef} className="hidden md:block py-0 bg-white relative overflow-hidden">
         {/* Decorative luxury shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-[#0B5DA0]/20 rounded-full decorator-shape" style={{ opacity: 0.6 }}></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 border-2 border-[#0B5DA0]/20 rotate-45 decorator-shape" style={{ opacity: 0.5 }}></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-[#0B5DA0]/30 decorator-shape rotate" style={{ opacity: 0.4 }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-28 h-28 border-2 border-[#0B5DA0]/15 rounded-3xl decorator-shape" style={{ opacity: 0.5 }}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-[#134c1f]/20 rounded-full decorator-shape" style={{ opacity: 0.6 }}></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 border-2 border-[#134c1f]/20 rotate-45 decorator-shape" style={{ opacity: 0.5 }}></div>
+        <div className="absolute top-1/3 right-1/4 w-20 h-20 border border-[#134c1f]/30 decorator-shape rotate" style={{ opacity: 0.4 }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-28 h-28 border-2 border-[#134c1f]/15 rounded-3xl decorator-shape" style={{ opacity: 0.5 }}></div>
 
         {/* Diagonal lines */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ opacity: 0.1 }}>
-          <line x1="0" y1="0" x2="100%" y2="100%" stroke="#0B5DA0" strokeWidth="2" />
-          <line x1="100%" y1="0" x2="0" y2="100%" stroke="#0B5DA0" strokeWidth="2" />
+          <line x1="0" y1="0" x2="100%" y2="100%" stroke="#134c1f" strokeWidth="2" />
+          <line x1="100%" y1="0" x2="0" y2="100%" stroke="#134c1f" strokeWidth="2" />
         </svg>
 
         <div className="flex items-center justify-center gap-8 px-6 lg:px-12 min-h-screen relative z-10">
@@ -267,8 +267,8 @@ export default function ShowcaseHero() {
       {/* Mobile - Stacked Sections */}
       <section className="md:hidden bg-white relative overflow-hidden">
         {/* Small decorative shapes for mobile */}
-        <div className="absolute top-10 left-5 w-16 h-16 border border-[#0B5DA0]/20 rounded-full decorator-shape pointer-events-none" style={{ opacity: 0.4 }}></div>
-        <div className="absolute bottom-10 right-5 w-20 h-20 border border-[#0B5DA0]/20 rotate-45 decorator-shape pointer-events-none" style={{ opacity: 0.3 }}></div>
+        <div className="absolute top-10 left-5 w-16 h-16 border border-[#134c1f]/20 rounded-full decorator-shape pointer-events-none" style={{ opacity: 0.4 }}></div>
+        <div className="absolute bottom-10 right-5 w-20 h-20 border border-[#134c1f]/20 rotate-45 decorator-shape pointer-events-none" style={{ opacity: 0.3 }}></div>
         
         {/* Left section */}
         <div className="showcase-item relative h-64 overflow-hidden flex flex-col justify-between cursor-pointer">

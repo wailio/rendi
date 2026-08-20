@@ -40,7 +40,7 @@ export default function CategoriesShowcase() {
               className="flex flex-col items-center gap-4 p-6 rounded-lg hover:bg-gray-50 transition-all duration-300 group cursor-pointer"
             >
               <div className="w-16 h-16 flex items-center justify-center text-4xl group-hover:scale-110 transition-transform">
-                <svg className="w-12 h-12 stroke-gray-900 stroke-2 fill-none group-hover:stroke-[#1E90FF] transition-colors" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 stroke-gray-900 stroke-2 fill-none group-hover:stroke-[#134c1f] transition-colors" viewBox="0 0 24 24">
                   {cat.name === 'SOFAS' && <path d="M2 8h20v8H2z M2 8v-2h20v2" />}
                   {cat.name === 'WARDROBES' && <path d="M4 2h16v20H4z M12 2v20 M4 6h16 M4 12h16" />}
                   {cat.name === 'CHAIRS' && <path d="M6 4h12l-1 4v8l-1 2H8l-1-2v-8l-1-4z M5 16h14v2H5z" />}
@@ -87,7 +87,7 @@ export default function CategoriesShowcase() {
             href="https://maps.app.goo.gl/cjjvrBX2X2M2UMbv5"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-[#1E90FF] hover:bg-[#0B5DA0] text-white rounded-lg py-3 px-6 text-sm md:text-base font-semibold transition-colors"
+            className="flex items-center justify-center gap-2 bg-[#134c1f] hover:bg-[#0B5DA0] text-white rounded-lg py-3 px-6 text-sm md:text-base font-semibold transition-colors"
           >
             <MapPin size={18} />
             Avis Google
