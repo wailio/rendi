@@ -194,7 +194,7 @@ function ProductCard({ product, favorites, toggleFavorite }: { product: Product;
     <div className="group flex-shrink-0 transition-[transform,opacity] duration-300 ease-out md:snap-center">
       <Link href={`/product/${product.id}`}>
         <div
-          className="group/card relative flex h-full w-40 flex-col overflow-hidden bg-white cursor-pointer shadow-none transition-[transform,box-shadow,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:w-80 lg:w-[22rem] md:shadow-[0_8px_24px_rgba(0,0,0,0.10),0_2px_8px_rgba(0,0,0,0.06)] md:hover:-translate-y-1 md:hover:shadow-[0_12px_28px_rgba(0,0,0,0.12),0_4px_10px_rgba(0,0,0,0.06)] md:[clip-path:polygon(0_0,96%_0,100%_4%,100%_100%,4%_100%,0_96%)]"
+          className="group/card relative flex h-full w-40 flex-col overflow-hidden bg-white cursor-pointer shadow-none transition-[transform,box-shadow,opacity] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] md:w-80 lg:w-[22rem] md:shadow-[0_14px_24px_rgba(10,37,15,0.22),0_4px_10px_rgba(10,37,15,0.10)] md:hover:-translate-y-1 md:hover:shadow-[0_18px_30px_rgba(10,37,15,0.28),0_6px_12px_rgba(10,37,15,0.14)] md:[clip-path:polygon(0_0,96%_0,100%_4%,100%_100%,4%_100%,0_96%)]"
         >
           {/* Discount Badge - Red rectangle top left */}
           {product.discount && (
@@ -360,7 +360,7 @@ export default function Products() {
               type="button"
               aria-label="Produits précédents"
               onClick={() => scrollNosProduits("left")}
-              className="hidden md:flex absolute left-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white"
+              className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#0a250f]/30 bg-[#0a250f] text-white shadow-md transition hover:bg-[#0a250f]/90 md:flex"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -368,7 +368,7 @@ export default function Products() {
               type="button"
               aria-label="Produits suivants"
               onClick={() => scrollNosProduits("right")}
-              className="hidden md:flex absolute right-2 top-1/2 z-10 -translate-y-1/2 h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white"
+              className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#0a250f]/30 bg-[#0a250f] text-white shadow-md transition hover:bg-[#0a250f]/90 md:flex"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -392,7 +392,7 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Mod��les Prêts Section */}
+        {/* Mod���les Prêts Section */}
         <div className="relative z-10 mb-8 md:mb-12">
           <Reveal>
             <h2 className="mb-6 text-left font-[family-name:var(--font-cormorant)] text-[32px] font-light italic tracking-[2px] text-[#134c1f] md:text-[42px]">Modèles prêts</h2>
@@ -404,7 +404,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles précédents"
               onClick={() => scrollModelesPrets("left")}
-              className="absolute left-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white md:flex"
+              className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#0a250f]/30 bg-[#0a250f] text-white shadow-md transition hover:bg-[#0a250f]/90 md:flex"
             >
               <ChevronLeft className="h-5 w-5" aria-hidden="true" />
             </button>
@@ -412,7 +412,7 @@ export default function Products() {
               type="button"
               aria-label="Modèles suivants"
               onClick={() => scrollModelesPrets("right")}
-              className="absolute right-2 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white/95 text-gray-900 shadow-md transition hover:bg-gray-900 hover:text-white md:flex"
+              className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#0a250f]/30 bg-[#0a250f] text-white shadow-md transition hover:bg-[#0a250f]/90 md:flex"
             >
               <ChevronRight className="h-5 w-5" aria-hidden="true" />
             </button>
