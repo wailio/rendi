@@ -23,7 +23,7 @@ export default function LuxuryHeader() {
   const topBarTextColor = "text-white"
 
   return (
-    <header className={`hidden md:block fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${isScrolled ? "translate-y-0" : "-translate-y-full"}`}>
+    <header className={`hidden md:block fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ${isScrolled ? "translate-y-0" : "translate-y-0"}`}>
       {/* Top Bar - Thinner */}
       <div className={`w-full py-2 px-6 ${topBarBgClass}`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 text-xs">
